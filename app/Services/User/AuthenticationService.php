@@ -34,7 +34,7 @@ class AuthenticationService
             $user = User::create([
                 'first_name' => $data['first_name'],
                 'last_name' => $data['last_name'],
-                'middle_name' => $data['middle_name'],
+                'middle_name' => $data['middle_name'] ?? null,
                 'email' => $data['email'],
                 'phone_number' => $data['phone_number'],
             ]);
@@ -49,7 +49,7 @@ class AuthenticationService
         $app_user = AppUser::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
-            'middle_name' => $data['middle_name'],
+            'middle_name' => $data['middle_name'] ?? null,
             'email' => $data['email'],
             'phone_number' => $data['phone_number'],
             'app_reference' => $data['app_reference'],

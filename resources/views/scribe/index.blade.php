@@ -128,9 +128,10 @@ You can switch the language used with the tabs at the top right (or from the nav
     \"last_name\": \"Doe\",
     \"middle_name\": \"\",
     \"phone_number\": \"08101209762\",
+    \"device_id\": \"uqzwbhsniuumxoaqschkqqnuacbhicieupsczorusecckgccqbnqteislaxyywydfowgjzsysjbmbglxvlbdkodjqmmwmnxwisfkledtzcmngvdudzoardbhcrvikzmyxncjqsldswewoqyajzifi\",
     \"email\": \"johndoe342@gmail.com\",
-    \"app_reference\": \"wixdooznsecdvnrbckkpwnkkeuxcgpweulsdndsoyepidkuitwabsttvdrfhvycjgdzfpruoykrtkqwavjdbgawauamavqhurxmiastl\",
-    \"password\": \"puhbiymqvdjgjrpiazqwfqaahkxmrmqjrtwoqedzcirfjmbfhrvgnkrydayphmxvamquksddgmuq\"
+    \"app_reference\": \"dzkiliezdzigmtjdkvvadhuhphcslbmcrpicxylihcetrtbfzpbapjnjhcxibcvkqwfjzbgzavsxqsujdkbcsdczxtatvmvltpcbporpmsjyucgvxvuosnzbxnjnfuhqitjdornjhjmaaolpujgqlpfdaqdlwzgjeelrnvfqqlgqjhvqnntzcsbviuraondreioshjhsuixbwdvfqxhfsfryhqzcdtxmpydegiaj\",
+    \"password\": \"ydhwdsiophyltcwilehzszioytsmagumwddlkefiqhljabnmkthcrqokhcy\"
 }"
 </code></pre></div>
 
@@ -150,9 +151,10 @@ let body = {
     "last_name": "Doe",
     "middle_name": "",
     "phone_number": "08101209762",
+    "device_id": "uqzwbhsniuumxoaqschkqqnuacbhicieupsczorusecckgccqbnqteislaxyywydfowgjzsysjbmbglxvlbdkodjqmmwmnxwisfkledtzcmngvdudzoardbhcrvikzmyxncjqsldswewoqyajzifi",
     "email": "johndoe342@gmail.com",
-    "app_reference": "wixdooznsecdvnrbckkpwnkkeuxcgpweulsdndsoyepidkuitwabsttvdrfhvycjgdzfpruoykrtkqwavjdbgawauamavqhurxmiastl",
-    "password": "puhbiymqvdjgjrpiazqwfqaahkxmrmqjrtwoqedzcirfjmbfhrvgnkrydayphmxvamquksddgmuq"
+    "app_reference": "dzkiliezdzigmtjdkvvadhuhphcslbmcrpicxylihcetrtbfzpbapjnjhcxibcvkqwfjzbgzavsxqsujdkbcsdczxtatvmvltpcbporpmsjyucgvxvuosnzbxnjnfuhqitjdornjhjmaaolpujgqlpfdaqdlwzgjeelrnvfqqlgqjhvqnntzcsbviuraondreioshjhsuixbwdvfqxhfsfryhqzcdtxmpydegiaj",
+    "password": "ydhwdsiophyltcwilehzszioytsmagumwddlkefiqhljabnmkthcrqokhcy"
 };
 
 fetch(url, {
@@ -171,14 +173,14 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;reference&quot;: &quot;c93719e1-a96a-4670-bfec-97cbf44fe1a0&quot;,
-        &quot;first_name&quot;: &quot;Shea Padberg II&quot;,
-        &quot;middle_name&quot;: &quot;Dolly Jacobs PhD&quot;,
-        &quot;email&quot;: &quot;beverly.balistreri@hotmail.com&quot;,
-        &quot;app_reference&quot;: &quot;54baa0ba-505d-4263-9ce4-66885568f93a&quot;,
-        &quot;user_reference&quot;: &quot;7d2aac31-a779-4320-885e-ae3b6a17ea61&quot;,
-        &quot;created_at&quot;: &quot;2022-09-15T13:52:37.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-09-15T13:52:37.000000Z&quot;
+        &quot;reference&quot;: &quot;7ee361e0-9865-4c69-abd6-2c5ab29fbc74&quot;,
+        &quot;first_name&quot;: &quot;Michel Koch&quot;,
+        &quot;middle_name&quot;: &quot;Kitty Bahringer&quot;,
+        &quot;email&quot;: &quot;america.leuschke@crist.biz&quot;,
+        &quot;app_reference&quot;: &quot;35bd13a1-c2fd-4eed-8341-7a9cc227f636&quot;,
+        &quot;user_reference&quot;: &quot;9e120e36-eb2f-41c8-8350-044dddfbf8de&quot;,
+        &quot;created_at&quot;: &quot;2022-09-15T20:46:25.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-09-15T20:46:25.000000Z&quot;
     },
     &quot;message&quot;: &quot;App user created,verify email.&quot;,
     &quot;code&quot;: &quot;201&quot;
@@ -295,6 +297,18 @@ fetch(url, {
 <p>App user phone. Must be at least 8 characters. Must not be greater than 15 characters.</p>
         </p>
                 <p>
+            <b><code>device_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text"
+               name="device_id"
+               data-endpoint="POSTapi-v1-users-register"
+               value="uqzwbhsniuumxoaqschkqqnuacbhicieupsczorusecckgccqbnqteislaxyywydfowgjzsysjbmbglxvlbdkodjqmmwmnxwisfkledtzcmngvdudzoardbhcrvikzmyxncjqsldswewoqyajzifi"
+               data-component="body" hidden>
+    <br>
+<p>Device id. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
             <b><code>email</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
@@ -313,7 +327,7 @@ fetch(url, {
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-register"
-               value="wixdooznsecdvnrbckkpwnkkeuxcgpweulsdndsoyepidkuitwabsttvdrfhvycjgdzfpruoykrtkqwavjdbgawauamavqhurxmiastl"
+               value="dzkiliezdzigmtjdkvvadhuhphcslbmcrpicxylihcetrtbfzpbapjnjhcxibcvkqwfjzbgzavsxqsujdkbcsdczxtatvmvltpcbporpmsjyucgvxvuosnzbxnjnfuhqitjdornjhjmaaolpujgqlpfdaqdlwzgjeelrnvfqqlgqjhvqnntzcsbviuraondreioshjhsuixbwdvfqxhfsfryhqzcdtxmpydegiaj"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to register the user. Must not be greater than 255 characters.</p>
@@ -325,7 +339,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-v1-users-register"
-               value="puhbiymqvdjgjrpiazqwfqaahkxmrmqjrtwoqedzcirfjmbfhrvgnkrydayphmxvamquksddgmuq"
+               value="ydhwdsiophyltcwilehzszioytsmagumwddlkefiqhljabnmkthcrqokhcy"
                data-component="body" hidden>
     <br>
 <p>User password. Must not be greater than 255 characters.</p>
