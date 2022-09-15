@@ -129,8 +129,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     \"middle_name\": \"\",
     \"phone_number\": \"08101209762\",
     \"email\": \"johndoe342@gmail.com\",
-    \"app_reference\": \"jtmocekhntqvgkipzwmkgshjemmtrdusbishotclrbafnqoccktqlkedonbnlsjzfdraqndhiwklaykcwebnuzlzquvgydcfsnlerzwvptweqzepadvlmkixcxprdzpthtmylocyndzruzmdnkqtvsgzvxrmxqhmwobzgxjkewfnxgdsbxphxptzdwcnezvqpiayhtsqhl\",
-    \"password\": \"vneltachicfjxvrxglpjibmrwybatowcsafnymwuqxqqvibxzuflxvaoqavtvxnqahkzlplpqtwyneyaxhdibxkqmvlqepiocpqnhxkmhzdszgzfbesiyxtaayjojrpamgupqrgendacwfvpvbovq\"
+    \"app_reference\": \"wixdooznsecdvnrbckkpwnkkeuxcgpweulsdndsoyepidkuitwabsttvdrfhvycjgdzfpruoykrtkqwavjdbgawauamavqhurxmiastl\",
+    \"password\": \"puhbiymqvdjgjrpiazqwfqaahkxmrmqjrtwoqedzcirfjmbfhrvgnkrydayphmxvamquksddgmuq\"
 }"
 </code></pre></div>
 
@@ -151,8 +151,8 @@ let body = {
     "middle_name": "",
     "phone_number": "08101209762",
     "email": "johndoe342@gmail.com",
-    "app_reference": "jtmocekhntqvgkipzwmkgshjemmtrdusbishotclrbafnqoccktqlkedonbnlsjzfdraqndhiwklaykcwebnuzlzquvgydcfsnlerzwvptweqzepadvlmkixcxprdzpthtmylocyndzruzmdnkqtvsgzvxrmxqhmwobzgxjkewfnxgdsbxphxptzdwcnezvqpiayhtsqhl",
-    "password": "vneltachicfjxvrxglpjibmrwybatowcsafnymwuqxqqvibxzuflxvaoqavtvxnqahkzlplpqtwyneyaxhdibxkqmvlqepiocpqnhxkmhzdszgzfbesiyxtaayjojrpamgupqrgendacwfvpvbovq"
+    "app_reference": "wixdooznsecdvnrbckkpwnkkeuxcgpweulsdndsoyepidkuitwabsttvdrfhvycjgdzfpruoykrtkqwavjdbgawauamavqhurxmiastl",
+    "password": "puhbiymqvdjgjrpiazqwfqaahkxmrmqjrtwoqedzcirfjmbfhrvgnkrydayphmxvamquksddgmuq"
 };
 
 fetch(url, {
@@ -171,15 +171,38 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;reference&quot;: &quot;777b237a-2467-4977-ba5a-f0201bf20286&quot;,
-        &quot;first_name&quot;: &quot;Ernestine Haag&quot;,
-        &quot;middle_name&quot;: &quot;Jillian Crist&quot;,
-        &quot;email&quot;: &quot;rice.kelton@yahoo.com&quot;,
-        &quot;app_reference&quot;: &quot;da3f3cf9-aa12-4a10-9396-ea3b7ecd420c&quot;,
-        &quot;user_reference&quot;: &quot;978700eb-af1b-48cb-baad-17174db222f2&quot;,
-        &quot;created_at&quot;: &quot;2022-09-15T13:35:34.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-09-15T13:35:34.000000Z&quot;
-    }
+        &quot;reference&quot;: &quot;c93719e1-a96a-4670-bfec-97cbf44fe1a0&quot;,
+        &quot;first_name&quot;: &quot;Shea Padberg II&quot;,
+        &quot;middle_name&quot;: &quot;Dolly Jacobs PhD&quot;,
+        &quot;email&quot;: &quot;beverly.balistreri@hotmail.com&quot;,
+        &quot;app_reference&quot;: &quot;54baa0ba-505d-4263-9ce4-66885568f93a&quot;,
+        &quot;user_reference&quot;: &quot;7d2aac31-a779-4320-885e-ae3b6a17ea61&quot;,
+        &quot;created_at&quot;: &quot;2022-09-15T13:52:37.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-09-15T13:52:37.000000Z&quot;
+    },
+    &quot;message&quot;: &quot;App user created,verify email.&quot;,
+    &quot;code&quot;: &quot;201&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;errors&quot;: {}
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (500):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;code&quot;: 500,
+    &quot;error_debug&quot;: &quot;&quot;
 }</code>
  </pre>
     </span>
@@ -290,7 +313,7 @@ fetch(url, {
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-register"
-               value="jtmocekhntqvgkipzwmkgshjemmtrdusbishotclrbafnqoccktqlkedonbnlsjzfdraqndhiwklaykcwebnuzlzquvgydcfsnlerzwvptweqzepadvlmkixcxprdzpthtmylocyndzruzmdnkqtvsgzvxrmxqhmwobzgxjkewfnxgdsbxphxptzdwcnezvqpiayhtsqhl"
+               value="wixdooznsecdvnrbckkpwnkkeuxcgpweulsdndsoyepidkuitwabsttvdrfhvycjgdzfpruoykrtkqwavjdbgawauamavqhurxmiastl"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to register the user. Must not be greater than 255 characters.</p>
@@ -302,7 +325,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-v1-users-register"
-               value="vneltachicfjxvrxglpjibmrwybatowcsafnymwuqxqqvibxzuflxvaoqavtvxnqahkzlplpqtwyneyaxhdibxkqmvlqepiocpqnhxkmhzdszgzfbesiyxtaayjojrpamgupqrgendacwfvpvbovq"
+               value="puhbiymqvdjgjrpiazqwfqaahkxmrmqjrtwoqedzcirfjmbfhrvgnkrydayphmxvamquksddgmuq"
                data-component="body" hidden>
     <br>
 <p>User password. Must not be greater than 255 characters.</p>

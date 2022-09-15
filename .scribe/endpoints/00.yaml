@@ -61,14 +61,14 @@ endpoints:
         name: app_reference
         description: 'Reference of app that wants to register the user. Must not be greater than 255 characters.'
         required: true
-        example: jtmocekhntqvgkipzwmkgshjemmtrdusbishotclrbafnqoccktqlkedonbnlsjzfdraqndhiwklaykcwebnuzlzquvgydcfsnlerzwvptweqzepadvlmkixcxprdzpthtmylocyndzruzmdnkqtvsgzvxrmxqhmwobzgxjkewfnxgdsbxphxptzdwcnezvqpiayhtsqhl
+        example: wixdooznsecdvnrbckkpwnkkeuxcgpweulsdndsoyepidkuitwabsttvdrfhvycjgdzfpruoykrtkqwavjdbgawauamavqhurxmiastl
         type: string
         custom: []
       password:
         name: password
         description: 'User password. Must not be greater than 255 characters.'
         required: true
-        example: vneltachicfjxvrxglpjibmrwybatowcsafnymwuqxqqvibxzuflxvaoqavtvxnqahkzlplpqtwyneyaxhdibxkqmvlqepiocpqnhxkmhzdszgzfbesiyxtaayjojrpamgupqrgendacwfvpvbovq
+        example: puhbiymqvdjgjrpiazqwfqaahkxmrmqjrtwoqedzcirfjmbfhrvgnkrydayphmxvamquksddgmuq
         type: string
         custom: []
     cleanBodyParameters:
@@ -77,15 +77,36 @@ endpoints:
       middle_name: ''
       phone_number: '08101209762'
       email: johndoe342@gmail.com
-      app_reference: jtmocekhntqvgkipzwmkgshjemmtrdusbishotclrbafnqoccktqlkedonbnlsjzfdraqndhiwklaykcwebnuzlzquvgydcfsnlerzwvptweqzepadvlmkixcxprdzpthtmylocyndzruzmdnkqtvsgzvxrmxqhmwobzgxjkewfnxgdsbxphxptzdwcnezvqpiayhtsqhl
-      password: vneltachicfjxvrxglpjibmrwybatowcsafnymwuqxqqvibxzuflxvaoqavtvxnqahkzlplpqtwyneyaxhdibxkqmvlqepiocpqnhxkmhzdszgzfbesiyxtaayjojrpamgupqrgendacwfvpvbovq
+      app_reference: wixdooznsecdvnrbckkpwnkkeuxcgpweulsdndsoyepidkuitwabsttvdrfhvycjgdzfpruoykrtkqwavjdbgawauamavqhurxmiastl
+      password: puhbiymqvdjgjrpiazqwfqaahkxmrmqjrtwoqedzcirfjmbfhrvgnkrydayphmxvamquksddgmuq
     fileParameters: []
     responses:
       -
         status: 201
-        content: '{"data":{"reference":"777b237a-2467-4977-ba5a-f0201bf20286","first_name":"Ernestine Haag","middle_name":"Jillian Crist","email":"rice.kelton@yahoo.com","app_reference":"da3f3cf9-aa12-4a10-9396-ea3b7ecd420c","user_reference":"978700eb-af1b-48cb-baad-17174db222f2","created_at":"2022-09-15T13:35:34.000000Z","updated_at":"2022-09-15T13:35:34.000000Z"}}'
+        content: '{"data":{"reference":"c93719e1-a96a-4670-bfec-97cbf44fe1a0","first_name":"Shea Padberg II","middle_name":"Dolly Jacobs PhD","email":"beverly.balistreri@hotmail.com","app_reference":"54baa0ba-505d-4263-9ce4-66885568f93a","user_reference":"7d2aac31-a779-4320-885e-ae3b6a17ea61","created_at":"2022-09-15T13:52:37.000000Z","updated_at":"2022-09-15T13:52:37.000000Z"},"message":"App user created,verify email.","code":"201"}'
         headers: []
         description: '201'
+        custom: []
+      -
+        status: 422
+        content: |
+          {
+              "message": "",
+              "errors": {}
+          }
+        headers: []
+        description: '422'
+        custom: []
+      -
+        status: 500
+        content: |
+          {
+              "message": "",
+              "code": 500,
+              "error_debug": ""
+          }
+        headers: []
+        description: '500'
         custom: []
     responseFields: []
     auth: []
