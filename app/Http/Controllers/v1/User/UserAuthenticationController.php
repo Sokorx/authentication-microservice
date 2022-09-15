@@ -28,11 +28,14 @@ class UserAuthenticationController extends Controller
     /**
      * @apiResource 201 App\Http\Resources\AppUserResource
      * @apiResourceModel App\Models\AppUser
+     * @responseFile 422 responses/validation.error.json
+     * @responseFile 500 responses/server.error.json
+     * @apiResourceAdditional message="App user created,verify email." code=201
      */
     public function register(RegisterUserRequest $request)
     {
-
         try {
+
             $validated_data  = $request->validated();
             $app_user = $this->authentication_service->createAppUser($validated_data);
             return ApiResponse::validResponse(
