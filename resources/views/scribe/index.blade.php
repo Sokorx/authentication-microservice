@@ -74,6 +74,9 @@
                                                     <li class="tocify-item level-2" data-unique="endpoints-POSTapi-v1-users-register">
                                 <a href="#endpoints-POSTapi-v1-users-register">POST api/v1/users/register</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-v1-users-verify-email">
+                                <a href="#endpoints-POSTapi-v1-users-verify-email">POST api/v1/users/verify-email</a>
+                            </li>
                                                                         </ul>
                             </ul>
             </div>
@@ -128,10 +131,10 @@ You can switch the language used with the tabs at the top right (or from the nav
     \"last_name\": \"Doe\",
     \"middle_name\": \"\",
     \"phone_number\": \"08101209762\",
-    \"device_id\": \"uqzwbhsniuumxoaqschkqqnuacbhicieupsczorusecckgccqbnqteislaxyywydfowgjzsysjbmbglxvlbdkodjqmmwmnxwisfkledtzcmngvdudzoardbhcrvikzmyxncjqsldswewoqyajzifi\",
+    \"device_id\": \"gftgdxtffaovquztndauhjvxhfjlbxayiydecgawnjcawbqefbmqlcicsdjxmigddzvgokphtgzbbmozzeptfz\",
     \"email\": \"johndoe342@gmail.com\",
-    \"app_reference\": \"dzkiliezdzigmtjdkvvadhuhphcslbmcrpicxylihcetrtbfzpbapjnjhcxibcvkqwfjzbgzavsxqsujdkbcsdczxtatvmvltpcbporpmsjyucgvxvuosnzbxnjnfuhqitjdornjhjmaaolpujgqlpfdaqdlwzgjeelrnvfqqlgqjhvqnntzcsbviuraondreioshjhsuixbwdvfqxhfsfryhqzcdtxmpydegiaj\",
-    \"password\": \"ydhwdsiophyltcwilehzszioytsmagumwddlkefiqhljabnmkthcrqokhcy\"
+    \"app_reference\": \"vyziqcslwbatowjzxssqssewndqmaymncbdmjsbnqtxcbxnhdvytpraxbavrjjybrckrkikielxigrwbgqvoonvjsqryfiwrysy\",
+    \"password\": \"hffezorxjfxdwqlpiykmbcmrnblsndckabvkqiowxlrwkpouvdcytrdneroyqjyihruopthyxtogppdhwbdqasdintiuhtoqwmwhxpessktmreznupgpevzyctdgdakmbkvnvevfnohiampynfvfuzbfrbfiqyjnlarzdjzptfzogbsldfuzpoqoeulzsijamgfflcqemo\"
 }"
 </code></pre></div>
 
@@ -151,10 +154,10 @@ let body = {
     "last_name": "Doe",
     "middle_name": "",
     "phone_number": "08101209762",
-    "device_id": "uqzwbhsniuumxoaqschkqqnuacbhicieupsczorusecckgccqbnqteislaxyywydfowgjzsysjbmbglxvlbdkodjqmmwmnxwisfkledtzcmngvdudzoardbhcrvikzmyxncjqsldswewoqyajzifi",
+    "device_id": "gftgdxtffaovquztndauhjvxhfjlbxayiydecgawnjcawbqefbmqlcicsdjxmigddzvgokphtgzbbmozzeptfz",
     "email": "johndoe342@gmail.com",
-    "app_reference": "dzkiliezdzigmtjdkvvadhuhphcslbmcrpicxylihcetrtbfzpbapjnjhcxibcvkqwfjzbgzavsxqsujdkbcsdczxtatvmvltpcbporpmsjyucgvxvuosnzbxnjnfuhqitjdornjhjmaaolpujgqlpfdaqdlwzgjeelrnvfqqlgqjhvqnntzcsbviuraondreioshjhsuixbwdvfqxhfsfryhqzcdtxmpydegiaj",
-    "password": "ydhwdsiophyltcwilehzszioytsmagumwddlkefiqhljabnmkthcrqokhcy"
+    "app_reference": "vyziqcslwbatowjzxssqssewndqmaymncbdmjsbnqtxcbxnhdvytpraxbavrjjybrckrkikielxigrwbgqvoonvjsqryfiwrysy",
+    "password": "hffezorxjfxdwqlpiykmbcmrnblsndckabvkqiowxlrwkpouvdcytrdneroyqjyihruopthyxtogppdhwbdqasdintiuhtoqwmwhxpessktmreznupgpevzyctdgdakmbkvnvevfnohiampynfvfuzbfrbfiqyjnlarzdjzptfzogbsldfuzpoqoeulzsijamgfflcqemo"
 };
 
 fetch(url, {
@@ -173,14 +176,14 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;reference&quot;: &quot;7ee361e0-9865-4c69-abd6-2c5ab29fbc74&quot;,
-        &quot;first_name&quot;: &quot;Michel Koch&quot;,
-        &quot;middle_name&quot;: &quot;Kitty Bahringer&quot;,
-        &quot;email&quot;: &quot;america.leuschke@crist.biz&quot;,
+        &quot;reference&quot;: &quot;f84dde19-c71f-4973-b32d-7d97aa90dde7&quot;,
+        &quot;first_name&quot;: &quot;Addie Kuvalis&quot;,
+        &quot;middle_name&quot;: &quot;Dr. Larissa Kassulke&quot;,
+        &quot;email&quot;: &quot;angel99@hotmail.com&quot;,
         &quot;app_reference&quot;: &quot;35bd13a1-c2fd-4eed-8341-7a9cc227f636&quot;,
-        &quot;user_reference&quot;: &quot;9e120e36-eb2f-41c8-8350-044dddfbf8de&quot;,
-        &quot;created_at&quot;: &quot;2022-09-15T20:46:25.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-09-15T20:46:25.000000Z&quot;
+        &quot;user_reference&quot;: &quot;6098355b-e572-48bf-a076-fb1275fc2587&quot;,
+        &quot;created_at&quot;: &quot;2022-09-15T22:16:53.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-09-15T22:16:53.000000Z&quot;
     },
     &quot;message&quot;: &quot;App user created,verify email.&quot;,
     &quot;code&quot;: &quot;201&quot;
@@ -303,7 +306,7 @@ fetch(url, {
                 <input type="text"
                name="device_id"
                data-endpoint="POSTapi-v1-users-register"
-               value="uqzwbhsniuumxoaqschkqqnuacbhicieupsczorusecckgccqbnqteislaxyywydfowgjzsysjbmbglxvlbdkodjqmmwmnxwisfkledtzcmngvdudzoardbhcrvikzmyxncjqsldswewoqyajzifi"
+               value="gftgdxtffaovquztndauhjvxhfjlbxayiydecgawnjcawbqefbmqlcicsdjxmigddzvgokphtgzbbmozzeptfz"
                data-component="body" hidden>
     <br>
 <p>Device id. Must not be greater than 255 characters.</p>
@@ -327,7 +330,7 @@ fetch(url, {
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-register"
-               value="dzkiliezdzigmtjdkvvadhuhphcslbmcrpicxylihcetrtbfzpbapjnjhcxibcvkqwfjzbgzavsxqsujdkbcsdczxtatvmvltpcbporpmsjyucgvxvuosnzbxnjnfuhqitjdornjhjmaaolpujgqlpfdaqdlwzgjeelrnvfqqlgqjhvqnntzcsbviuraondreioshjhsuixbwdvfqxhfsfryhqzcdtxmpydegiaj"
+               value="vyziqcslwbatowjzxssqssewndqmaymncbdmjsbnqtxcbxnhdvytpraxbavrjjybrckrkikielxigrwbgqvoonvjsqryfiwrysy"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to register the user. Must not be greater than 255 characters.</p>
@@ -339,10 +342,181 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-v1-users-register"
-               value="ydhwdsiophyltcwilehzszioytsmagumwddlkefiqhljabnmkthcrqokhcy"
+               value="hffezorxjfxdwqlpiykmbcmrnblsndckabvkqiowxlrwkpouvdcytrdneroyqjyihruopthyxtogppdhwbdqasdintiuhtoqwmwhxpessktmreznupgpevzyctdgdakmbkvnvevfnohiampynfvfuzbfrbfiqyjnlarzdjzptfzogbsldfuzpoqoeulzsijamgfflcqemo"
                data-component="body" hidden>
     <br>
 <p>User password. Must not be greater than 255 characters.</p>
+        </p>
+        </form>
+
+                    <h2 id="endpoints-POSTapi-v1-users-verify-email">POST api/v1/users/verify-email</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-v1-users-verify-email">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http:localhost:84/api/v1/users/verify-email" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"verification_token\": \"iblolmqtrrzewatztckqymcvfbbrdpyhjvavjevuzlvuveiqsufcuqttkoleclsobnyzkcbrsyootvnukltkiuntexjosrwqqhirqjuqsegstq\",
+    \"user_reference\": \"uiiwyeeacleylwavrdxsofkptqbrxfmxoeukxbriqukkzwipqiusyqxbsxusprgheyvhgvsqohglpnluiawlfduotjrkgnoasjukhtcooqtvxemswqmpqfwcvatacffdyinvnxjhgfybjptpipuwmougbgwushflkvgrgydqppbshqceozvfvvpblhn\",
+    \"app_reference\": \"cwfmpvuecblnjldgvxajdvalwnanszlgvfcbzubkedmcnqcetljiceyezjfujjlqtnajznogldkwjsvghltkajcaqslpzshcxafuoapeelfjwcxfemsuglgtihqbgzqyvqkjgtvbgbldavovfirevffjisjthjc\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http:localhost:84/api/v1/users/verify-email"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "verification_token": "iblolmqtrrzewatztckqymcvfbbrdpyhjvavjevuzlvuveiqsufcuqttkoleclsobnyzkcbrsyootvnukltkiuntexjosrwqqhirqjuqsegstq",
+    "user_reference": "uiiwyeeacleylwavrdxsofkptqbrxfmxoeukxbriqukkzwipqiusyqxbsxusprgheyvhgvsqohglpnluiawlfduotjrkgnoasjukhtcooqtvxemswqmpqfwcvatacffdyinvnxjhgfybjptpipuwmougbgwushflkvgrgydqppbshqceozvfvvpblhn",
+    "app_reference": "cwfmpvuecblnjldgvxajdvalwnanszlgvfcbzubkedmcnqcetljiceyezjfujjlqtnajznogldkwjsvghltkajcaqslpzshcxafuoapeelfjwcxfemsuglgtihqbgzqyvqkjgtvbgbldavovfirevffjisjthjc"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-users-verify-email">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+ &quot;message&quot;: &#039;App user verified successfull&#039;,
+ &quot;data&quot;: null,
+ &quot;code&quot;: 200
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (403):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+&quot;message&quot;: &quot;Expired verification token&quot;,
+`&quot;code&quot;: 403,
+&quot;error_debug&quot;: null
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;errors&quot;: {}
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (500):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;code&quot;: 500,
+    &quot;error_debug&quot;: &quot;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-users-verify-email" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-users-verify-email"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-users-verify-email"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-users-verify-email" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-users-verify-email"></code></pre>
+</span>
+<form id="form-POSTapi-v1-users-verify-email" data-method="POST"
+      data-path="api/v1/users/verify-email"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-users-verify-email', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-users-verify-email"
+                    onclick="tryItOut('POSTapi-v1-users-verify-email');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-users-verify-email"
+                    onclick="cancelTryOut('POSTapi-v1-users-verify-email');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-users-verify-email" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/users/verify-email</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>verification_token</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text"
+               name="verification_token"
+               data-endpoint="POSTapi-v1-users-verify-email"
+               value="iblolmqtrrzewatztckqymcvfbbrdpyhjvavjevuzlvuveiqsufcuqttkoleclsobnyzkcbrsyootvnukltkiuntexjosrwqqhirqjuqsegstq"
+               data-component="body" hidden>
+    <br>
+<p>Email verification token. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>user_reference</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text"
+               name="user_reference"
+               data-endpoint="POSTapi-v1-users-verify-email"
+               value="uiiwyeeacleylwavrdxsofkptqbrxfmxoeukxbriqukkzwipqiusyqxbsxusprgheyvhgvsqohglpnluiawlfduotjrkgnoasjukhtcooqtvxemswqmpqfwcvatacffdyinvnxjhgfybjptpipuwmougbgwushflkvgrgydqppbshqceozvfvvpblhn"
+               data-component="body" hidden>
+    <br>
+<p>Reference of user that wants to  verify their email. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>app_reference</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text"
+               name="app_reference"
+               data-endpoint="POSTapi-v1-users-verify-email"
+               value="cwfmpvuecblnjldgvxajdvalwnanszlgvfcbzubkedmcnqcetljiceyezjfujjlqtnajznogldkwjsvghltkajcaqslpzshcxafuoapeelfjwcxfemsuglgtihqbgzqyvqkjgtvbgbldavovfirevffjisjthjc"
+               data-component="body" hidden>
+    <br>
+<p>Reference of app that wants to  verify user. Must not be greater than 255 characters.</p>
         </p>
         </form>
 
