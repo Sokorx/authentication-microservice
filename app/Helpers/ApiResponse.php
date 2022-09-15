@@ -14,7 +14,7 @@ class ApiResponse
         $body = [
             'message' => $message,
             'code' => $status_code ?? null,
-            'error_debug' => $trace->getMessage() ?? null,
+            'error_debug' => $trace ? $trace->getMessage() : null,
         ];
 
         return response()->json($body)->setStatusCode($status_code);

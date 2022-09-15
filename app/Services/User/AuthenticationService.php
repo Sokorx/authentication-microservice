@@ -174,4 +174,32 @@ class AuthenticationService
         }
         return $verification_token;
     }
+
+    public function verifyAppUserEmail($data)
+    {
+        /**
+         * Find app user by verification token,
+         * user reference and app reference and then verify email
+         */
+        $app_user = AppUser::where(
+            $data
+        )->first();
+
+        $expiry_date = Carbon::parse($app_user->verification_token_expiry);
+        if ($expiry_date->lt(Carbon::now())) {
+
+            return ['verified' => false, 'message' => 'Expired verification token'];
+        }
+
+        DB::beginTransaction();
+
+        $app_user->verified_at = Carbon::now();
+        $app_user->verification_token_expiry = null;
+        $app_user->verification_token = null;
+        $app_user->save();
+        DB::commit();
+
+
+        return ['verified' => true, 'message' => 'App user verified successfully'];
+    }
 }
