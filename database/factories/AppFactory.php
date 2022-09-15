@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\App>
  */
-class UserFactory extends Factory
+class AppFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,11 +18,8 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'first_name' => fake()->name(),
-            'last_name' => fake()->name(),
-            'middle_name' => fake()->name(),
-            'phone_number' => fake()->phoneNumber(),
-            'email' => fake()->email(),
+            'name' => fake()->word(),
+            'version' => fake()->semver(),
             'reference' => Str::uuid(),
 
         ];
