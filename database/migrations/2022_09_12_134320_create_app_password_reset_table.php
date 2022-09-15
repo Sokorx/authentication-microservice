@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('app_password_reset', function (Blueprint $table) {
             $table->id();
             $table->string('user_reference');
+            $table->string('app_reference');
             $table->foreign('user_reference')->references('reference')->on('users');
+            $table->foreign('app_reference')->references('reference')->on('apps');
 
             $table->string('token');
             $table->string('token_expiry');
