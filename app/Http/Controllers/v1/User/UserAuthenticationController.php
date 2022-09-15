@@ -40,7 +40,7 @@ class UserAuthenticationController extends Controller
             $app_user = $this->authentication_service->createAppUser($validated_data);
             return ApiResponse::validResponse(
                 'App user created,verify email.',
-                ['app_user' => new AppUserResource($app_user)],
+                new AppUserResource($app_user),
                 201
             );
         } catch (Exception $e) {

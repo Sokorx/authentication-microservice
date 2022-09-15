@@ -50,6 +50,13 @@ endpoints:
         example: '08101209762'
         type: string
         custom: []
+      device_id:
+        name: device_id
+        description: 'Device id. Must not be greater than 255 characters.'
+        required: true
+        example: uqzwbhsniuumxoaqschkqqnuacbhicieupsczorusecckgccqbnqteislaxyywydfowgjzsysjbmbglxvlbdkodjqmmwmnxwisfkledtzcmngvdudzoardbhcrvikzmyxncjqsldswewoqyajzifi
+        type: string
+        custom: []
       email:
         name: email
         description: 'App user email. Must not be greater than 255 characters.'
@@ -61,14 +68,14 @@ endpoints:
         name: app_reference
         description: 'Reference of app that wants to register the user. Must not be greater than 255 characters.'
         required: true
-        example: wixdooznsecdvnrbckkpwnkkeuxcgpweulsdndsoyepidkuitwabsttvdrfhvycjgdzfpruoykrtkqwavjdbgawauamavqhurxmiastl
+        example: dzkiliezdzigmtjdkvvadhuhphcslbmcrpicxylihcetrtbfzpbapjnjhcxibcvkqwfjzbgzavsxqsujdkbcsdczxtatvmvltpcbporpmsjyucgvxvuosnzbxnjnfuhqitjdornjhjmaaolpujgqlpfdaqdlwzgjeelrnvfqqlgqjhvqnntzcsbviuraondreioshjhsuixbwdvfqxhfsfryhqzcdtxmpydegiaj
         type: string
         custom: []
       password:
         name: password
         description: 'User password. Must not be greater than 255 characters.'
         required: true
-        example: puhbiymqvdjgjrpiazqwfqaahkxmrmqjrtwoqedzcirfjmbfhrvgnkrydayphmxvamquksddgmuq
+        example: ydhwdsiophyltcwilehzszioytsmagumwddlkefiqhljabnmkthcrqokhcy
         type: string
         custom: []
     cleanBodyParameters:
@@ -76,14 +83,15 @@ endpoints:
       last_name: Doe
       middle_name: ''
       phone_number: '08101209762'
+      device_id: uqzwbhsniuumxoaqschkqqnuacbhicieupsczorusecckgccqbnqteislaxyywydfowgjzsysjbmbglxvlbdkodjqmmwmnxwisfkledtzcmngvdudzoardbhcrvikzmyxncjqsldswewoqyajzifi
       email: johndoe342@gmail.com
-      app_reference: wixdooznsecdvnrbckkpwnkkeuxcgpweulsdndsoyepidkuitwabsttvdrfhvycjgdzfpruoykrtkqwavjdbgawauamavqhurxmiastl
-      password: puhbiymqvdjgjrpiazqwfqaahkxmrmqjrtwoqedzcirfjmbfhrvgnkrydayphmxvamquksddgmuq
+      app_reference: dzkiliezdzigmtjdkvvadhuhphcslbmcrpicxylihcetrtbfzpbapjnjhcxibcvkqwfjzbgzavsxqsujdkbcsdczxtatvmvltpcbporpmsjyucgvxvuosnzbxnjnfuhqitjdornjhjmaaolpujgqlpfdaqdlwzgjeelrnvfqqlgqjhvqnntzcsbviuraondreioshjhsuixbwdvfqxhfsfryhqzcdtxmpydegiaj
+      password: ydhwdsiophyltcwilehzszioytsmagumwddlkefiqhljabnmkthcrqokhcy
     fileParameters: []
     responses:
       -
         status: 201
-        content: '{"data":{"reference":"c93719e1-a96a-4670-bfec-97cbf44fe1a0","first_name":"Shea Padberg II","middle_name":"Dolly Jacobs PhD","email":"beverly.balistreri@hotmail.com","app_reference":"54baa0ba-505d-4263-9ce4-66885568f93a","user_reference":"7d2aac31-a779-4320-885e-ae3b6a17ea61","created_at":"2022-09-15T13:52:37.000000Z","updated_at":"2022-09-15T13:52:37.000000Z"},"message":"App user created,verify email.","code":"201"}'
+        content: '{"data":{"reference":"7ee361e0-9865-4c69-abd6-2c5ab29fbc74","first_name":"Michel Koch","middle_name":"Kitty Bahringer","email":"america.leuschke@crist.biz","app_reference":"35bd13a1-c2fd-4eed-8341-7a9cc227f636","user_reference":"9e120e36-eb2f-41c8-8350-044dddfbf8de","created_at":"2022-09-15T20:46:25.000000Z","updated_at":"2022-09-15T20:46:25.000000Z"},"message":"App user created,verify email.","code":"201"}'
         headers: []
         description: '201'
         custom: []
