@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\App;
 
 class AppSeeder extends Seeder
 {
@@ -14,6 +15,8 @@ class AppSeeder extends Seeder
      */
     public function run()
     {
-        //
+        App::factory()
+            ->count(10)
+            ->create();
     }
 }
