@@ -23,7 +23,10 @@ class AppUser extends Model
         'app_reference',
         'phone_number',
         'password',
-        'reference'
+        'reference',
+        'verification_token_expiry',
+        'verification_token'
+
     ];
     protected $hidden = [
         'password',

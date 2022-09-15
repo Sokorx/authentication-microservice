@@ -30,6 +30,7 @@ class RegisterUserRequest extends FormRequest
             'last_name' => 'required|string|max:255',
             'middle_name' => 'string|nullable|max:255',
             'phone_number' => 'string|required|min:8|max:15',
+            'device_id' => 'string|required|max:255',
             'email' => [
                 'required', 'max:255',
                 Rule::unique('app_users', 'email')->where(function ($query) {
@@ -62,6 +63,11 @@ class RegisterUserRequest extends FormRequest
                 'description' => 'App user email',
                 'example' => 'johndoe342@gmail.com',
             ],
+
+            'device_id' => [
+                'description' => 'Device id',
+            ],
+
             'phone_number' => [
                 'description' => 'App user phone',
                 'example' => '08101209762',

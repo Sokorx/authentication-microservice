@@ -4,6 +4,7 @@ namespace App\Services\User;
 
 use App\Models\User;
 use App\Models\AppUser;
+use App\Models\AppUserDevice;
 use Exception;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -19,6 +20,7 @@ class AuthenticationService
     {
         $user_exists_check = $this->userExists($data['email']);
         $app_user_exists = $this->appUserExists($data['email'], $data['app_reference']);
+        $app_user_device_exists = $this->appUserDeviceExists($data['device_id'], $data['app_reference']);
 
         $user_reference = null;
 
@@ -56,6 +58,13 @@ class AuthenticationService
             'verification_token' => $verification_token,
             'verification_token_expiry' => Carbon::now()->addMinutes(10)
         ]);
+        if (!$app_user_device_exists) {
+            AppUserDevice::create([
+                'app_reference' => $data['app_reference'],
+                'device_id' => $data['device_id'],
+                'user_reference' => $user_reference,
+            ]);
+        }
         DB::commit();
 
 
@@ -106,6 +115,8 @@ class AuthenticationService
         ]);
 
 
+
+
         #TODO SEND EMAIL VERIFICATION MAIL
 
         return $app_user;
@@ -135,6 +146,17 @@ class AuthenticationService
             "app_reference" => $app_reference
         ])->first();
         if (!$user) {
+            return false;
+        }
+        return true;
+    }
+    public function appUserDeviceExists(string $device_id, string $app_reference)
+    {
+        $device = AppUserDevice::where([
+            'device_id' => $device_id,
+            "app_reference" => $app_reference
+        ])->first();
+        if (!$device) {
             return false;
         }
         return true;

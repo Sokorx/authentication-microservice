@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\GenerateModelReferenceTrait;
+use Illuminate\Support\Str;
 
 class AppUserDevice extends Model
 {
@@ -18,4 +19,14 @@ class AppUserDevice extends Model
         'status',
         'reference'
     ];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->reference = (string) Str::uuid();
+        });
+    }
 }

@@ -24,7 +24,7 @@ return new class extends Migration
 
             $table->foreign('user_reference')->references('reference')->on('users');
 
-            $table->string('status');
+            $table->string('status')->default('active');
             $table->string('reference')->unique();
 
             $table->timestamps();
