@@ -13,7 +13,7 @@ use Carbon\Carbon;
 class UserEmailVerificationTest extends TestCase
 {
     /**
-     * Test successfult verification
+     * Test successful verification
      *
      * @return void
      */
@@ -54,6 +54,45 @@ class UserEmailVerificationTest extends TestCase
         $app_user->refresh();
 
         $this->assertNotNull($app_user->verified_at);
+    }
+    /**
+     * Test resending verification mail
+     *
+     * @return void
+     */
+    public function testResendVerificationMail()
+    {
+        App::factory()->create();
+        User::factory()->create();
+
+        $app_user = AppUser::factory()->create([
+
+            'verification_token' => "1234",
+            'verification_token_expiry' => Carbon::now()->addMinutes(10),
+        ]);
+
+
+
+        $response = $this->postJson(
+            "/api/v1/users/resend-verification-email",
+            [
+
+
+                "app_reference" => $app_user->app_reference,
+                "user_reference" => $app_user->user_reference,
+
+
+            ]
+
+        );
+
+
+        $response->assertStatus(200)->assertJsonStructure([
+            "data",
+            "message",
+            "code"
+
+        ]);
     }
 
 

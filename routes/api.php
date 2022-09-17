@@ -25,6 +25,7 @@ Route::group(
         Route::prefix("users")->group(function () {
             Route::post('/register', [UserAuthenticationController::class, 'register']);
             Route::post('/verify-email', [UserAuthenticationController::class, 'verifyEmail']);
+            Route::post('/resend-verification-email', [UserAuthenticationController::class, 'resendVerificationMail']);
         });
     }
 );

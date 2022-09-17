@@ -24,6 +24,7 @@ class UserAuthenticationController extends Controller
 
 
     /**
+     * Register App User
      * @apiResource 201 App\Http\Resources\AppUserResource
      * @apiResourceModel App\Models\AppUser
      * @responseFile 422 responses/validation.error.json
@@ -52,7 +53,7 @@ class UserAuthenticationController extends Controller
 
 
     /**
-     *
+     * Verify Email for App User
      * @response 200 {
      *  "message": 'App user verified successfull',
      *  "data": null,
@@ -91,9 +92,9 @@ class UserAuthenticationController extends Controller
     }
 
     /**
-     *
+     * Resend app user verification email
      * @response 200 {
-     *  "message": 'Verification mail has been sent.',
+     *  "message": 'Verification mail has been resent.',
      *  "data": null,
      *  "code": 200
      * }
@@ -109,7 +110,6 @@ class UserAuthenticationController extends Controller
     {
         try {
 
-            dump('jere');
             $validated_data  = $request->validated();
             $response = $this->authentication_service->resendAppUserVerificationMail($validated_data);
 
