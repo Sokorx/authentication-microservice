@@ -8,6 +8,7 @@ use App\Services\User\AuthenticationService;
 
 use App\Http\Requests\Authentication\RegisterUserRequest;
 use App\Http\Requests\Authentication\VerifyEmailRequest;
+use App\Http\Requests\Authentication\ResendVerificationMailRequest;
 use Illuminate\Support\Facades\Log;
 use App\Http\Resources\AppUserResource;
 use Exception;
@@ -20,8 +21,6 @@ class UserAuthenticationController extends Controller
     {
         $this->authentication_service = $authentication_service;
     }
-
-
 
 
     /**
@@ -83,7 +82,47 @@ class UserAuthenticationController extends Controller
                 200
             );
         } catch (Exception $e) {
-            Log::error("Error registering app user", [
+            Log::error("Error verifying app user", [
+                "message" => $e->getMessage(),
+                "payload" => $request->all()
+            ]);
+            return ApiResponse::errorResponse('Server error', 500, $e);
+        }
+    }
+
+    /**
+     *
+     * @response 200 {
+     *  "message": 'Verification mail has been sent.',
+     *  "data": null,
+     *  "code": 200
+     * }
+     * @response 403 {
+     * "message": "App user already verified",
+     *`"code": 403,
+     *"error_debug": null
+     * }
+     * @responseFile 422 responses/validation.error.json
+     * @responseFile 500 responses/server.error.json
+     */
+    public function resendVerificationMail(ResendVerificationMailRequest $request)
+    {
+        try {
+
+            dump('jere');
+            $validated_data  = $request->validated();
+            $response = $this->authentication_service->resendAppUserVerificationMail($validated_data);
+
+            if (!$response['sent_email']) {
+                return ApiResponse::errorResponse($response['message'], 403, null);
+            }
+            return ApiResponse::validResponse(
+                $response['message'],
+                null,
+                200
+            );
+        } catch (Exception $e) {
+            Log::error("Error resending verification mail", [
                 "message" => $e->getMessage(),
                 "payload" => $request->all()
             ]);

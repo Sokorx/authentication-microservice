@@ -17,6 +17,8 @@ class AppUserResource extends JsonResource
         return [
             'reference' => $this->reference,
             'first_name' => $this->first_name,
+            'last_name' => $this->last_name,
+            'phone_number' => $this->phone_number,
             'middle_name' => $this->middle_name,
             'email' => $this->email,
             'app_reference' => $this->app_reference,
