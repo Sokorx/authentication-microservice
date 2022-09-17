@@ -24,7 +24,7 @@ jobs:
           --health-retries 5
         ports:
           # Maps tcp port 3306 on service container to the host
-          - 3306:3306
+          - 3306/tcp
     # End of services section
 
     steps:
