@@ -150,6 +150,7 @@ class AuthenticationService
         }
         return true;
     }
+
     public function appUserDeviceExists(string $device_id, string $app_reference)
     {
         $device = AppUserDevice::where([
@@ -201,5 +202,30 @@ class AuthenticationService
 
 
         return ['verified' => true, 'message' => 'App user verified successfully'];
+    }
+
+    public function resendAppUserVerificationMail($data)
+    {
+
+        $app_user = AppUser::where(
+            $data
+        )->whereNull('verified_at')->first();
+
+        if (!$app_user) {
+
+            return ['sent_email' => false, 'message' => 'App user already verified'];
+        }
+        DB::beginTransaction();
+
+        $app_user->verification_token = $this->generateVerificationToken();
+        $app_user->verification_token_expiry = Carbon::now()->addMinutes(10);
+        $app_user->save();
+
+        DB::commit();
+
+        #TODO resend verification email
+
+
+        return ['sent_email' => true, 'message' => 'Verification mail has been sent.'];
     }
 }
