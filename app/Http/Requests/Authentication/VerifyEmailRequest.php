@@ -4,6 +4,7 @@ namespace App\Http\Requests\Authentication;
 
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class VerifyEmailRequest extends FormRequest
 {
@@ -27,7 +28,12 @@ class VerifyEmailRequest extends FormRequest
 
         return [
 
-            'verification_token' => 'required|exists:app_users,verification_token|max:255',
+            'verification_token' => [
+                'required',  'max:255',
+                Rule::exists('app_users', 'verification_token')->where(function ($query) {
+                    return $query->whereNull('verified_at');
+                })
+            ],
             'user_reference' => 'required|exists:users,reference|max:255',
             'app_reference' => 'required|exists:apps,reference|max:255',
         ];
