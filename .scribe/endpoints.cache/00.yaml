@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Register App User'
       description: ''
       authenticated: false
       custom: []
@@ -56,7 +56,7 @@ endpoints:
         name: device_id
         description: 'Device id. Must not be greater than 255 characters.'
         required: true
-        example: gftgdxtffaovquztndauhjvxhfjlbxayiydecgawnjcawbqefbmqlcicsdjxmigddzvgokphtgzbbmozzeptfz
+        example: pyjwjnycfsvopczufhsnszbcqhgmssfmxizqszkixqegikikvwbertuhkssfdnsuvdtmbnpxwvgqbwdkqsnndugqjzqdjlzrturggqkbytajispbqubeexeukkmdcbosufqcrnawavibbnxvutagdvhrfidasifrqrbszrordqkhtbnjhevhitcixpswfydjaixugeuksrjhuflwdv
         type: string
         custom: []
       email:
@@ -70,14 +70,14 @@ endpoints:
         name: app_reference
         description: 'Reference of app that wants to register the user. Must not be greater than 255 characters.'
         required: true
-        example: vyziqcslwbatowjzxssqssewndqmaymncbdmjsbnqtxcbxnhdvytpraxbavrjjybrckrkikielxigrwbgqvoonvjsqryfiwrysy
+        example: fceszzllinewpotlnzgcunpztceglhivremttaafrjaeufkzmdncgoekslkqvwuqhcuezzkfdlrmpcyvpsaknnlufwvfoaorxewpzjnmmgysfqgqqsxjzopbhbqobrmmrshvmqplqcrvepoycjraxiiy
         type: string
         custom: []
       password:
         name: password
         description: 'User password. Must not be greater than 255 characters.'
         required: true
-        example: hffezorxjfxdwqlpiykmbcmrnblsndckabvkqiowxlrwkpouvdcytrdneroyqjyihruopthyxtogppdhwbdqasdintiuhtoqwmwhxpessktmreznupgpevzyctdgdakmbkvnvevfnohiampynfvfuzbfrbfiqyjnlarzdjzptfzogbsldfuzpoqoeulzsijamgfflcqemo
+        example: gwdsppwqfurzdfhswvdjrtfmvoowstgkdrrcrxjmngvghlwbtiiwcmcdwiwoyeuoaophegxjeafyiueujnxaswma
         type: string
         custom: []
     cleanBodyParameters:
@@ -85,15 +85,15 @@ endpoints:
       last_name: Doe
       middle_name: ''
       phone_number: '08101209762'
-      device_id: gftgdxtffaovquztndauhjvxhfjlbxayiydecgawnjcawbqefbmqlcicsdjxmigddzvgokphtgzbbmozzeptfz
+      device_id: pyjwjnycfsvopczufhsnszbcqhgmssfmxizqszkixqegikikvwbertuhkssfdnsuvdtmbnpxwvgqbwdkqsnndugqjzqdjlzrturggqkbytajispbqubeexeukkmdcbosufqcrnawavibbnxvutagdvhrfidasifrqrbszrordqkhtbnjhevhitcixpswfydjaixugeuksrjhuflwdv
       email: johndoe342@gmail.com
-      app_reference: vyziqcslwbatowjzxssqssewndqmaymncbdmjsbnqtxcbxnhdvytpraxbavrjjybrckrkikielxigrwbgqvoonvjsqryfiwrysy
-      password: hffezorxjfxdwqlpiykmbcmrnblsndckabvkqiowxlrwkpouvdcytrdneroyqjyihruopthyxtogppdhwbdqasdintiuhtoqwmwhxpessktmreznupgpevzyctdgdakmbkvnvevfnohiampynfvfuzbfrbfiqyjnlarzdjzptfzogbsldfuzpoqoeulzsijamgfflcqemo
+      app_reference: fceszzllinewpotlnzgcunpztceglhivremttaafrjaeufkzmdncgoekslkqvwuqhcuezzkfdlrmpcyvpsaknnlufwvfoaorxewpzjnmmgysfqgqqsxjzopbhbqobrmmrshvmqplqcrvepoycjraxiiy
+      password: gwdsppwqfurzdfhswvdjrtfmvoowstgkdrrcrxjmngvghlwbtiiwcmcdwiwoyeuoaophegxjeafyiueujnxaswma
     fileParameters: []
     responses:
       -
         status: 201
-        content: '{"data":{"reference":"f84dde19-c71f-4973-b32d-7d97aa90dde7","first_name":"Addie Kuvalis","middle_name":"Dr. Larissa Kassulke","email":"angel99@hotmail.com","app_reference":"35bd13a1-c2fd-4eed-8341-7a9cc227f636","user_reference":"6098355b-e572-48bf-a076-fb1275fc2587","created_at":"2022-09-15T22:16:53.000000Z","updated_at":"2022-09-15T22:16:53.000000Z"},"message":"App user created,verify email.","code":"201"}'
+        content: '{"data":{"reference":"05eeafa1-425a-4d72-adc1-0bb81fc40ca6","first_name":"Blake Upton","last_name":"Savannah Denesik II","phone_number":"(313) 485-8165","middle_name":"Dr. Eugenia Jast","email":"cicero.pfannerstill@nitzsche.com","app_reference":"35bd13a1-c2fd-4eed-8341-7a9cc227f636","user_reference":"2039dfe8-eed5-4905-a8f7-8774d4c93944","verified":false,"created_at":"2022-09-17T15:11:33.000000Z","updated_at":"2022-09-17T15:11:33.000000Z"},"message":"App user created,verify email.","code":"201"}'
         headers: []
         description: '201'
         custom: []
@@ -133,7 +133,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Verify Email for App User'
       description: ''
       authenticated: false
       custom: []
@@ -149,27 +149,27 @@ endpoints:
         name: verification_token
         description: 'Email verification token. Must not be greater than 255 characters.'
         required: true
-        example: iblolmqtrrzewatztckqymcvfbbrdpyhjvavjevuzlvuveiqsufcuqttkoleclsobnyzkcbrsyootvnukltkiuntexjosrwqqhirqjuqsegstq
+        example: jdlbdqkpnhfykkxzaarqxyjdduaqopqqtkomnrgwxubyhqogfphpdiy
         type: string
         custom: []
       user_reference:
         name: user_reference
         description: 'Reference of user that wants to  verify their email. Must not be greater than 255 characters.'
         required: true
-        example: uiiwyeeacleylwavrdxsofkptqbrxfmxoeukxbriqukkzwipqiusyqxbsxusprgheyvhgvsqohglpnluiawlfduotjrkgnoasjukhtcooqtvxemswqmpqfwcvatacffdyinvnxjhgfybjptpipuwmougbgwushflkvgrgydqppbshqceozvfvvpblhn
+        example: xiztmrasawpxqtsipnwxytgdjqnjtqzwpajxakxwgslheswxaqqfqejwgnshpuhfvfqljeusrhvwmteczaewqfmbnpwffcmdbcnofyxgooifsjjovdtzdgijkvttubnraibodgmarqfzoesgkkgijmpvyvwxobulyejyldfbgjmzsvrqnjyvwxcwimknkoiasmqafczosrygrxnl
         type: string
         custom: []
       app_reference:
         name: app_reference
         description: 'Reference of app that wants to  verify user. Must not be greater than 255 characters.'
         required: true
-        example: cwfmpvuecblnjldgvxajdvalwnanszlgvfcbzubkedmcnqcetljiceyezjfujjlqtnajznogldkwjsvghltkajcaqslpzshcxafuoapeelfjwcxfemsuglgtihqbgzqyvqkjgtvbgbldavovfirevffjisjthjc
+        example: sokgqhlrdwbugiqgdjwmphnhtpsnzxsbtjyyafdwwutouddiopajalmkcaqbusfuncgtveaezlhpcpprbplsbbtddaueinskbzaiidtciuajpspcrfekezuhlxyiijzosgncepgoyevabzisqmxrxuvnmowqepsqzwmsiivgumiasqyocrwcfphtnhjhxxgbmyomahnqvkzjqeapwrcbefzhaewglmcqkqposkmvmi
         type: string
         custom: []
     cleanBodyParameters:
-      verification_token: iblolmqtrrzewatztckqymcvfbbrdpyhjvavjevuzlvuveiqsufcuqttkoleclsobnyzkcbrsyootvnukltkiuntexjosrwqqhirqjuqsegstq
-      user_reference: uiiwyeeacleylwavrdxsofkptqbrxfmxoeukxbriqukkzwipqiusyqxbsxusprgheyvhgvsqohglpnluiawlfduotjrkgnoasjukhtcooqtvxemswqmpqfwcvatacffdyinvnxjhgfybjptpipuwmougbgwushflkvgrgydqppbshqceozvfvvpblhn
-      app_reference: cwfmpvuecblnjldgvxajdvalwnanszlgvfcbzubkedmcnqcetljiceyezjfujjlqtnajznogldkwjsvghltkajcaqslpzshcxafuoapeelfjwcxfemsuglgtihqbgzqyvqkjgtvbgbldavovfirevffjisjthjc
+      verification_token: jdlbdqkpnhfykkxzaarqxyjdduaqopqqtkomnrgwxubyhqogfphpdiy
+      user_reference: xiztmrasawpxqtsipnwxytgdjqnjtqzwpajxakxwgslheswxaqqfqejwgnshpuhfvfqljeusrhvwmteczaewqfmbnpwffcmdbcnofyxgooifsjjovdtzdgijkvttubnraibodgmarqfzoesgkkgijmpvyvwxobulyejyldfbgjmzsvrqnjyvwxcwimknkoiasmqafczosrygrxnl
+      app_reference: sokgqhlrdwbugiqgdjwmphnhtpsnzxsbtjyyafdwwutouddiopajalmkcaqbusfuncgtveaezlhpcpprbplsbbtddaueinskbzaiidtciuajpspcrfekezuhlxyiijzosgncepgoyevabzisqmxrxuvnmowqepsqzwmsiivgumiasqyocrwcfphtnhjhxxgbmyomahnqvkzjqeapwrcbefzhaewglmcqkqposkmvmi
     fileParameters: []
     responses:
       -
@@ -188,6 +188,95 @@ endpoints:
         content: |-
           {
           "message": "Expired verification token",
+          `"code": 403,
+          "error_debug": null
+          }
+        headers: []
+        description: '403'
+        custom: []
+      -
+        status: 422
+        content: |
+          {
+              "message": "",
+              "errors": {}
+          }
+        headers: []
+        description: '422'
+        custom: []
+      -
+        status: 500
+        content: |
+          {
+              "message": "",
+              "code": 500,
+              "error_debug": ""
+          }
+        headers: []
+        description: '500'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/users/resend-verification-email
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      user_reference:
+        name: user_reference
+        description: 'Reference of user that wants to  verify their email. Must not be greater than 255 characters.'
+        required: true
+        example: zybozpamnnchjjyugbaexkrkcnyikpiriadmaphraeftchiywuzvvddnxsapgtlbvlhuisabioizcl
+        type: string
+        custom: []
+      app_reference:
+        name: app_reference
+        description: 'Reference of app that wants to  verify user. Must not be greater than 255 characters.'
+        required: true
+        example: icqlbguonrhldyrxiiuujdzwvkzuoraqxeeaihzlpndqbavdochalmdbfrmndkzvefrsfqqujejsygdhkfuhalectntszgmkkdtpxuzqgfozvichbvgaabhcuexqedoglqjestynfemocdipuwrpgofunqtuaairlntizhyvwexommltemrnxoyaotfhyss
+        type: string
+        custom: []
+    cleanBodyParameters:
+      user_reference: zybozpamnnchjjyugbaexkrkcnyikpiriadmaphraeftchiywuzvvddnxsapgtlbvlhuisabioizcl
+      app_reference: icqlbguonrhldyrxiiuujdzwvkzuoraqxeeaihzlpndqbavdochalmdbfrmndkzvefrsfqqujejsygdhkfuhalectntszgmkkdtpxuzqgfozvichbvgaabhcuexqedoglqjestynfemocdipuwrpgofunqtuaairlntizhyvwexommltemrnxoyaotfhyss
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+           "message": 'Verification mail has been resent.',
+           "data": null,
+           "code": 200
+          }
+        headers: []
+        description: '200'
+        custom: []
+      -
+        status: 403
+        content: |-
+          {
+          "message": "App user already verified",
           `"code": 403,
           "error_debug": null
           }

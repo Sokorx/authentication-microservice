@@ -213,7 +213,7 @@ class AuthenticationService
 
         if (!$app_user) {
 
-            return ['sent_email' => false, 'message' => 'App user already verified'];
+            return ['sent_email' => false, 'message' => 'App user not found or  already verified'];
         }
         DB::beginTransaction();
 
@@ -226,6 +226,6 @@ class AuthenticationService
         #TODO resend verification email
 
 
-        return ['sent_email' => true, 'message' => 'Verification mail has been sent.'];
+        return ['sent_email' => true, 'message' => 'Verification mail has been resent.'];
     }
 }
