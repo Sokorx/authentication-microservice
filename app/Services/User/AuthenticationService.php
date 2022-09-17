@@ -34,7 +34,7 @@ class AuthenticationService
             $user = User::create([
                 'first_name' => $data['first_name'],
                 'last_name' => $data['last_name'],
-                'middle_name' => $data['middle_name'],
+                'middle_name' => $data['middle_name'] ?? null,
                 'email' => $data['email'],
                 'phone_number' => $data['phone_number'],
             ]);
@@ -49,7 +49,7 @@ class AuthenticationService
         $app_user = AppUser::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
-            'middle_name' => $data['middle_name'],
+            'middle_name' => $data['middle_name'] ?? null,
             'email' => $data['email'],
             'phone_number' => $data['phone_number'],
             'app_reference' => $data['app_reference'],
@@ -150,6 +150,7 @@ class AuthenticationService
         }
         return true;
     }
+
     public function appUserDeviceExists(string $device_id, string $app_reference)
     {
         $device = AppUserDevice::where([
@@ -173,5 +174,58 @@ class AuthenticationService
             return $this->generateVerificationToken();
         }
         return $verification_token;
+    }
+
+    public function verifyAppUserEmail($data)
+    {
+        /**
+         * Find app user by verification token,
+         * user reference and app reference and then verify email
+         */
+        $app_user = AppUser::where(
+            $data
+        )->first();
+
+        $expiry_date = Carbon::parse($app_user->verification_token_expiry);
+        if ($expiry_date->lt(Carbon::now())) {
+
+            return ['verified' => false, 'message' => 'Expired verification token'];
+        }
+
+        DB::beginTransaction();
+
+        $app_user->verified_at = Carbon::now();
+        $app_user->verification_token_expiry = null;
+        $app_user->verification_token = null;
+        $app_user->save();
+        DB::commit();
+
+
+        return ['verified' => true, 'message' => 'App user verified successfully'];
+    }
+
+    public function resendAppUserVerificationMail($data)
+    {
+
+        $app_user = AppUser::where(
+            $data
+        )->whereNull('verified_at')->first();
+
+        if (!$app_user) {
+
+            return ['sent_email' => false, 'message' => 'App user not found or  already verified'];
+        }
+        DB::beginTransaction();
+
+        $app_user->verification_token = $this->generateVerificationToken();
+        $app_user->verification_token_expiry = Carbon::now()->addMinutes(10);
+        $app_user->save();
+
+        DB::commit();
+
+        #TODO resend verification email
+
+
+        return ['sent_email' => true, 'message' => 'Verification mail has been resent.'];
     }
 }

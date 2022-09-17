@@ -5,10 +5,10 @@ namespace App\Http\Controllers\v1\User;
 use App\Helpers\ApiResponse;
 use App\Http\Controllers\Controller;
 use App\Services\User\AuthenticationService;
-use Knuckles\Scribe\Attributes\ResponseFromApiResource;
-use App\Models\AppUser;
 
-use App\Http\Requests\RegisterUserRequest;
+use App\Http\Requests\Authentication\RegisterUserRequest;
+use App\Http\Requests\Authentication\VerifyEmailRequest;
+use App\Http\Requests\Authentication\ResendVerificationMailRequest;
 use Illuminate\Support\Facades\Log;
 use App\Http\Resources\AppUserResource;
 use Exception;
@@ -23,9 +23,8 @@ class UserAuthenticationController extends Controller
     }
 
 
-
-
     /**
+     * Register App User
      * @apiResource 201 App\Http\Resources\AppUserResource
      * @apiResourceModel App\Models\AppUser
      * @responseFile 422 responses/validation.error.json
@@ -40,11 +39,90 @@ class UserAuthenticationController extends Controller
             $app_user = $this->authentication_service->createAppUser($validated_data);
             return ApiResponse::validResponse(
                 'App user created,verify email.',
-                ['app_user' => new AppUserResource($app_user)],
+                new AppUserResource($app_user),
                 201
             );
         } catch (Exception $e) {
             Log::error("Error registering app user", [
+                "message" => $e->getMessage(),
+                "payload" => $request->all()
+            ]);
+            return ApiResponse::errorResponse('Server error', 500, $e);
+        }
+    }
+
+
+    /**
+     * Verify Email for App User
+     * @response 200 {
+     *  "message": 'App user verified successfull',
+     *  "data": null,
+     *  "code": 200
+     * }
+     * @response 403 {
+     * "message": "Expired verification token",
+     *`"code": 403,
+     *"error_debug": null
+     * }
+     * @responseFile 422 responses/validation.error.json
+     * @responseFile 500 responses/server.error.json
+     */
+    public function verifyEmail(VerifyEmailRequest $request)
+    {
+        try {
+
+            $validated_data  = $request->validated();
+            $response = $this->authentication_service->verifyAppUserEmail($validated_data);
+
+            if (!$response['verified']) {
+                return ApiResponse::errorResponse($response['message'], 403, null);
+            }
+            return ApiResponse::validResponse(
+                $response['message'],
+                null,
+                200
+            );
+        } catch (Exception $e) {
+            Log::error("Error verifying app user", [
+                "message" => $e->getMessage(),
+                "payload" => $request->all()
+            ]);
+            return ApiResponse::errorResponse('Server error', 500, $e);
+        }
+    }
+
+    /**
+     * Resend app user verification email
+     * @response 200 {
+     *  "message": 'Verification mail has been resent.',
+     *  "data": null,
+     *  "code": 200
+     * }
+     * @response 403 {
+     * "message": "App user already verified",
+     *`"code": 403,
+     *"error_debug": null
+     * }
+     * @responseFile 422 responses/validation.error.json
+     * @responseFile 500 responses/server.error.json
+     */
+    public function resendVerificationMail(ResendVerificationMailRequest $request)
+    {
+        try {
+
+            $validated_data  = $request->validated();
+            $response = $this->authentication_service->resendAppUserVerificationMail($validated_data);
+
+            if (!$response['sent_email']) {
+                return ApiResponse::errorResponse($response['message'], 403, null);
+            }
+            return ApiResponse::validResponse(
+                $response['message'],
+                null,
+                200
+            );
+        } catch (Exception $e) {
+            Log::error("Error resending verification mail", [
                 "message" => $e->getMessage(),
                 "payload" => $request->all()
             ]);
