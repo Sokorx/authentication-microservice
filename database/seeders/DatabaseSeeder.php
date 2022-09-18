@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             AppSeeder::class,
             UserSeeder::class,
             AppUserSeeder::class,
+            AppUserDeviceSeeder::class,
+            AppLoginHistorySeeder::class,
         ]);
     }
 }

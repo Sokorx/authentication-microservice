@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use App\Models\App;
 

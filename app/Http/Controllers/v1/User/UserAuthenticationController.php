@@ -62,7 +62,7 @@ class UserAuthenticationController extends Controller
      * @apiResourceModel App\Models\AppLoginHistory
      * @responseFile 422 responses/validation.error.json
      * @responseFile 500 responses/server.error.json
-     * @apiResourceAdditional message="Login history updated" code=201
+     * @apiResourceAdditional message="Login history updated" code=200
      */
     public function updateLoginHistory(UpdateLoginHistoryRequest $request)
     {
