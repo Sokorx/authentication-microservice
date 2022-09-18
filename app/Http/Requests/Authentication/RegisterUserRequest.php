@@ -38,7 +38,6 @@ class RegisterUserRequest extends FormRequest
                 })
             ],
             'app_reference' => 'required|exists:apps,reference|max:255',
-            'password' => 'required|string|max:255',
         ];
     }
 

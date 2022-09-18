@@ -78,7 +78,7 @@
                                 <a href="#endpoints-POSTapi-v1-users-verify-email">Verify Email for App User</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-v1-users-resend-verification-email">
-                                <a href="#endpoints-POSTapi-v1-users-resend-verification-email">POST api/v1/users/resend-verification-email</a>
+                                <a href="#endpoints-POSTapi-v1-users-resend-verification-email">Resend app user verification email</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -90,7 +90,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: September 17 2022</li>
+        <li>Last updated: September 18 2022</li>
     </ul>
 </div>
 
@@ -134,10 +134,9 @@ You can switch the language used with the tabs at the top right (or from the nav
     \"last_name\": \"Doe\",
     \"middle_name\": \"\",
     \"phone_number\": \"08101209762\",
-    \"device_id\": \"pyjwjnycfsvopczufhsnszbcqhgmssfmxizqszkixqegikikvwbertuhkssfdnsuvdtmbnpxwvgqbwdkqsnndugqjzqdjlzrturggqkbytajispbqubeexeukkmdcbosufqcrnawavibbnxvutagdvhrfidasifrqrbszrordqkhtbnjhevhitcixpswfydjaixugeuksrjhuflwdv\",
+    \"device_id\": \"lroamnmrqrsf\",
     \"email\": \"johndoe342@gmail.com\",
-    \"app_reference\": \"fceszzllinewpotlnzgcunpztceglhivremttaafrjaeufkzmdncgoekslkqvwuqhcuezzkfdlrmpcyvpsaknnlufwvfoaorxewpzjnmmgysfqgqqsxjzopbhbqobrmmrshvmqplqcrvepoycjraxiiy\",
-    \"password\": \"gwdsppwqfurzdfhswvdjrtfmvoowstgkdrrcrxjmngvghlwbtiiwcmcdwiwoyeuoaophegxjeafyiueujnxaswma\"
+    \"app_reference\": \"tevzprpxkecye\"
 }"
 </code></pre></div>
 
@@ -157,10 +156,9 @@ let body = {
     "last_name": "Doe",
     "middle_name": "",
     "phone_number": "08101209762",
-    "device_id": "pyjwjnycfsvopczufhsnszbcqhgmssfmxizqszkixqegikikvwbertuhkssfdnsuvdtmbnpxwvgqbwdkqsnndugqjzqdjlzrturggqkbytajispbqubeexeukkmdcbosufqcrnawavibbnxvutagdvhrfidasifrqrbszrordqkhtbnjhevhitcixpswfydjaixugeuksrjhuflwdv",
+    "device_id": "lroamnmrqrsf",
     "email": "johndoe342@gmail.com",
-    "app_reference": "fceszzllinewpotlnzgcunpztceglhivremttaafrjaeufkzmdncgoekslkqvwuqhcuezzkfdlrmpcyvpsaknnlufwvfoaorxewpzjnmmgysfqgqqsxjzopbhbqobrmmrshvmqplqcrvepoycjraxiiy",
-    "password": "gwdsppwqfurzdfhswvdjrtfmvoowstgkdrrcrxjmngvghlwbtiiwcmcdwiwoyeuoaophegxjeafyiueujnxaswma"
+    "app_reference": "tevzprpxkecye"
 };
 
 fetch(url, {
@@ -179,17 +177,17 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;reference&quot;: &quot;05eeafa1-425a-4d72-adc1-0bb81fc40ca6&quot;,
-        &quot;first_name&quot;: &quot;Blake Upton&quot;,
-        &quot;last_name&quot;: &quot;Savannah Denesik II&quot;,
-        &quot;phone_number&quot;: &quot;(313) 485-8165&quot;,
-        &quot;middle_name&quot;: &quot;Dr. Eugenia Jast&quot;,
-        &quot;email&quot;: &quot;cicero.pfannerstill@nitzsche.com&quot;,
-        &quot;app_reference&quot;: &quot;35bd13a1-c2fd-4eed-8341-7a9cc227f636&quot;,
-        &quot;user_reference&quot;: &quot;2039dfe8-eed5-4905-a8f7-8774d4c93944&quot;,
+        &quot;reference&quot;: &quot;3c5f7cb0-2d14-4a26-9f2c-9a1c4f41e312&quot;,
+        &quot;first_name&quot;: &quot;Mr. Kay Cole DDS&quot;,
+        &quot;last_name&quot;: &quot;Dr. Kathryne Sawayn III&quot;,
+        &quot;phone_number&quot;: &quot;1-737-483-8870&quot;,
+        &quot;middle_name&quot;: &quot;Ollie Reichel&quot;,
+        &quot;email&quot;: &quot;murazik.chester@koch.com&quot;,
+        &quot;app_reference&quot;: &quot;03cb4fcc-d9fa-451d-9f68-1b2124e70590&quot;,
+        &quot;user_reference&quot;: &quot;6098355b-e572-48bf-a076-fb1275fc2587&quot;,
         &quot;verified&quot;: false,
-        &quot;created_at&quot;: &quot;2022-09-17T15:11:33.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-09-17T15:11:33.000000Z&quot;
+        &quot;created_at&quot;: &quot;2022-09-18T14:25:02.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-09-18T14:25:02.000000Z&quot;
     },
     &quot;message&quot;: &quot;App user created,verify email.&quot;,
     &quot;code&quot;: &quot;201&quot;
@@ -312,7 +310,7 @@ fetch(url, {
                 <input type="text"
                name="device_id"
                data-endpoint="POSTapi-v1-users-register"
-               value="pyjwjnycfsvopczufhsnszbcqhgmssfmxizqszkixqegikikvwbertuhkssfdnsuvdtmbnpxwvgqbwdkqsnndugqjzqdjlzrturggqkbytajispbqubeexeukkmdcbosufqcrnawavibbnxvutagdvhrfidasifrqrbszrordqkhtbnjhevhitcixpswfydjaixugeuksrjhuflwdv"
+               value="lroamnmrqrsf"
                data-component="body" hidden>
     <br>
 <p>Device id. Must not be greater than 255 characters.</p>
@@ -336,22 +334,10 @@ fetch(url, {
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-register"
-               value="fceszzllinewpotlnzgcunpztceglhivremttaafrjaeufkzmdncgoekslkqvwuqhcuezzkfdlrmpcyvpsaknnlufwvfoaorxewpzjnmmgysfqgqqsxjzopbhbqobrmmrshvmqplqcrvepoycjraxiiy"
+               value="tevzprpxkecye"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to register the user. Must not be greater than 255 characters.</p>
-        </p>
-                <p>
-            <b><code>password</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text"
-               name="password"
-               data-endpoint="POSTapi-v1-users-register"
-               value="gwdsppwqfurzdfhswvdjrtfmvoowstgkdrrcrxjmngvghlwbtiiwcmcdwiwoyeuoaophegxjeafyiueujnxaswma"
-               data-component="body" hidden>
-    <br>
-<p>User password. Must not be greater than 255 characters.</p>
         </p>
         </form>
 
@@ -372,9 +358,9 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"verification_token\": \"jdlbdqkpnhfykkxzaarqxyjdduaqopqqtkomnrgwxubyhqogfphpdiy\",
-    \"user_reference\": \"xiztmrasawpxqtsipnwxytgdjqnjtqzwpajxakxwgslheswxaqqfqejwgnshpuhfvfqljeusrhvwmteczaewqfmbnpwffcmdbcnofyxgooifsjjovdtzdgijkvttubnraibodgmarqfzoesgkkgijmpvyvwxobulyejyldfbgjmzsvrqnjyvwxcwimknkoiasmqafczosrygrxnl\",
-    \"app_reference\": \"sokgqhlrdwbugiqgdjwmphnhtpsnzxsbtjyyafdwwutouddiopajalmkcaqbusfuncgtveaezlhpcpprbplsbbtddaueinskbzaiidtciuajpspcrfekezuhlxyiijzosgncepgoyevabzisqmxrxuvnmowqepsqzwmsiivgumiasqyocrwcfphtnhjhxxgbmyomahnqvkzjqeapwrcbefzhaewglmcqkqposkmvmi\"
+    \"verification_token\": \"jpjvprelhcurkoyehvgfbmojkpalijupptydhhnnowvecmwngqpugdcmiiuqahxnrfxcssihwuvdiarvfkjqvjmotkybjlkksmdklphucggneioofzurxfowspejubfaulxdpycmislgnthckliumedwfwmpbhzjphtjhjcshsyegtnklpiydpbpcegmenekapkwsvdrrzgqpbhq\",
+    \"user_reference\": \"xpdvtyesfgricvnchdlnfooqrqaqrncfqxpipdvyagxxxajojjlqsdagcjqubzmfroeeoxuwcobuxszocqeqbfinhmwdtogzhyjsykenlalbbjaivrrnwqrjlichpzhubylpjlecjkpxpjvxwskldrdkhpeznxrjnizhsdaukkzykkuhsprgfvubhcxiyderafqtugfbyrbbjixtbltraxkiopzoedruy\",
+    \"app_reference\": \"oyqdpcbaxuqipewxpqlzhprvqqqnodbgoplbohvfdrajjatnlwrfixncceqfpntruumeauajldyonlngcvkimotsdxrtzghefb\"
 }"
 </code></pre></div>
 
@@ -390,9 +376,9 @@ const headers = {
 };
 
 let body = {
-    "verification_token": "jdlbdqkpnhfykkxzaarqxyjdduaqopqqtkomnrgwxubyhqogfphpdiy",
-    "user_reference": "xiztmrasawpxqtsipnwxytgdjqnjtqzwpajxakxwgslheswxaqqfqejwgnshpuhfvfqljeusrhvwmteczaewqfmbnpwffcmdbcnofyxgooifsjjovdtzdgijkvttubnraibodgmarqfzoesgkkgijmpvyvwxobulyejyldfbgjmzsvrqnjyvwxcwimknkoiasmqafczosrygrxnl",
-    "app_reference": "sokgqhlrdwbugiqgdjwmphnhtpsnzxsbtjyyafdwwutouddiopajalmkcaqbusfuncgtveaezlhpcpprbplsbbtddaueinskbzaiidtciuajpspcrfekezuhlxyiijzosgncepgoyevabzisqmxrxuvnmowqepsqzwmsiivgumiasqyocrwcfphtnhjhxxgbmyomahnqvkzjqeapwrcbefzhaewglmcqkqposkmvmi"
+    "verification_token": "jpjvprelhcurkoyehvgfbmojkpalijupptydhhnnowvecmwngqpugdcmiiuqahxnrfxcssihwuvdiarvfkjqvjmotkybjlkksmdklphucggneioofzurxfowspejubfaulxdpycmislgnthckliumedwfwmpbhzjphtjhjcshsyegtnklpiydpbpcegmenekapkwsvdrrzgqpbhq",
+    "user_reference": "xpdvtyesfgricvnchdlnfooqrqaqrncfqxpipdvyagxxxajojjlqsdagcjqubzmfroeeoxuwcobuxszocqeqbfinhmwdtogzhyjsykenlalbbjaivrrnwqrjlichpzhubylpjlecjkpxpjvxwskldrdkhpeznxrjnizhsdaukkzykkuhsprgfvubhcxiyderafqtugfbyrbbjixtbltraxkiopzoedruy",
+    "app_reference": "oyqdpcbaxuqipewxpqlzhprvqqqnodbgoplbohvfdrajjatnlwrfixncceqfpntruumeauajldyonlngcvkimotsdxrtzghefb"
 };
 
 fetch(url, {
@@ -495,7 +481,7 @@ fetch(url, {
                 <input type="text"
                name="verification_token"
                data-endpoint="POSTapi-v1-users-verify-email"
-               value="jdlbdqkpnhfykkxzaarqxyjdduaqopqqtkomnrgwxubyhqogfphpdiy"
+               value="jpjvprelhcurkoyehvgfbmojkpalijupptydhhnnowvecmwngqpugdcmiiuqahxnrfxcssihwuvdiarvfkjqvjmotkybjlkksmdklphucggneioofzurxfowspejubfaulxdpycmislgnthckliumedwfwmpbhzjphtjhjcshsyegtnklpiydpbpcegmenekapkwsvdrrzgqpbhq"
                data-component="body" hidden>
     <br>
 <p>Email verification token. Must not be greater than 255 characters.</p>
@@ -507,7 +493,7 @@ fetch(url, {
                 <input type="text"
                name="user_reference"
                data-endpoint="POSTapi-v1-users-verify-email"
-               value="xiztmrasawpxqtsipnwxytgdjqnjtqzwpajxakxwgslheswxaqqfqejwgnshpuhfvfqljeusrhvwmteczaewqfmbnpwffcmdbcnofyxgooifsjjovdtzdgijkvttubnraibodgmarqfzoesgkkgijmpvyvwxobulyejyldfbgjmzsvrqnjyvwxcwimknkoiasmqafczosrygrxnl"
+               value="xpdvtyesfgricvnchdlnfooqrqaqrncfqxpipdvyagxxxajojjlqsdagcjqubzmfroeeoxuwcobuxszocqeqbfinhmwdtogzhyjsykenlalbbjaivrrnwqrjlichpzhubylpjlecjkpxpjvxwskldrdkhpeznxrjnizhsdaukkzykkuhsprgfvubhcxiyderafqtugfbyrbbjixtbltraxkiopzoedruy"
                data-component="body" hidden>
     <br>
 <p>Reference of user that wants to  verify their email. Must not be greater than 255 characters.</p>
@@ -519,14 +505,14 @@ fetch(url, {
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-verify-email"
-               value="sokgqhlrdwbugiqgdjwmphnhtpsnzxsbtjyyafdwwutouddiopajalmkcaqbusfuncgtveaezlhpcpprbplsbbtddaueinskbzaiidtciuajpspcrfekezuhlxyiijzosgncepgoyevabzisqmxrxuvnmowqepsqzwmsiivgumiasqyocrwcfphtnhjhxxgbmyomahnqvkzjqeapwrcbefzhaewglmcqkqposkmvmi"
+               value="oyqdpcbaxuqipewxpqlzhprvqqqnodbgoplbohvfdrajjatnlwrfixncceqfpntruumeauajldyonlngcvkimotsdxrtzghefb"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to  verify user. Must not be greater than 255 characters.</p>
         </p>
         </form>
 
-                    <h2 id="endpoints-POSTapi-v1-users-resend-verification-email">POST api/v1/users/resend-verification-email</h2>
+                    <h2 id="endpoints-POSTapi-v1-users-resend-verification-email">Resend app user verification email</h2>
 
 <p>
 </p>
@@ -543,8 +529,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_reference\": \"zybozpamnnchjjyugbaexkrkcnyikpiriadmaphraeftchiywuzvvddnxsapgtlbvlhuisabioizcl\",
-    \"app_reference\": \"icqlbguonrhldyrxiiuujdzwvkzuoraqxeeaihzlpndqbavdochalmdbfrmndkzvefrsfqqujejsygdhkfuhalectntszgmkkdtpxuzqgfozvichbvgaabhcuexqedoglqjestynfemocdipuwrpgofunqtuaairlntizhyvwexommltemrnxoyaotfhyss\"
+    \"user_reference\": \"gedjoknonekgprycsjyceonxzvxrrlclxxgydyfyoscgdppmdoadsxgtioeisowhlhcuvyjhuapluhrjgidihzeigjmwxzctvbrlfrxarobjdzzfigyuhwyyyoksninavmkdhuolqgjlisvwhkruzrjxmzihmdzdocmnudpmecczpxbpywbhbbatrhtziu\",
+    \"app_reference\": \"djgckbthfcmeyshwqufalqftrmnquvnbbleuavadgnzcjrftgxjpahpftqsvvcztagzliyfvxgjxqsresmxwtzbirvcsedsvnibkrropozkhakgzkjizbowohyydtqkogppwyusexihrsnvdhwvdywzhaignaylirtapmunsrjhrhxnmhnradllgbtpmjzpmqcucsyhfvshxuusntwmxa\"
 }"
 </code></pre></div>
 
@@ -560,8 +546,8 @@ const headers = {
 };
 
 let body = {
-    "user_reference": "zybozpamnnchjjyugbaexkrkcnyikpiriadmaphraeftchiywuzvvddnxsapgtlbvlhuisabioizcl",
-    "app_reference": "icqlbguonrhldyrxiiuujdzwvkzuoraqxeeaihzlpndqbavdochalmdbfrmndkzvefrsfqqujejsygdhkfuhalectntszgmkkdtpxuzqgfozvichbvgaabhcuexqedoglqjestynfemocdipuwrpgofunqtuaairlntizhyvwexommltemrnxoyaotfhyss"
+    "user_reference": "gedjoknonekgprycsjyceonxzvxrrlclxxgydyfyoscgdppmdoadsxgtioeisowhlhcuvyjhuapluhrjgidihzeigjmwxzctvbrlfrxarobjdzzfigyuhwyyyoksninavmkdhuolqgjlisvwhkruzrjxmzihmdzdocmnudpmecczpxbpywbhbbatrhtziu",
+    "app_reference": "djgckbthfcmeyshwqufalqftrmnquvnbbleuavadgnzcjrftgxjpahpftqsvvcztagzliyfvxgjxqsresmxwtzbirvcsedsvnibkrropozkhakgzkjizbowohyydtqkogppwyusexihrsnvdhwvdywzhaignaylirtapmunsrjhrhxnmhnradllgbtpmjzpmqcucsyhfvshxuusntwmxa"
 };
 
 fetch(url, {
@@ -664,7 +650,7 @@ fetch(url, {
                 <input type="text"
                name="user_reference"
                data-endpoint="POSTapi-v1-users-resend-verification-email"
-               value="zybozpamnnchjjyugbaexkrkcnyikpiriadmaphraeftchiywuzvvddnxsapgtlbvlhuisabioizcl"
+               value="gedjoknonekgprycsjyceonxzvxrrlclxxgydyfyoscgdppmdoadsxgtioeisowhlhcuvyjhuapluhrjgidihzeigjmwxzctvbrlfrxarobjdzzfigyuhwyyyoksninavmkdhuolqgjlisvwhkruzrjxmzihmdzdocmnudpmecczpxbpywbhbbatrhtziu"
                data-component="body" hidden>
     <br>
 <p>Reference of user that wants to  verify their email. Must not be greater than 255 characters.</p>
@@ -676,7 +662,7 @@ fetch(url, {
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-resend-verification-email"
-               value="icqlbguonrhldyrxiiuujdzwvkzuoraqxeeaihzlpndqbavdochalmdbfrmndkzvefrsfqqujejsygdhkfuhalectntszgmkkdtpxuzqgfozvichbvgaabhcuexqedoglqjestynfemocdipuwrpgofunqtuaairlntizhyvwexommltemrnxoyaotfhyss"
+               value="djgckbthfcmeyshwqufalqftrmnquvnbbleuavadgnzcjrftgxjpahpftqsvvcztagzliyfvxgjxqsresmxwtzbirvcsedsvnibkrropozkhakgzkjizbowohyydtqkogppwyusexihrsnvdhwvdywzhaignaylirtapmunsrjhrhxnmhnradllgbtpmjzpmqcucsyhfvshxuusntwmxa"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to  verify user. Must not be greater than 255 characters.</p>

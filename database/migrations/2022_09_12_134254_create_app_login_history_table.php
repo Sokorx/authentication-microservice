@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('app_user_device_reference')->references('reference')->on('app_user_devices');
 
             $table->string('ip_address');
+            $table->boolean('is_successful');
             $table->timestamps();
         });
     }

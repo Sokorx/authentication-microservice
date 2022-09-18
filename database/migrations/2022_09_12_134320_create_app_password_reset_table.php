@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreign('app_reference')->references('reference')->on('apps');
 
             $table->string('token');
-            $table->string('token_expiry');
+            $table->timestamp('token_expiry');
             $table->timestamps();
         });
     }

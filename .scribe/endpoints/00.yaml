@@ -54,7 +54,7 @@ endpoints:
         name: device_id
         description: 'Device id. Must not be greater than 255 characters.'
         required: true
-        example: pyjwjnycfsvopczufhsnszbcqhgmssfmxizqszkixqegikikvwbertuhkssfdnsuvdtmbnpxwvgqbwdkqsnndugqjzqdjlzrturggqkbytajispbqubeexeukkmdcbosufqcrnawavibbnxvutagdvhrfidasifrqrbszrordqkhtbnjhevhitcixpswfydjaixugeuksrjhuflwdv
+        example: lroamnmrqrsf
         type: string
         custom: []
       email:
@@ -68,14 +68,7 @@ endpoints:
         name: app_reference
         description: 'Reference of app that wants to register the user. Must not be greater than 255 characters.'
         required: true
-        example: fceszzllinewpotlnzgcunpztceglhivremttaafrjaeufkzmdncgoekslkqvwuqhcuezzkfdlrmpcyvpsaknnlufwvfoaorxewpzjnmmgysfqgqqsxjzopbhbqobrmmrshvmqplqcrvepoycjraxiiy
-        type: string
-        custom: []
-      password:
-        name: password
-        description: 'User password. Must not be greater than 255 characters.'
-        required: true
-        example: gwdsppwqfurzdfhswvdjrtfmvoowstgkdrrcrxjmngvghlwbtiiwcmcdwiwoyeuoaophegxjeafyiueujnxaswma
+        example: tevzprpxkecye
         type: string
         custom: []
     cleanBodyParameters:
@@ -83,15 +76,14 @@ endpoints:
       last_name: Doe
       middle_name: ''
       phone_number: '08101209762'
-      device_id: pyjwjnycfsvopczufhsnszbcqhgmssfmxizqszkixqegikikvwbertuhkssfdnsuvdtmbnpxwvgqbwdkqsnndugqjzqdjlzrturggqkbytajispbqubeexeukkmdcbosufqcrnawavibbnxvutagdvhrfidasifrqrbszrordqkhtbnjhevhitcixpswfydjaixugeuksrjhuflwdv
+      device_id: lroamnmrqrsf
       email: johndoe342@gmail.com
-      app_reference: fceszzllinewpotlnzgcunpztceglhivremttaafrjaeufkzmdncgoekslkqvwuqhcuezzkfdlrmpcyvpsaknnlufwvfoaorxewpzjnmmgysfqgqqsxjzopbhbqobrmmrshvmqplqcrvepoycjraxiiy
-      password: gwdsppwqfurzdfhswvdjrtfmvoowstgkdrrcrxjmngvghlwbtiiwcmcdwiwoyeuoaophegxjeafyiueujnxaswma
+      app_reference: tevzprpxkecye
     fileParameters: []
     responses:
       -
         status: 201
-        content: '{"data":{"reference":"05eeafa1-425a-4d72-adc1-0bb81fc40ca6","first_name":"Blake Upton","last_name":"Savannah Denesik II","phone_number":"(313) 485-8165","middle_name":"Dr. Eugenia Jast","email":"cicero.pfannerstill@nitzsche.com","app_reference":"35bd13a1-c2fd-4eed-8341-7a9cc227f636","user_reference":"2039dfe8-eed5-4905-a8f7-8774d4c93944","verified":false,"created_at":"2022-09-17T15:11:33.000000Z","updated_at":"2022-09-17T15:11:33.000000Z"},"message":"App user created,verify email.","code":"201"}'
+        content: '{"data":{"reference":"3c5f7cb0-2d14-4a26-9f2c-9a1c4f41e312","first_name":"Mr. Kay Cole DDS","last_name":"Dr. Kathryne Sawayn III","phone_number":"1-737-483-8870","middle_name":"Ollie Reichel","email":"murazik.chester@koch.com","app_reference":"03cb4fcc-d9fa-451d-9f68-1b2124e70590","user_reference":"6098355b-e572-48bf-a076-fb1275fc2587","verified":false,"created_at":"2022-09-18T14:25:02.000000Z","updated_at":"2022-09-18T14:25:02.000000Z"},"message":"App user created,verify email.","code":"201"}'
         headers: []
         description: '201'
         custom: []
@@ -147,27 +139,27 @@ endpoints:
         name: verification_token
         description: 'Email verification token. Must not be greater than 255 characters.'
         required: true
-        example: jdlbdqkpnhfykkxzaarqxyjdduaqopqqtkomnrgwxubyhqogfphpdiy
+        example: jpjvprelhcurkoyehvgfbmojkpalijupptydhhnnowvecmwngqpugdcmiiuqahxnrfxcssihwuvdiarvfkjqvjmotkybjlkksmdklphucggneioofzurxfowspejubfaulxdpycmislgnthckliumedwfwmpbhzjphtjhjcshsyegtnklpiydpbpcegmenekapkwsvdrrzgqpbhq
         type: string
         custom: []
       user_reference:
         name: user_reference
         description: 'Reference of user that wants to  verify their email. Must not be greater than 255 characters.'
         required: true
-        example: xiztmrasawpxqtsipnwxytgdjqnjtqzwpajxakxwgslheswxaqqfqejwgnshpuhfvfqljeusrhvwmteczaewqfmbnpwffcmdbcnofyxgooifsjjovdtzdgijkvttubnraibodgmarqfzoesgkkgijmpvyvwxobulyejyldfbgjmzsvrqnjyvwxcwimknkoiasmqafczosrygrxnl
+        example: xpdvtyesfgricvnchdlnfooqrqaqrncfqxpipdvyagxxxajojjlqsdagcjqubzmfroeeoxuwcobuxszocqeqbfinhmwdtogzhyjsykenlalbbjaivrrnwqrjlichpzhubylpjlecjkpxpjvxwskldrdkhpeznxrjnizhsdaukkzykkuhsprgfvubhcxiyderafqtugfbyrbbjixtbltraxkiopzoedruy
         type: string
         custom: []
       app_reference:
         name: app_reference
         description: 'Reference of app that wants to  verify user. Must not be greater than 255 characters.'
         required: true
-        example: sokgqhlrdwbugiqgdjwmphnhtpsnzxsbtjyyafdwwutouddiopajalmkcaqbusfuncgtveaezlhpcpprbplsbbtddaueinskbzaiidtciuajpspcrfekezuhlxyiijzosgncepgoyevabzisqmxrxuvnmowqepsqzwmsiivgumiasqyocrwcfphtnhjhxxgbmyomahnqvkzjqeapwrcbefzhaewglmcqkqposkmvmi
+        example: oyqdpcbaxuqipewxpqlzhprvqqqnodbgoplbohvfdrajjatnlwrfixncceqfpntruumeauajldyonlngcvkimotsdxrtzghefb
         type: string
         custom: []
     cleanBodyParameters:
-      verification_token: jdlbdqkpnhfykkxzaarqxyjdduaqopqqtkomnrgwxubyhqogfphpdiy
-      user_reference: xiztmrasawpxqtsipnwxytgdjqnjtqzwpajxakxwgslheswxaqqfqejwgnshpuhfvfqljeusrhvwmteczaewqfmbnpwffcmdbcnofyxgooifsjjovdtzdgijkvttubnraibodgmarqfzoesgkkgijmpvyvwxobulyejyldfbgjmzsvrqnjyvwxcwimknkoiasmqafczosrygrxnl
-      app_reference: sokgqhlrdwbugiqgdjwmphnhtpsnzxsbtjyyafdwwutouddiopajalmkcaqbusfuncgtveaezlhpcpprbplsbbtddaueinskbzaiidtciuajpspcrfekezuhlxyiijzosgncepgoyevabzisqmxrxuvnmowqepsqzwmsiivgumiasqyocrwcfphtnhjhxxgbmyomahnqvkzjqeapwrcbefzhaewglmcqkqposkmvmi
+      verification_token: jpjvprelhcurkoyehvgfbmojkpalijupptydhhnnowvecmwngqpugdcmiiuqahxnrfxcssihwuvdiarvfkjqvjmotkybjlkksmdklphucggneioofzurxfowspejubfaulxdpycmislgnthckliumedwfwmpbhzjphtjhjcshsyegtnklpiydpbpcegmenekapkwsvdrrzgqpbhq
+      user_reference: xpdvtyesfgricvnchdlnfooqrqaqrncfqxpipdvyagxxxajojjlqsdagcjqubzmfroeeoxuwcobuxszocqeqbfinhmwdtogzhyjsykenlalbbjaivrrnwqrjlichpzhubylpjlecjkpxpjvxwskldrdkhpeznxrjnizhsdaukkzykkuhsprgfvubhcxiyderafqtugfbyrbbjixtbltraxkiopzoedruy
+      app_reference: oyqdpcbaxuqipewxpqlzhprvqqqnodbgoplbohvfdrajjatnlwrfixncceqfpntruumeauajldyonlngcvkimotsdxrtzghefb
     fileParameters: []
     responses:
       -
@@ -228,7 +220,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Resend app user verification email'
       description: ''
       authenticated: false
       custom: []
@@ -244,19 +236,19 @@ endpoints:
         name: user_reference
         description: 'Reference of user that wants to  verify their email. Must not be greater than 255 characters.'
         required: true
-        example: zybozpamnnchjjyugbaexkrkcnyikpiriadmaphraeftchiywuzvvddnxsapgtlbvlhuisabioizcl
+        example: gedjoknonekgprycsjyceonxzvxrrlclxxgydyfyoscgdppmdoadsxgtioeisowhlhcuvyjhuapluhrjgidihzeigjmwxzctvbrlfrxarobjdzzfigyuhwyyyoksninavmkdhuolqgjlisvwhkruzrjxmzihmdzdocmnudpmecczpxbpywbhbbatrhtziu
         type: string
         custom: []
       app_reference:
         name: app_reference
         description: 'Reference of app that wants to  verify user. Must not be greater than 255 characters.'
         required: true
-        example: icqlbguonrhldyrxiiuujdzwvkzuoraqxeeaihzlpndqbavdochalmdbfrmndkzvefrsfqqujejsygdhkfuhalectntszgmkkdtpxuzqgfozvichbvgaabhcuexqedoglqjestynfemocdipuwrpgofunqtuaairlntizhyvwexommltemrnxoyaotfhyss
+        example: djgckbthfcmeyshwqufalqftrmnquvnbbleuavadgnzcjrftgxjpahpftqsvvcztagzliyfvxgjxqsresmxwtzbirvcsedsvnibkrropozkhakgzkjizbowohyydtqkogppwyusexihrsnvdhwvdywzhaignaylirtapmunsrjhrhxnmhnradllgbtpmjzpmqcucsyhfvshxuusntwmxa
         type: string
         custom: []
     cleanBodyParameters:
-      user_reference: zybozpamnnchjjyugbaexkrkcnyikpiriadmaphraeftchiywuzvvddnxsapgtlbvlhuisabioizcl
-      app_reference: icqlbguonrhldyrxiiuujdzwvkzuoraqxeeaihzlpndqbavdochalmdbfrmndkzvefrsfqqujejsygdhkfuhalectntszgmkkdtpxuzqgfozvichbvgaabhcuexqedoglqjestynfemocdipuwrpgofunqtuaairlntizhyvwexommltemrnxoyaotfhyss
+      user_reference: gedjoknonekgprycsjyceonxzvxrrlclxxgydyfyoscgdppmdoadsxgtioeisowhlhcuvyjhuapluhrjgidihzeigjmwxzctvbrlfrxarobjdzzfigyuhwyyyoksninavmkdhuolqgjlisvwhkruzrjxmzihmdzdocmnudpmecczpxbpywbhbbatrhtziu
+      app_reference: djgckbthfcmeyshwqufalqftrmnquvnbbleuavadgnzcjrftgxjpahpftqsvvcztagzliyfvxgjxqsresmxwtzbirvcsedsvnibkrropozkhakgzkjizbowohyydtqkogppwyusexihrsnvdhwvdywzhaignaylirtapmunsrjhrhxnmhnradllgbtpmjzpmqcucsyhfvshxuusntwmxa
     fileParameters: []
     responses:
       -

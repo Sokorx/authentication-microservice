@@ -29,8 +29,6 @@ return new class extends Migration
             $table->string('reference')->unique();
             $table->string('phone_number');
 
-            $table->string('verification_token')->nullable();
-            $table->timestamp('verification_token_expiry')->nullable();
             $table->timestamp('verified_at')->nullable();
 
             $table->timestamps();
