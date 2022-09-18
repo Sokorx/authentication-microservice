@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('version');
+            $table->string('password');
             $table->string('reference')->unique();
             $table->timestamps();
         });

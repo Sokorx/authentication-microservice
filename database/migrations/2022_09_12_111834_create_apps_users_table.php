@@ -25,7 +25,6 @@ return new class extends Migration
             $table->foreign('app_reference')->references('reference')->on('apps');
             $table->foreign('user_reference')->references('reference')->on('users');
 
-            $table->string('password');
             $table->string('reference')->unique();
             $table->string('phone_number');
 

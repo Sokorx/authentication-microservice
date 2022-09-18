@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\v1\User\UserAuthenticationController;
+use App\Http\Controllers\v1\App\AuthenticationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,13 +23,20 @@ Route::group(
     ['prefix' => 'v1'],
     function () {
 
-        Route::prefix("users")->group(function () {
-            Route::post('/register', [UserAuthenticationController::class, 'register']);
-            Route::post('/verify-email', [UserAuthenticationController::class, 'verifyEmail']);
-            Route::post('/resend-verification-email', [UserAuthenticationController::class, 'resendVerificationMail']);
+
+
+        /**
+         * Authenticated Routes
+         */
+        Route::middleware('auth:sanctum')->group(function () {
+
+            Route::prefix("users")->group(function () {
+                Route::post('/register', [UserAuthenticationController::class, 'register']);
+            });
+        });
+
+        Route::prefix("apps")->group(function () {
+            Route::post('/login', [AuthenticationController::class, 'login']);
         });
     }
 );
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });

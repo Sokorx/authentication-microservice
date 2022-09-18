@@ -45,7 +45,6 @@ class AuthenticationService
             $user_reference = $user_exists_check['reference'];
         }
 
-        $verification_token = $this->generateVerificationToken();
         $app_user = AppUser::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
@@ -53,10 +52,7 @@ class AuthenticationService
             'email' => $data['email'],
             'phone_number' => $data['phone_number'],
             'app_reference' => $data['app_reference'],
-            'password' => Hash::make($data['password']),
             'user_reference' => $user_reference,
-            'verification_token' => $verification_token,
-            'verification_token_expiry' => Carbon::now()->addMinutes(10)
         ]);
         if (!$app_user_device_exists) {
             AppUserDevice::create([
@@ -167,7 +163,7 @@ class AuthenticationService
     {
         $verification_token = rand(1000, 9999);
 
-        $existing_token = AppUser::where('verification_token', $verification_token)->first();
+        $existing_token = AppUser::where('email_verification_token', $verification_token)->first();
 
         if ($existing_token) {
 

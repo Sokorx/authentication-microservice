@@ -3,18 +3,25 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use App\Traits\GenerateModelReferenceTrait;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class App extends Model
+
+
+
+class App extends Authenticatable
 {
 
-    use HasFactory, GenerateModelReferenceTrait;
+    use HasApiTokens, HasFactory, Notifiable, GenerateModelReferenceTrait;
 
     protected $table = 'apps';
     protected $fillable = [
         'name',
         'version',
-        'reference'
+        'password',
+        'reference',
+        'allowed_ips'
     ];
 }

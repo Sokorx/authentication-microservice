@@ -6,6 +6,8 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Support\Facades\Http;
 use App\Models\App;
+use Laravel\Sanctum\Sanctum;
+
 
 
 class UserRegisterationTest extends TestCase
@@ -19,6 +21,10 @@ class UserRegisterationTest extends TestCase
     {
 
         $app = App::factory()->create();
+
+        Sanctum::actingAs(
+            $app
+        );
 
 
         $response = $this->postJson(
@@ -91,6 +97,9 @@ class UserRegisterationTest extends TestCase
 
         $app = App::factory()->create();
 
+        Sanctum::actingAs(
+            $app
+        );
 
         $response = $this->postJson(
             "/api/v1/users/register",

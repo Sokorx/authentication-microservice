@@ -31,7 +31,6 @@ class AppUserFactory extends Factory
             'last_name' => fake()->name(),
             'middle_name' => fake()->name(),
             'email' => fake()->email(),
-            'password' =>  Hash::make('passowrd'),
             'phone_number' => fake()->phoneNumber(),
             'app_reference' => $app->reference,
             'user_reference' => $user->reference,
