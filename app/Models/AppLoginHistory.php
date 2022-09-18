@@ -14,6 +14,7 @@ class AppLoginHistory extends Model
     protected $fillable = [
         'app_user_device_reference',
         'ip_address',
+        'is_successful'
 
     ];
 }

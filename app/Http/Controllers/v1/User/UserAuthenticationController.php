@@ -5,21 +5,26 @@ namespace App\Http\Controllers\v1\User;
 use App\Helpers\ApiResponse;
 use App\Http\Controllers\Controller;
 use App\Services\User\AuthenticationService;
+use App\Services\User\UserService;
 
 use App\Http\Requests\Authentication\RegisterUserRequest;
+use App\Http\Requests\Authentication\UpdateLoginHistoryRequest;
 use App\Http\Requests\Authentication\VerifyEmailRequest;
 use App\Http\Requests\Authentication\ResendVerificationMailRequest;
 use Illuminate\Support\Facades\Log;
 use App\Http\Resources\AppUserResource;
+use App\Http\Resources\AppLoginHistoryResource;
 use Exception;
 
 class UserAuthenticationController extends Controller
 {
 
     public $authentication_service;
-    public function __construct(AuthenticationService $authentication_service)
+    public $user_service;
+    public function __construct(AuthenticationService $authentication_service, UserService $user_service)
     {
         $this->authentication_service = $authentication_service;
+        $this->user_service = $user_service;
     }
 
 
@@ -44,6 +49,34 @@ class UserAuthenticationController extends Controller
             );
         } catch (Exception $e) {
             Log::error("Error registering app user", [
+                "message" => $e->getMessage(),
+                "payload" => $request->all()
+            ]);
+            return ApiResponse::errorResponse('Server error', 500, $e);
+        }
+    }
+
+    /**
+     * Update login history
+     * @apiResource 200 App\Http\Resources\AppLoginHistoryResource
+     * @apiResourceModel App\Models\AppLoginHistory
+     * @responseFile 422 responses/validation.error.json
+     * @responseFile 500 responses/server.error.json
+     * @apiResourceAdditional message="Login history updated" code=201
+     */
+    public function updateLoginHistory(UpdateLoginHistoryRequest $request)
+    {
+        try {
+
+            $validated_data  = $request->validated();
+            $login_history = $this->user_service->updateAppUserLoginHistory($validated_data);
+            return ApiResponse::validResponse(
+                'Login history updated',
+                new AppLoginHistoryResource($login_history),
+                200
+            );
+        } catch (Exception $e) {
+            Log::error("Error updating login history", [
                 "message" => $e->getMessage(),
                 "payload" => $request->all()
             ]);
