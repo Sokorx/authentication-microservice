@@ -11,9 +11,13 @@ use App\Http\Requests\Authentication\RegisterUserRequest;
 use App\Http\Requests\Authentication\UpdateLoginHistoryRequest;
 use App\Http\Requests\Authentication\VerifyEmailRequest;
 use App\Http\Requests\Authentication\ResendVerificationMailRequest;
+use App\Http\Requests\Authentication\CheckIfUserExistsRequest;
+
 use Illuminate\Support\Facades\Log;
 use App\Http\Resources\AppUserResource;
 use App\Http\Resources\AppLoginHistoryResource;
+use App\Http\Resources\CheckIfUserExistsResource;
+
 use Exception;
 
 class UserAuthenticationController extends Controller
@@ -55,6 +59,41 @@ class UserAuthenticationController extends Controller
             return ApiResponse::errorResponse('Server error', 500, $e);
         }
     }
+
+
+
+    /**
+     * Check if User exists
+     * @responseFile 200 responses/userexists.error,json
+     * @responseFile 422 responses/validation.error.json
+     * @responseFile 500 responses/server.error.json
+     */
+    public function checkIfUserExists(CheckIfUserExistsRequest $request)
+    {
+        try {
+
+            $validated_data  = $request->validated();
+            $app_user_exists = $this->authentication_service->appUserExists($validated_data['email'], $validated_data['app_reference']);
+
+            $app_user = null;
+            if ($app_user_exists) {
+                $app_user =   $this->authentication_service->getAppUser($validated_data['email'], $validated_data['app_reference']);
+            }
+            return ApiResponse::validResponse(
+                'Request successfull',
+                new CheckIfUserExistsResource($app_user),
+                200
+            );
+        } catch (Exception $e) {
+            Log::error("Error checking if  app user exists", [
+                "message" => $e->getMessage(),
+                "payload" => $request->all()
+            ]);
+            return ApiResponse::errorResponse('Server error', 500, $e);
+        }
+    }
+
+
 
     /**
      * Update login history

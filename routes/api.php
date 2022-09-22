@@ -33,6 +33,7 @@ Route::group(
             Route::prefix("users")->group(function () {
                 Route::post('/register', [UserAuthenticationController::class, 'register']);
                 Route::post('/update-login-history', [UserAuthenticationController::class, 'updateLoginHistory']);
+                Route::post('/user-check', [UserAuthenticationController::class, 'checkIfUserExists']);
             });
         });
 

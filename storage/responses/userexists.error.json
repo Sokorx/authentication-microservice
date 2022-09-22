@@ -1,0 +1,20 @@
+{
+    "message": "Request successful",
+    "data": {
+        "app_user_exists": true,
+        "app_user": {
+            "reference": "a6eed45b-d9e4-4ab8-9543-58d2b7dd69fc",
+            "first_name": "Houston Willms",
+            "last_name": "Immanuel Jaskolski",
+            "phone_number": "564.559.8929",
+            "middle_name": "Kavon Shields",
+            "email": "ernie62@yahoo.com",
+            "app_reference": "f0b5c7b6-1bdd-4cf2-b658-0d95eb495786",
+            "user_reference": "b43eaf15-7b8c-47db-81cf-94db49fafbeb",
+            "verified": false,
+            "created_at": "2022-09-22T00:26:42.000000Z",
+            "updated_at": "2022-09-22T00:26:42.000000Z"
+        }
+    },
+    "code": 200
+}

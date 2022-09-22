@@ -147,6 +147,16 @@ class AuthenticationService
         return true;
     }
 
+    public function getAppUser(string $email, string $app_reference)
+    {
+        $user = AppUser::where([
+            'email' => $email,
+            "app_reference" => $app_reference
+        ])->first();
+
+        return $user;
+    }
+
     public function appUserDeviceExists(string $device_id, string $app_reference)
     {
         $device = AppUserDevice::where([
