@@ -54,7 +54,7 @@ endpoints:
         name: device_id
         description: 'Device id. Must not be greater than 255 characters.'
         required: true
-        example: trldqxoikjievkpqaxbcwritwsyjihpqueltdnsxppbwmltckxlknavwibzcxmnodmuxonijmjcvqsidydznyrfjrzhfjqyxgevjsftimoakvvmas
+        example: mgkuybrbvykdlxeoataltiotlpqbhtkldasthsvnqxfycshevukvyjtfnvxgqohzeoimqtexwtremplyjlqzxntlqodpllnqgrreidsvxoxfiuolinejvdshyxltileydrotzhvgevrjfdhgkqwzviclplsjaskdluybrhbhsymcwhxeqykvrjfwczubacepoybolxnmwuzkvwkgczlwbjaqlgzshig
         type: string
         custom: []
       email:
@@ -68,7 +68,7 @@ endpoints:
         name: app_reference
         description: 'Reference of app that wants to register the user. Must not be greater than 255 characters.'
         required: true
-        example: cniwrgkxpjdqlictlmronxb
+        example: yucpbkhjdjltfigfycvgtyltrikasivwfxujotwdjghoriunjuotjiupkfaerhsjltbqzhvwronuetbuvaywphkbspdimqceftnkqmthiugy
         type: string
         custom: []
     cleanBodyParameters:
@@ -76,14 +76,14 @@ endpoints:
       last_name: Doe
       middle_name: ''
       phone_number: '08101209762'
-      device_id: trldqxoikjievkpqaxbcwritwsyjihpqueltdnsxppbwmltckxlknavwibzcxmnodmuxonijmjcvqsidydznyrfjrzhfjqyxgevjsftimoakvvmas
+      device_id: mgkuybrbvykdlxeoataltiotlpqbhtkldasthsvnqxfycshevukvyjtfnvxgqohzeoimqtexwtremplyjlqzxntlqodpllnqgrreidsvxoxfiuolinejvdshyxltileydrotzhvgevrjfdhgkqwzviclplsjaskdluybrhbhsymcwhxeqykvrjfwczubacepoybolxnmwuzkvwkgczlwbjaqlgzshig
       email: johndoe342@gmail.com
-      app_reference: cniwrgkxpjdqlictlmronxb
+      app_reference: yucpbkhjdjltfigfycvgtyltrikasivwfxujotwdjghoriunjuotjiupkfaerhsjltbqzhvwronuetbuvaywphkbspdimqceftnkqmthiugy
     fileParameters: []
     responses:
       -
         status: 201
-        content: '{"data":{"reference":"a6eed45b-d9e4-4ab8-9543-58d2b7dd69fc","first_name":"Houston Willms","last_name":"Immanuel Jaskolski","phone_number":"564.559.8929","middle_name":"Kavon Shields","email":"ernie62@yahoo.com","app_reference":"f0b5c7b6-1bdd-4cf2-b658-0d95eb495786","user_reference":"b43eaf15-7b8c-47db-81cf-94db49fafbeb","verified":false,"created_at":"2022-09-22T00:26:42.000000Z","updated_at":"2022-09-22T00:26:42.000000Z"},"message":"App user created,verify email.","code":"201"}'
+        content: '{"data":{"reference":"390322fa-50f2-497f-925a-1d8aaadb74a3","first_name":"Genoveva Bartell","last_name":"Julien Oberbrunner","phone_number":"1-541-715-0251","middle_name":"Morton Koch","email":"blanda.raoul@gmail.com","app_reference":"926b8083-7565-4d97-acf3-fd90b345f89c","user_reference":"14fe49bb-6b1b-402d-8484-b9475ae94547","verified":false,"created_at":"2022-09-22T17:57:36.000000Z","updated_at":"2022-09-22T17:57:36.000000Z"},"message":"App user created,verify email.","code":"201"}'
         headers: []
         description: '201'
         custom: []
@@ -139,14 +139,14 @@ endpoints:
         name: device_id
         description: 'Device id. Must not be greater than 255 characters.'
         required: true
-        example: yfvcpcohlnnxctijoyvwrxbaopjpvqhmfufwbekcebnlzqyciiojtjl
+        example: ttqnctjyphcmkvnpabrmsuhboyymvafiqyfhpvvjtcylwhrzcqpsbrazclxgnoxqicjuxqmbqzxelqtrvuifxcyyuhhflkdyecgjzwinbxnsjnvjawikplibqdfzomayhxlsiscsfofpuhwdoevyieppnwlbjbzynrxpmbrlikerkgtt
         type: string
         custom: []
       ip_address:
         name: ip_address
         description: 'User ip address. Must not be greater than 255 characters.'
         required: true
-        example: xqrcznkchyrfbhyblxgxdxjozttinqsvgpkpgovsyhxijhlefkjzdcwexvucbngihoocsohgompqlbkgzfkbpvpreuprtqtdosgwyaftzwsrumdzhkjdfibtcorihzjfdqqmbjcyzfkuywwokigyulwhnuejtylujszikucblxbkzwqweplvnrbekprxtoxgzzcdhfmwgysxyxstatilrpthoui
+        example: pngyxrnqcpkkcbpevhdkbxcmzumvzijyffsctmqgmqyyfpkxnhozhefliqcsllclmgvxfzkszdalglgalheiuxfxdvogppgqhhzrtvztdiphyfizdgqlkpsc
         type: string
         custom: []
       is_successful:
@@ -160,19 +160,112 @@ endpoints:
         name: user_reference
         description: 'User reference. Must not be greater than 255 characters.'
         required: true
-        example: enlywpvypxtspfpmnrbpnhggjbuezafwunqbhwzextzgevppkqmfkqiogfstvdbntfzofkwllrmcyexiqkbdcdqkgatxedtynkegekrquhvkkquiugmfxwarynhbdkweyukqkvicclhdudqutevymtojfmaxpvpjvnkwnrihgrauglaawpsbtfvmvfuufqpwbzdpgnqgbdabyekvebviuqvpsggcgsrfoknuqqijerwcqttqkpyqztvyfz
+        example: ummoyxvjvwuwhhyynrnnchmhfzgmnnnrlytjajrkjdagfgptztucchsxvhlohxbogykflxlqckbwahdtgrtwjxcglfofzawocxgsxqqwhwziypznpdlgodpdakcmpexmgrfrtqhtgtbsblpyhjpclgtjhjaqrhgtgeemzjqxvakpbcsigmijtzckobsvvyogzocfxapenhciuifiqmakkffhuzxodtcaqvzgkkaspwmpkvdqbpgtyatppyg
         type: string
         custom: []
     cleanBodyParameters:
-      device_id: yfvcpcohlnnxctijoyvwrxbaopjpvqhmfufwbekcebnlzqyciiojtjl
-      ip_address: xqrcznkchyrfbhyblxgxdxjozttinqsvgpkpgovsyhxijhlefkjzdcwexvucbngihoocsohgompqlbkgzfkbpvpreuprtqtdosgwyaftzwsrumdzhkjdfibtcorihzjfdqqmbjcyzfkuywwokigyulwhnuejtylujszikucblxbkzwqweplvnrbekprxtoxgzzcdhfmwgysxyxstatilrpthoui
+      device_id: ttqnctjyphcmkvnpabrmsuhboyymvafiqyfhpvvjtcylwhrzcqpsbrazclxgnoxqicjuxqmbqzxelqtrvuifxcyyuhhflkdyecgjzwinbxnsjnvjawikplibqdfzomayhxlsiscsfofpuhwdoevyieppnwlbjbzynrxpmbrlikerkgtt
+      ip_address: pngyxrnqcpkkcbpevhdkbxcmzumvzijyffsctmqgmqyyfpkxnhozhefliqcsllclmgvxfzkszdalglgalheiuxfxdvogppgqhhzrtvztdiphyfizdgqlkpsc
       is_successful: false
-      user_reference: enlywpvypxtspfpmnrbpnhggjbuezafwunqbhwzextzgevppkqmfkqiogfstvdbntfzofkwllrmcyexiqkbdcdqkgatxedtynkegekrquhvkkquiugmfxwarynhbdkweyukqkvicclhdudqutevymtojfmaxpvpjvnkwnrihgrauglaawpsbtfvmvfuufqpwbzdpgnqgbdabyekvebviuqvpsggcgsrfoknuqqijerwcqttqkpyqztvyfz
+      user_reference: ummoyxvjvwuwhhyynrnnchmhfzgmnnnrlytjajrkjdagfgptztucchsxvhlohxbogykflxlqckbwahdtgrtwjxcglfofzawocxgsxqqwhwziypznpdlgodpdakcmpexmgrfrtqhtgtbsblpyhjpclgtjhjaqrhgtgeemzjqxvakpbcsigmijtzckobsvvyogzocfxapenhciuifiqmakkffhuzxodtcaqvzgkkaspwmpkvdqbpgtyatppyg
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":{"app_user_device_reference":"c2d6c540-fa23-4fab-860d-0446914f35d2","ip_address":"9462682b-7658-4a96-9272-738fd3f0dc7a","is_successful":true,"created_at":"2022-09-22T00:26:42.000000Z","updated_at":"2022-09-22T00:26:42.000000Z"},"message":"Login history updated","code":"200"}'
+        content: '{"data":{"app_user_device_reference":"cadc49ac-dfbb-412e-a13d-436bf1852172","ip_address":"5cebf18b-0c9f-4ac0-ab29-3ea08de944c6","is_successful":true,"created_at":"2022-09-22T17:57:36.000000Z","updated_at":"2022-09-22T17:57:36.000000Z"},"message":"Login history updated","code":"200"}'
+        headers: []
+        description: '200'
+        custom: []
+      -
+        status: 422
+        content: |
+          {
+              "message": "",
+              "errors": {}
+          }
+        headers: []
+        description: '422'
+        custom: []
+      -
+        status: 500
+        content: |
+          {
+              "message": "",
+              "code": 500,
+              "error_debug": ""
+          }
+        headers: []
+        description: '500'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/users/user-check
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Check if User exists'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'App user email. Must not be greater than 255 characters.'
+        required: true
+        example: johndoe342@gmail.com
+        type: string
+        custom: []
+      app_reference:
+        name: app_reference
+        description: 'Reference of app that wants to register the user. Must not be greater than 255 characters.'
+        required: true
+        example: ctcyhghmlpyzxkbrdhidcmerdpzqnjkpwsbbdjivmawjwcwzwaytatklrrtvmyrsvwzhfqeebnyxjkttdprlnatdniikzpsbyrqnnerspsygwghfnwvrkaolxlvmejhlatdtkhcwonybolmyncehologjylmqafajztbrkdjvkznaiby
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: johndoe342@gmail.com
+      app_reference: ctcyhghmlpyzxkbrdhidcmerdpzqnjkpwsbbdjivmawjwcwzwaytatklrrtvmyrsvwzhfqeebnyxjkttdprlnatdniikzpsbyrqnnerspsygwghfnwvrkaolxlvmejhlatdtkhcwonybolmyncehologjylmqafajztbrkdjvkznaiby
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "message": "Request successful",
+              "data": {
+                  "app_user_exists": true,
+                  "app_user": {
+                      "reference": "a6eed45b-d9e4-4ab8-9543-58d2b7dd69fc",
+                      "first_name": "Houston Willms",
+                      "last_name": "Immanuel Jaskolski",
+                      "phone_number": "564.559.8929",
+                      "middle_name": "Kavon Shields",
+                      "email": "ernie62@yahoo.com",
+                      "app_reference": "f0b5c7b6-1bdd-4cf2-b658-0d95eb495786",
+                      "user_reference": "b43eaf15-7b8c-47db-81cf-94db49fafbeb",
+                      "verified": false,
+                      "created_at": "2022-09-22T00:26:42.000000Z",
+                      "updated_at": "2022-09-22T00:26:42.000000Z"
+                  }
+              },
+              "code": 200
+          }
         headers: []
         description: '200'
         custom: []
@@ -228,19 +321,19 @@ endpoints:
         name: password
         description: 'App password.'
         required: true
-        example: sed
+        example: aut
         type: string
         custom: []
       reference:
         name: reference
         description: 'App reference. Must not be greater than 255 characters.'
         required: true
-        example: vgxmsroljsnavyyvujdlgbqyixggjagwwzqsmnrhnyzkbbmbbmnbrxfymeugmhgsenlxk
+        example: hfurhrtmyqxecwcezqfusegqjehoyewgucacnuiwarqyfifznnjqhcfkcxxzztazcuqrpec
         type: string
         custom: []
     cleanBodyParameters:
-      password: sed
-      reference: vgxmsroljsnavyyvujdlgbqyixggjagwwzqsmnrhnyzkbbmbbmnbrxfymeugmhgsenlxk
+      password: aut
+      reference: hfurhrtmyqxecwcezqfusegqjehoyewgucacnuiwarqyfifznnjqhcfkcxxzztazcuqrpec
     fileParameters: []
     responses:
       -

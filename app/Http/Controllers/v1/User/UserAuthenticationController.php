@@ -64,7 +64,7 @@ class UserAuthenticationController extends Controller
 
     /**
      * Check if User exists
-     * @responseFile 200 responses/userexists.error,json
+     * @responseFile 200 responses/userexists.error.json
      * @responseFile 422 responses/validation.error.json
      * @responseFile 500 responses/server.error.json
      */

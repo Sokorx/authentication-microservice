@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Laravel Documentation</title>
+    <title>Authentication Log Microservice</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
 
@@ -77,6 +77,9 @@
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-v1-users-update-login-history">
                                 <a href="#endpoints-POSTapi-v1-users-update-login-history">Update login history</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-v1-users-user-check">
+                                <a href="#endpoints-POSTapi-v1-users-user-check">Check if User exists</a>
+                            </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-v1-apps-login">
                                 <a href="#endpoints-POSTapi-v1-apps-login">Login App</a>
                             </li>
@@ -134,9 +137,9 @@ You can switch the language used with the tabs at the top right (or from the nav
     \"last_name\": \"Doe\",
     \"middle_name\": \"\",
     \"phone_number\": \"08101209762\",
-    \"device_id\": \"trldqxoikjievkpqaxbcwritwsyjihpqueltdnsxppbwmltckxlknavwibzcxmnodmuxonijmjcvqsidydznyrfjrzhfjqyxgevjsftimoakvvmas\",
+    \"device_id\": \"mgkuybrbvykdlxeoataltiotlpqbhtkldasthsvnqxfycshevukvyjtfnvxgqohzeoimqtexwtremplyjlqzxntlqodpllnqgrreidsvxoxfiuolinejvdshyxltileydrotzhvgevrjfdhgkqwzviclplsjaskdluybrhbhsymcwhxeqykvrjfwczubacepoybolxnmwuzkvwkgczlwbjaqlgzshig\",
     \"email\": \"johndoe342@gmail.com\",
-    \"app_reference\": \"cniwrgkxpjdqlictlmronxb\"
+    \"app_reference\": \"yucpbkhjdjltfigfycvgtyltrikasivwfxujotwdjghoriunjuotjiupkfaerhsjltbqzhvwronuetbuvaywphkbspdimqceftnkqmthiugy\"
 }"
 </code></pre></div>
 
@@ -156,9 +159,9 @@ let body = {
     "last_name": "Doe",
     "middle_name": "",
     "phone_number": "08101209762",
-    "device_id": "trldqxoikjievkpqaxbcwritwsyjihpqueltdnsxppbwmltckxlknavwibzcxmnodmuxonijmjcvqsidydznyrfjrzhfjqyxgevjsftimoakvvmas",
+    "device_id": "mgkuybrbvykdlxeoataltiotlpqbhtkldasthsvnqxfycshevukvyjtfnvxgqohzeoimqtexwtremplyjlqzxntlqodpllnqgrreidsvxoxfiuolinejvdshyxltileydrotzhvgevrjfdhgkqwzviclplsjaskdluybrhbhsymcwhxeqykvrjfwczubacepoybolxnmwuzkvwkgczlwbjaqlgzshig",
     "email": "johndoe342@gmail.com",
-    "app_reference": "cniwrgkxpjdqlictlmronxb"
+    "app_reference": "yucpbkhjdjltfigfycvgtyltrikasivwfxujotwdjghoriunjuotjiupkfaerhsjltbqzhvwronuetbuvaywphkbspdimqceftnkqmthiugy"
 };
 
 fetch(url, {
@@ -177,17 +180,17 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;reference&quot;: &quot;a6eed45b-d9e4-4ab8-9543-58d2b7dd69fc&quot;,
-        &quot;first_name&quot;: &quot;Houston Willms&quot;,
-        &quot;last_name&quot;: &quot;Immanuel Jaskolski&quot;,
-        &quot;phone_number&quot;: &quot;564.559.8929&quot;,
-        &quot;middle_name&quot;: &quot;Kavon Shields&quot;,
-        &quot;email&quot;: &quot;ernie62@yahoo.com&quot;,
-        &quot;app_reference&quot;: &quot;f0b5c7b6-1bdd-4cf2-b658-0d95eb495786&quot;,
-        &quot;user_reference&quot;: &quot;b43eaf15-7b8c-47db-81cf-94db49fafbeb&quot;,
+        &quot;reference&quot;: &quot;390322fa-50f2-497f-925a-1d8aaadb74a3&quot;,
+        &quot;first_name&quot;: &quot;Genoveva Bartell&quot;,
+        &quot;last_name&quot;: &quot;Julien Oberbrunner&quot;,
+        &quot;phone_number&quot;: &quot;1-541-715-0251&quot;,
+        &quot;middle_name&quot;: &quot;Morton Koch&quot;,
+        &quot;email&quot;: &quot;blanda.raoul@gmail.com&quot;,
+        &quot;app_reference&quot;: &quot;926b8083-7565-4d97-acf3-fd90b345f89c&quot;,
+        &quot;user_reference&quot;: &quot;14fe49bb-6b1b-402d-8484-b9475ae94547&quot;,
         &quot;verified&quot;: false,
-        &quot;created_at&quot;: &quot;2022-09-22T00:26:42.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-09-22T00:26:42.000000Z&quot;
+        &quot;created_at&quot;: &quot;2022-09-22T17:57:36.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-09-22T17:57:36.000000Z&quot;
     },
     &quot;message&quot;: &quot;App user created,verify email.&quot;,
     &quot;code&quot;: &quot;201&quot;
@@ -310,7 +313,7 @@ fetch(url, {
                 <input type="text"
                name="device_id"
                data-endpoint="POSTapi-v1-users-register"
-               value="trldqxoikjievkpqaxbcwritwsyjihpqueltdnsxppbwmltckxlknavwibzcxmnodmuxonijmjcvqsidydznyrfjrzhfjqyxgevjsftimoakvvmas"
+               value="mgkuybrbvykdlxeoataltiotlpqbhtkldasthsvnqxfycshevukvyjtfnvxgqohzeoimqtexwtremplyjlqzxntlqodpllnqgrreidsvxoxfiuolinejvdshyxltileydrotzhvgevrjfdhgkqwzviclplsjaskdluybrhbhsymcwhxeqykvrjfwczubacepoybolxnmwuzkvwkgczlwbjaqlgzshig"
                data-component="body" hidden>
     <br>
 <p>Device id. Must not be greater than 255 characters.</p>
@@ -334,7 +337,7 @@ fetch(url, {
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-register"
-               value="cniwrgkxpjdqlictlmronxb"
+               value="yucpbkhjdjltfigfycvgtyltrikasivwfxujotwdjghoriunjuotjiupkfaerhsjltbqzhvwronuetbuvaywphkbspdimqceftnkqmthiugy"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to register the user. Must not be greater than 255 characters.</p>
@@ -358,10 +361,10 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"device_id\": \"yfvcpcohlnnxctijoyvwrxbaopjpvqhmfufwbekcebnlzqyciiojtjl\",
-    \"ip_address\": \"xqrcznkchyrfbhyblxgxdxjozttinqsvgpkpgovsyhxijhlefkjzdcwexvucbngihoocsohgompqlbkgzfkbpvpreuprtqtdosgwyaftzwsrumdzhkjdfibtcorihzjfdqqmbjcyzfkuywwokigyulwhnuejtylujszikucblxbkzwqweplvnrbekprxtoxgzzcdhfmwgysxyxstatilrpthoui\",
+    \"device_id\": \"ttqnctjyphcmkvnpabrmsuhboyymvafiqyfhpvvjtcylwhrzcqpsbrazclxgnoxqicjuxqmbqzxelqtrvuifxcyyuhhflkdyecgjzwinbxnsjnvjawikplibqdfzomayhxlsiscsfofpuhwdoevyieppnwlbjbzynrxpmbrlikerkgtt\",
+    \"ip_address\": \"pngyxrnqcpkkcbpevhdkbxcmzumvzijyffsctmqgmqyyfpkxnhozhefliqcsllclmgvxfzkszdalglgalheiuxfxdvogppgqhhzrtvztdiphyfizdgqlkpsc\",
     \"is_successful\": false,
-    \"user_reference\": \"enlywpvypxtspfpmnrbpnhggjbuezafwunqbhwzextzgevppkqmfkqiogfstvdbntfzofkwllrmcyexiqkbdcdqkgatxedtynkegekrquhvkkquiugmfxwarynhbdkweyukqkvicclhdudqutevymtojfmaxpvpjvnkwnrihgrauglaawpsbtfvmvfuufqpwbzdpgnqgbdabyekvebviuqvpsggcgsrfoknuqqijerwcqttqkpyqztvyfz\"
+    \"user_reference\": \"ummoyxvjvwuwhhyynrnnchmhfzgmnnnrlytjajrkjdagfgptztucchsxvhlohxbogykflxlqckbwahdtgrtwjxcglfofzawocxgsxqqwhwziypznpdlgodpdakcmpexmgrfrtqhtgtbsblpyhjpclgtjhjaqrhgtgeemzjqxvakpbcsigmijtzckobsvvyogzocfxapenhciuifiqmakkffhuzxodtcaqvzgkkaspwmpkvdqbpgtyatppyg\"
 }"
 </code></pre></div>
 
@@ -377,10 +380,10 @@ const headers = {
 };
 
 let body = {
-    "device_id": "yfvcpcohlnnxctijoyvwrxbaopjpvqhmfufwbekcebnlzqyciiojtjl",
-    "ip_address": "xqrcznkchyrfbhyblxgxdxjozttinqsvgpkpgovsyhxijhlefkjzdcwexvucbngihoocsohgompqlbkgzfkbpvpreuprtqtdosgwyaftzwsrumdzhkjdfibtcorihzjfdqqmbjcyzfkuywwokigyulwhnuejtylujszikucblxbkzwqweplvnrbekprxtoxgzzcdhfmwgysxyxstatilrpthoui",
+    "device_id": "ttqnctjyphcmkvnpabrmsuhboyymvafiqyfhpvvjtcylwhrzcqpsbrazclxgnoxqicjuxqmbqzxelqtrvuifxcyyuhhflkdyecgjzwinbxnsjnvjawikplibqdfzomayhxlsiscsfofpuhwdoevyieppnwlbjbzynrxpmbrlikerkgtt",
+    "ip_address": "pngyxrnqcpkkcbpevhdkbxcmzumvzijyffsctmqgmqyyfpkxnhozhefliqcsllclmgvxfzkszdalglgalheiuxfxdvogppgqhhzrtvztdiphyfizdgqlkpsc",
     "is_successful": false,
-    "user_reference": "enlywpvypxtspfpmnrbpnhggjbuezafwunqbhwzextzgevppkqmfkqiogfstvdbntfzofkwllrmcyexiqkbdcdqkgatxedtynkegekrquhvkkquiugmfxwarynhbdkweyukqkvicclhdudqutevymtojfmaxpvpjvnkwnrihgrauglaawpsbtfvmvfuufqpwbzdpgnqgbdabyekvebviuqvpsggcgsrfoknuqqijerwcqttqkpyqztvyfz"
+    "user_reference": "ummoyxvjvwuwhhyynrnnchmhfzgmnnnrlytjajrkjdagfgptztucchsxvhlohxbogykflxlqckbwahdtgrtwjxcglfofzawocxgsxqqwhwziypznpdlgodpdakcmpexmgrfrtqhtgtbsblpyhjpclgtjhjaqrhgtgeemzjqxvakpbcsigmijtzckobsvvyogzocfxapenhciuifiqmakkffhuzxodtcaqvzgkkaspwmpkvdqbpgtyatppyg"
 };
 
 fetch(url, {
@@ -399,11 +402,11 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;app_user_device_reference&quot;: &quot;c2d6c540-fa23-4fab-860d-0446914f35d2&quot;,
-        &quot;ip_address&quot;: &quot;9462682b-7658-4a96-9272-738fd3f0dc7a&quot;,
+        &quot;app_user_device_reference&quot;: &quot;cadc49ac-dfbb-412e-a13d-436bf1852172&quot;,
+        &quot;ip_address&quot;: &quot;5cebf18b-0c9f-4ac0-ab29-3ea08de944c6&quot;,
         &quot;is_successful&quot;: true,
-        &quot;created_at&quot;: &quot;2022-09-22T00:26:42.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-09-22T00:26:42.000000Z&quot;
+        &quot;created_at&quot;: &quot;2022-09-22T17:57:36.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-09-22T17:57:36.000000Z&quot;
     },
     &quot;message&quot;: &quot;Login history updated&quot;,
     &quot;code&quot;: &quot;200&quot;
@@ -478,7 +481,7 @@ fetch(url, {
                 <input type="text"
                name="device_id"
                data-endpoint="POSTapi-v1-users-update-login-history"
-               value="yfvcpcohlnnxctijoyvwrxbaopjpvqhmfufwbekcebnlzqyciiojtjl"
+               value="ttqnctjyphcmkvnpabrmsuhboyymvafiqyfhpvvjtcylwhrzcqpsbrazclxgnoxqicjuxqmbqzxelqtrvuifxcyyuhhflkdyecgjzwinbxnsjnvjawikplibqdfzomayhxlsiscsfofpuhwdoevyieppnwlbjbzynrxpmbrlikerkgtt"
                data-component="body" hidden>
     <br>
 <p>Device id. Must not be greater than 255 characters.</p>
@@ -490,7 +493,7 @@ fetch(url, {
                 <input type="text"
                name="ip_address"
                data-endpoint="POSTapi-v1-users-update-login-history"
-               value="xqrcznkchyrfbhyblxgxdxjozttinqsvgpkpgovsyhxijhlefkjzdcwexvucbngihoocsohgompqlbkgzfkbpvpreuprtqtdosgwyaftzwsrumdzhkjdfibtcorihzjfdqqmbjcyzfkuywwokigyulwhnuejtylujszikucblxbkzwqweplvnrbekprxtoxgzzcdhfmwgysxyxstatilrpthoui"
+               value="pngyxrnqcpkkcbpevhdkbxcmzumvzijyffsctmqgmqyyfpkxnhozhefliqcsllclmgvxfzkszdalglgalheiuxfxdvogppgqhhzrtvztdiphyfizdgqlkpsc"
                data-component="body" hidden>
     <br>
 <p>User ip address. Must not be greater than 255 characters.</p>
@@ -525,10 +528,171 @@ fetch(url, {
                 <input type="text"
                name="user_reference"
                data-endpoint="POSTapi-v1-users-update-login-history"
-               value="enlywpvypxtspfpmnrbpnhggjbuezafwunqbhwzextzgevppkqmfkqiogfstvdbntfzofkwllrmcyexiqkbdcdqkgatxedtynkegekrquhvkkquiugmfxwarynhbdkweyukqkvicclhdudqutevymtojfmaxpvpjvnkwnrihgrauglaawpsbtfvmvfuufqpwbzdpgnqgbdabyekvebviuqvpsggcgsrfoknuqqijerwcqttqkpyqztvyfz"
+               value="ummoyxvjvwuwhhyynrnnchmhfzgmnnnrlytjajrkjdagfgptztucchsxvhlohxbogykflxlqckbwahdtgrtwjxcglfofzawocxgsxqqwhwziypznpdlgodpdakcmpexmgrfrtqhtgtbsblpyhjpclgtjhjaqrhgtgeemzjqxvakpbcsigmijtzckobsvvyogzocfxapenhciuifiqmakkffhuzxodtcaqvzgkkaspwmpkvdqbpgtyatppyg"
                data-component="body" hidden>
     <br>
 <p>User reference. Must not be greater than 255 characters.</p>
+        </p>
+        </form>
+
+                    <h2 id="endpoints-POSTapi-v1-users-user-check">Check if User exists</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-v1-users-user-check">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:84/api/v1/users/user-check" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"email\": \"johndoe342@gmail.com\",
+    \"app_reference\": \"ctcyhghmlpyzxkbrdhidcmerdpzqnjkpwsbbdjivmawjwcwzwaytatklrrtvmyrsvwzhfqeebnyxjkttdprlnatdniikzpsbyrqnnerspsygwghfnwvrkaolxlvmejhlatdtkhcwonybolmyncehologjylmqafajztbrkdjvkznaiby\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:84/api/v1/users/user-check"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "email": "johndoe342@gmail.com",
+    "app_reference": "ctcyhghmlpyzxkbrdhidcmerdpzqnjkpwsbbdjivmawjwcwzwaytatklrrtvmyrsvwzhfqeebnyxjkttdprlnatdniikzpsbyrqnnerspsygwghfnwvrkaolxlvmejhlatdtkhcwonybolmyncehologjylmqafajztbrkdjvkznaiby"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-users-user-check">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Request successful&quot;,
+    &quot;data&quot;: {
+        &quot;app_user_exists&quot;: true,
+        &quot;app_user&quot;: {
+            &quot;reference&quot;: &quot;a6eed45b-d9e4-4ab8-9543-58d2b7dd69fc&quot;,
+            &quot;first_name&quot;: &quot;Houston Willms&quot;,
+            &quot;last_name&quot;: &quot;Immanuel Jaskolski&quot;,
+            &quot;phone_number&quot;: &quot;564.559.8929&quot;,
+            &quot;middle_name&quot;: &quot;Kavon Shields&quot;,
+            &quot;email&quot;: &quot;ernie62@yahoo.com&quot;,
+            &quot;app_reference&quot;: &quot;f0b5c7b6-1bdd-4cf2-b658-0d95eb495786&quot;,
+            &quot;user_reference&quot;: &quot;b43eaf15-7b8c-47db-81cf-94db49fafbeb&quot;,
+            &quot;verified&quot;: false,
+            &quot;created_at&quot;: &quot;2022-09-22T00:26:42.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-09-22T00:26:42.000000Z&quot;
+        }
+    },
+    &quot;code&quot;: 200
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;errors&quot;: {}
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (500):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;code&quot;: 500,
+    &quot;error_debug&quot;: &quot;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-users-user-check" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-users-user-check"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-users-user-check"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-users-user-check" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-users-user-check"></code></pre>
+</span>
+<form id="form-POSTapi-v1-users-user-check" data-method="POST"
+      data-path="api/v1/users/user-check"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-users-user-check', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-users-user-check"
+                    onclick="tryItOut('POSTapi-v1-users-user-check');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-users-user-check"
+                    onclick="cancelTryOut('POSTapi-v1-users-user-check');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-users-user-check" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/users/user-check</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-v1-users-user-check"
+               value="johndoe342@gmail.com"
+               data-component="body" hidden>
+    <br>
+<p>App user email. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>app_reference</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text"
+               name="app_reference"
+               data-endpoint="POSTapi-v1-users-user-check"
+               value="ctcyhghmlpyzxkbrdhidcmerdpzqnjkpwsbbdjivmawjwcwzwaytatklrrtvmyrsvwzhfqeebnyxjkttdprlnatdniikzpsbyrqnnerspsygwghfnwvrkaolxlvmejhlatdtkhcwonybolmyncehologjylmqafajztbrkdjvkznaiby"
+               data-component="body" hidden>
+    <br>
+<p>Reference of app that wants to register the user. Must not be greater than 255 characters.</p>
         </p>
         </form>
 
@@ -549,8 +713,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"password\": \"sed\",
-    \"reference\": \"vgxmsroljsnavyyvujdlgbqyixggjagwwzqsmnrhnyzkbbmbbmnbrxfymeugmhgsenlxk\"
+    \"password\": \"aut\",
+    \"reference\": \"hfurhrtmyqxecwcezqfusegqjehoyewgucacnuiwarqyfifznnjqhcfkcxxzztazcuqrpec\"
 }"
 </code></pre></div>
 
@@ -566,8 +730,8 @@ const headers = {
 };
 
 let body = {
-    "password": "sed",
-    "reference": "vgxmsroljsnavyyvujdlgbqyixggjagwwzqsmnrhnyzkbbmbbmnbrxfymeugmhgsenlxk"
+    "password": "aut",
+    "reference": "hfurhrtmyqxecwcezqfusegqjehoyewgucacnuiwarqyfifznnjqhcfkcxxzztazcuqrpec"
 };
 
 fetch(url, {
@@ -672,7 +836,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-v1-apps-login"
-               value="sed"
+               value="aut"
                data-component="body" hidden>
     <br>
 <p>App password.</p>
@@ -684,7 +848,7 @@ fetch(url, {
                 <input type="text"
                name="reference"
                data-endpoint="POSTapi-v1-apps-login"
-               value="vgxmsroljsnavyyvujdlgbqyixggjagwwzqsmnrhnyzkbbmbbmnbrxfymeugmhgsenlxk"
+               value="hfurhrtmyqxecwcezqfusegqjehoyewgucacnuiwarqyfifznnjqhcfkcxxzztazcuqrpec"
                data-component="body" hidden>
     <br>
 <p>App reference. Must not be greater than 255 characters.</p>
