@@ -29,7 +29,7 @@ class RegisterUserRequest extends FormRequest
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'middle_name' => 'string|nullable|max:255',
-            'phone_number' => 'string|required|min:8|max:15',
+            'phone_number' => 'string|nullable|min:8|max:15',
             'device_id' => 'string|required|max:255',
             'email' => [
                 'required', 'max:255',

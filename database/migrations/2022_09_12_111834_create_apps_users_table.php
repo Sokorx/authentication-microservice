@@ -26,7 +26,7 @@ return new class extends Migration
             $table->foreign('user_reference')->references('reference')->on('users');
 
             $table->string('reference')->unique();
-            $table->string('phone_number');
+            $table->string('phone_number')->nullable();
 
             $table->timestamp('verified_at')->nullable();
 

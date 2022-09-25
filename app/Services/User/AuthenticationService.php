@@ -36,7 +36,6 @@ class AuthenticationService
                 'last_name' => $data['last_name'],
                 'middle_name' => $data['middle_name'] ?? null,
                 'email' => $data['email'],
-                'phone_number' => $data['phone_number'],
             ]);
 
             $user->save();
@@ -50,7 +49,7 @@ class AuthenticationService
             'last_name' => $data['last_name'],
             'middle_name' => $data['middle_name'] ?? null,
             'email' => $data['email'],
-            'phone_number' => $data['phone_number'],
+            'phone_number' => $data['phone_number'] ?? null,
             'app_reference' => $data['app_reference'],
             'user_reference' => $user_reference,
         ]);
