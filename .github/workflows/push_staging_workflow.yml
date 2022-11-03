@@ -53,8 +53,9 @@ jobs:
       - name: Composer install
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
       - name: Generate Documentation
+        run: php artisan scribe:generate
+      - name: Copy Documentation To Public Folder
         run: |
-          php artisan scribe:generate
           php -r "file_exists('storage/app/scribe/openapi.yaml') || copy('storage/app/scribe/openapi.yaml', 'public/vendor/scribe/openapi.yaml');"
           php -r "file_exists('storage/app/scribe/collection.json') || copy('storage/app/scribe/collection.json', 'public/vendor/scribe/collection.json');"
       - name: Setup Deployer
