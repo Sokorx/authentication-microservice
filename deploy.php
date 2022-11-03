@@ -26,6 +26,7 @@ add('writable_dirs', [
     'storage',
     'storage/app',
     'storage/app/public',
+    'storage/app/scribe',
     'storage/framework',
     'storage/framework/cache',
     'storage/framework/cache/data',
