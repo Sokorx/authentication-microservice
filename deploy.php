@@ -73,7 +73,7 @@ host('ms-auth.monitecture.com')
 ->set('branch', 'main') // Git branch
 ->set('deploy_path', '/var/www/authentication-microservice');
 
-// Staging Server
+// Staging Server.
 host('staging-ms-auth.monitecture.com')
 ->setHostname('157.230.214.233')
 ->setRemoteUser('root')
