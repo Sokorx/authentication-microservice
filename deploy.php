@@ -63,7 +63,7 @@ task('deploy:secrets', function () {
 });
 
 task('deploy:success', function () {
-    run('cd /var/www/authentication-microservice/current && php artisan scribe:generate');
+    run('cd /var/www/staging/authentication-microservice/current && php artisan scribe:generate');
 });
 
 // Production Server
