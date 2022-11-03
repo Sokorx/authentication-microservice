@@ -13,19 +13,13 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          MYSQL_ROOT_PASSWORD: ${{ secrets.DB_STAGING_PASSWORD }}
           MYSQL_DATABASE: authmicroservice
         ports:
           - 3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
       - uses: actions/checkout@v2
-      - name: Verify authmicroservice DB exists
-        run: mysql --host 127.0.0.1 --port 3306 -u root -e "SHOW DATABASES LIKE 'authmicroservice'"
-      - name: Create 2nd Database
-        run: mysql --host 127.0.0.1 --port 3306 -u root -e "CREATE DATABASE IF NOT EXISTS authmicroservice_second;"
-      - name: Verify authmicroservice_second DB exists
-        run: mysql --host 127.0.0.1 --port 3306 -u root -e "SHOW DATABASES LIKE 'authmicroservice_second'"
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Composer Dependencies
@@ -39,7 +33,7 @@ jobs:
           DB_CONNECTION: mysql
           DB_PORT: 3306
           DB_USER: root
-          DB_PASSWORD: ""
+          DB_PASSWORD: ${{ secrets.DB_STAGING_PASSWORD }}
           DB_DATABASE: authmicroservice
         run: vendor/bin/phpunit
   deploy-staging:
