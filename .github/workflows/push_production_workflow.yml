@@ -29,6 +29,8 @@ jobs:
       - name: Clear Cache
         run: php artisan config:clear
       - name: Migrate with seeder
+        env:
+          DB_PORT: ${{ job.services.mysql.ports[3306] }}
         run: php artisan migrate --seeder
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         env:
