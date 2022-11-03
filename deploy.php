@@ -48,7 +48,6 @@ add('rsync', [
     ],
 ]);
 
-
 // Set up a deployer task to copy secrets to the server
 // Since our secrets are stored in Gitlab, we can access them as env vars
 task('deploy:secrets', function () {
@@ -60,10 +59,6 @@ task('deploy:secrets', function () {
     // run('sudo supervisorctl update');
     // run('sudo supervisorctl start websockets');
     // run('sudo supervisorctl start worker');
-});
-
-task('deploy:success', function () {
-    run('cd /var/www/staging/authentication-microservice/current && php artisan scribe:generate');
 });
 
 // Production Server

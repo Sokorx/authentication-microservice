@@ -52,6 +52,8 @@ jobs:
           extension-csv: mbstring, bcmath
       - name: Composer install
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+      - name: Generate Documentation
+        run: php artisan scribe:generate
       - name: Setup Deployer
         uses: atymic/deployer-php-action@master
         with:
