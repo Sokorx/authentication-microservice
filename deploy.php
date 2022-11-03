@@ -64,7 +64,7 @@ task('deploy:secrets', function () {
 });
 
 task('deploy:success', function () {
-    run('php artisan scribe:generate');
+    run('cd current && php artisan scribe:generate');
 });
 
 // Production Server
