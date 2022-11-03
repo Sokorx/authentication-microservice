@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Moniport",
-        "_postman_id": "51ced4e4-b6c7-4d79-9907-074f25870439",
+        "_postman_id": "c5c1410a-9c4b-4700-8c91-7a31c0727c7a",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"John\",\"last_name\":\"Doe\",\"middle_name\":\"\",\"phone_number\":\"08101209762\",\"device_id\":\"qfvllaezdgbhnpxffnrggacbtvmzslpybjoscauvcmtwijghpvicrqcazxjunwwenxdycgivythilgbomiurcwepeovoulvxazoxejjgcxkmrqrfbotvrhdnmzzzvoxrvymzokczgpbdbtuxhsetgenpsyyysrluuuyqsoaosaxuhjgqduprwobrqqvloolimfdayxohkasttdoqwntpdjrnsizefocizosppnpksjewvrudzxyqjudbzhiib\",\"email\":\"johndoe342@gmail.com\",\"app_reference\":\"shchyarqcatxexmbaydtroxsrhllwwdlpxhmtsqfsqbygkmnfuyaervpmxdfjzifewmhrqizsjixlbayvrcuetspvsyugnpnmvcpsnjjoahbyzfkbwuaiynrfsrivcthipnuchaxonduuammtwqranfzgscjxyotlewicuiggkirdpsmbmghmwzoklusldqwnmpmgrosjdcybuvyydnkudgqiddbrkwmpssmecjotgaokfgewztsqmcaxuvwnmw\",\"password\":\"gtlownndmgbxzudhxritbkdlcjroybukggiqnyipewiotirlloccttnbebwcqtqwqbkfggrdwawbseoqlbkytogizjewcihjhgiarvtgwrmgzsrjulncggcuppnzkycgrvpzvepmywfmvimdywhebxkvfefluqbrxzogouqrphipghsokls\"}"
+                            "raw": "{\"first_name\":\"John\",\"last_name\":\"Doe\",\"middle_name\":\"\",\"phone_number\":\"08101209762\",\"device_id\":\"tjdzzbpgatdtsxfeealqylkiajzuwxldjnjpuxgmbvkvymgmhumzssoqsrxtqogrsqhyugyohshjgghpjumipaphlqvxxfjhqxssmmerdmdhptukkeqkqfdkkibwgaemxhsemmgplllxibvzimmwchadyravmacpsixocvijcetnsxcnnioozbob\",\"email\":\"johndoe342@gmail.com\",\"app_reference\":\"wplnurqcdnvbkszsxqpwuhatpvfrxprcoaieazlapanremozgqwfkozphxuyxg\",\"password\":\"keifcnytaunomngcbecpwfeamjghbwugwyiknzumaprbhxpmwwacermwldpblbwavfowajyncgboqgxwuvpoahetnrfvpmxwbydoptazrrnnedyxuwesyllaifyhfpwoxjbsemxtcswdgzqihcvvyytyqqecghurfofclbutajwwpgemavoalqhi\"}"
                         },
                         "description": "",
                         "auth": {
@@ -91,7 +91,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"verification_token\":\"hvijuyifdcwgimsrlaswqvbbvjrkiijmnxgmjwnlafmxryyzzbyunvhxdvluqdwqvumktjiuvousupxitbvqtcsrfxsxskwarcfptjyujmlvqeixykrhgsoiqqgcpfgktpjsfussvgwyylijkbpwlxrytnofxeeatuirchzpskfnsrxebqihoboeewrcjhaksnoklhzwgmnone\",\"user_reference\":\"rhmxoliskjgfxysongcmzkbjguvnhfnbzuwsdcwgokploqcftgqilpexfdpfqaqsifsjtvlvepvrvpehjejbgruhkrmjmnbqjxlptwqjscgmjknodvavhzubonrjckxtwdymlosdnodupffthunvrdumygutedqmkjzbufxfvejxvensbavmllvtwixejagtlvyfihshctwwdovdyfsjgemrqwpuwwpgoycdqkgnphxduapxtyry\",\"app_reference\":\"japgdwhkvieinocrovqnqvibxzkplklxpsapwvgzfjoxyaxftremwhmvnkylampuobcerzzbkzbayzynvmmqppndiusfgejtubfzervyvekmiyxvtaklrdazzknmcjsx\"}"
+                            "raw": "{\"verification_token\":\"yjsqhscdxokwaayvmztrvtvuatwkswopekujjxpyhpjqoivvadltqrsdjuanuqcbvjuqzgrzueypmtolttlcibrhepwxmnvskeltcdtmgtywggzhtkskcvoaoatbvjxljmamhbxheyjsypcosttrkaqqdpvpcrwdnzybmpemohxvdhcuisxnuhqmvctivyowvvazwqmgbm\",\"user_reference\":\"zohcbuknqqfcmrabogunkviypdqargvnxmkifpmcqtikiyoiisnzvmornkfjxmo\",\"app_reference\":\"ljtircbpojvfmriqfwkmwleykciiqtkzqyymjpkfjsvamokicujivudyjdcuuhgqucdoftdxfpkvysyyxsuexqgsioqwmzxqziuolfnlzqlcdknpbpycrtpcuvdnansfkfkfattfmgusqjtaxmoxhtuewsbomlhxrjgvmmocppjknlatevcvlzmchgkxymnqzd\"}"
                         },
                         "description": "",
                         "auth": {
@@ -147,7 +147,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"user_reference\":\"yjmpsqelkwajlqmpmikoxkrbfkvxlaldqiwgmrqatapowbjbikbnqhnvealqbpuiwhenwjqfvgfymgcdtlmozxxjro\",\"app_reference\":\"\"}"
+                            "raw": "{\"user_reference\":\"vlxppivvveuerwbcwapzqxespeucdnmcdqpxydfwvvfnhacqewczpiclpinfypijlfrwbqwiqtewkarsmppludfxvjmtjmysoypcraqrkywbymsluhgfaxxzukkdkrsyxnkvjceoybvbuldijymsvhoefosytitexkekdhkfjwmao\",\"app_reference\":\"ozgaitsnjpvnvvmpwmqldugihytefwzfsfubekftpnzporrnufdzxqvqlsnndinbggeekbfhbjgymvxrvkhqeezwoafskrgxkzpvlzxtfhmemjcncbdzeyydwtdqumbyhqinztpodslevnczxykwzry\"}"
                         },
                         "description": "",
                         "auth": {

@@ -24,10 +24,18 @@ Route::get('/docs', function () {
 
 Route::get('/docs/postman', function() {
     $path = storage_path('app/scribe/collection.json');
-    return response()->file($path);
+    if (file_exists($path)) {
+        return response()->file($path);
+    }
+
+    return null;
 })->name('scribe.postman');
 
 Route::get('/docs/openapi', function() {
     $path = storage_path('app/scribe/openapi.yaml');
-    return response()->file($path);
+    if (file_exists($path)) {
+        return response()->file($path);
+    }
+
+    return null;
 })->name('scribe.openapi');
