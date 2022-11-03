@@ -63,6 +63,10 @@ task('deploy:secrets', function () {
     // run('php artisan scribe:generate');
 });
 
+task('deploy:success', function () {
+    run('php artisan scribe:generate');
+});
+
 // Production Server
 host('ms-auth.monitecture.com')
 ->setHostname('157.230.214.233')
