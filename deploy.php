@@ -91,7 +91,6 @@ desc('Deploy the application');
 
 task('deploy', [
     'deploy:info',
-    'deploy:lock',
     'deploy:setup',
     'deploy:release',
     'deploy:update_code',
