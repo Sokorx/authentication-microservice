@@ -15,11 +15,6 @@ jobs:
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
           MYSQL_DATABASE: authmicroservice
-          DB_CONNECTION: mysql
-          DB_HOST: 127.0.0.1
-          DB_PORT: 3306
-          DB_DATABASE: authmicroservice
-          DB_USERNAME: root
         ports:
           - 3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
@@ -35,11 +30,19 @@ jobs:
         run: php artisan config:clear
       - name: Migrate with seeder
         env:
-          DB_PORT: ${{ job.services.mysql.ports[3306] }}
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: authmicroservice
+          DB_USERNAME: root
         run: php artisan migrate --seeder
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         env:
-          DB_PORT: ${{ job.services.mysql.ports[3306] }}
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: authmicroservice
+          DB_USERNAME: root
         run: vendor/bin/phpunit
   deploy-staging:
     name: Deploy Project to STAGING Server
