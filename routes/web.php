@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,13 @@ Route::get('/', function () {
 Route::get('/docs', function () {
     return view('scribe.index');
 });
+
+Route::get('/docs/postman', function() {
+    $path = storage_path('app/scribe/collection.json');
+    return response()->file($path);
+})->name('scribe.postman');
+
+Route::get('/docs/openapi', function() {
+    $path = storage_path('app/scribe/openapi.yaml');
+    return response()->file($path);
+})->name('scribe.openapi');
