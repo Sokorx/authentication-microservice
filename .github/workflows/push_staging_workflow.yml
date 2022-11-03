@@ -21,11 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Verify authmicroservice DB exists
-        run: mysql --host 127.0.0.1 --port 3306 -uroot -e "SHOW DATABASES LIKE 'authmicroservice'"
+        run: mysql --host 127.0.0.1 --port 3306 -u root -e "SHOW DATABASES LIKE 'authmicroservice'"
       - name: Create 2nd Database
-        run: mysql --host 127.0.0.1 --port 3306 -uroot -e "CREATE DATABASE IF NOT EXISTS authmicroservice_second;"
+        run: mysql --host 127.0.0.1 --port 3306 -u root -e "CREATE DATABASE IF NOT EXISTS authmicroservice_second;"
       - name: Verify authmicroservice_second DB exists
-        run: mysql --host 127.0.0.1 --port 3306 -uroot -e "SHOW DATABASES LIKE 'authmicroservice_second'"
+        run: mysql --host 127.0.0.1 --port 3306 -u root -e "SHOW DATABASES LIKE 'authmicroservice_second'"
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Composer Dependencies
