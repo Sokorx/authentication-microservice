@@ -19,7 +19,13 @@ jobs:
           - 3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+      - name: Verify authmicroservice DB exists
+        run: mysql --host 127.0.0.1 --port 3306 -uroot -e "SHOW DATABASES LIKE 'authmicroservice'"
+      - name: Create 2nd Database
+        run: mysql --host 127.0.0.1 --port 3306 -uroot -e "CREATE DATABASE IF NOT EXISTS authmicroservice_second;"
+      - name: Verify authmicroservice_second DB exists
+        run: mysql --host 127.0.0.1 --port 3306 -uroot -e "SHOW DATABASES LIKE 'authmicroservice_second'"
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Composer Dependencies
