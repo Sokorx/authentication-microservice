@@ -55,8 +55,8 @@ jobs:
       - name: Generate Documentation
         run: |
           php artisan scribe:generate
-          mv storage/app/scribe/openapi.yaml public/vendor/scribe
-          mv storage/app/scribe/collection.json public/vendor/scribe
+          php -r "file_exists('storage/app/scribe/openapi.yaml') || copy('storage/app/scribe/openapi.yaml', 'public/vendor/scribe/openapi.yaml');"
+          php -r "file_exists('storage/app/scribe/collection.json') || copy('storage/app/scribe/collection.json', 'public/vendor/scribe/collection.json');"
       - name: Setup Deployer
         uses: atymic/deployer-php-action@master
         with:
