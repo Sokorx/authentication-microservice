@@ -68,7 +68,7 @@ host('ms-auth.monitecture.com')
 ->setLabels([
     'env' => 'production'
 ])
-->set('branch', 'main') // Git branch
+->set('branch', 'main') // Git branch.
 ->set('deploy_path', '/var/www/authentication-microservice');
 
 // Staging Server
