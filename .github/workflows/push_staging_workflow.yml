@@ -36,6 +36,8 @@ jobs:
         run: |
           php artisan migrate --seeder
           php artisan test
+      - name: Generate Documentation
+        run: php artisan scribe:generate
   deploy-staging:
     name: Deploy Project to STAGING Server
     runs-on: ubuntu-latest
