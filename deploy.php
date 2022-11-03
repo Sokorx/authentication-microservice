@@ -60,7 +60,7 @@ task('deploy:secrets', function () {
     // run('sudo supervisorctl update');
     // run('sudo supervisorctl start websockets');
     // run('sudo supervisorctl start worker');
-    run('php artisan scribe:generate');
+    // run('php artisan scribe:generate');
 });
 
 // Production Server
