@@ -1,0 +1,190 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/staging-ms-auth.monitecture.com"
+        }
+    ],
+    "info": {
+        "name": "Moniport",
+        "_postman_id": "c5c1410a-9c4b-4700-8c91-7a31c0727c7a",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Register App User",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/users\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/users\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"John\",\"last_name\":\"Doe\",\"middle_name\":\"\",\"phone_number\":\"08101209762\",\"device_id\":\"tjdzzbpgatdtsxfeealqylkiajzuwxldjnjpuxgmbvkvymgmhumzssoqsrxtqogrsqhyugyohshjgghpjumipaphlqvxxfjhqxssmmerdmdhptukkeqkqfdkkibwgaemxhsemmgplllxibvzimmwchadyravmacpsixocvijcetnsxcnnioozbob\",\"email\":\"johndoe342@gmail.com\",\"app_reference\":\"wplnurqcdnvbkszsxqpwuhatpvfrxprcoaieazlapanremozgqwfkozphxuyxg\",\"password\":\"keifcnytaunomngcbecpwfeamjghbwugwyiknzumaprbhxpmwwacermwldpblbwavfowajyncgboqgxwuvpoahetnrfvpmxwbydoptazrrnnedyxuwesyllaifyhfpwoxjbsemxtcswdgzqihcvvyytyqqecghurfofclbutajwwpgemavoalqhi\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":{\"reference\":\"\",\"first_name\":\"\",\"last_name\":\"\",\"phone_number\":\"\",\"middle_name\":\"\",\"email\":\"\",\"app_reference\":\"\",\"user_reference\":\"\",\"verified\":false,\"created_at\":null,\"updated_at\":null},\"message\":\"App user created,verify email.\",\"code\":\"201\"}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n    \"message\": \"\",\n    \"errors\": {}\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 500,
+                            "body": "{\n    \"message\": \"\",\n    \"code\": 500,\n    \"error_debug\": \"\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Verify Email for App User",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/users\/verify-email",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/users\/verify-email"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"verification_token\":\"yjsqhscdxokwaayvmztrvtvuatwkswopekujjxpyhpjqoivvadltqrsdjuanuqcbvjuqzgrzueypmtolttlcibrhepwxmnvskeltcdtmgtywggzhtkskcvoaoatbvjxljmamhbxheyjsypcosttrkaqqdpvpcrwdnzybmpemohxvdhcuisxnuhqmvctivyowvvazwqmgbm\",\"user_reference\":\"zohcbuknqqfcmrabogunkviypdqargvnxmkifpmcqtikiyoiisnzvmornkfjxmo\",\"app_reference\":\"ljtircbpojvfmriqfwkmwleykciiqtkzqyymjpkfjsvamokicujivudyjdcuuhgqucdoftdxfpkvysyyxsuexqgsioqwmzxqziuolfnlzqlcdknpbpycrtpcuvdnansfkfkfattfmgusqjtaxmoxhtuewsbomlhxrjgvmmocppjknlatevcvlzmchgkxymnqzd\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": 'App user verified successfull',\n \"data\": null,\n \"code\": 200\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n\"message\": \"Expired verification token\",\n`\"code\": 403,\n\"error_debug\": null\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n    \"message\": \"\",\n    \"errors\": {}\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 500,
+                            "body": "{\n    \"message\": \"\",\n    \"code\": 500,\n    \"error_debug\": \"\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Resend app user verification email",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/users\/resend-verification-email",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/users\/resend-verification-email"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"user_reference\":\"vlxppivvveuerwbcwapzqxespeucdnmcdqpxydfwvvfnhacqewczpiclpinfypijlfrwbqwiqtewkarsmppludfxvjmtjmysoypcraqrkywbymsluhgfaxxzukkdkrsyxnkvjceoybvbuldijymsvhoefosytitexkekdhkfjwmao\",\"app_reference\":\"ozgaitsnjpvnvvmpwmqldugihytefwzfsfubekftpnzporrnufdzxqvqlsnndinbggeekbfhbjgymvxrvkhqeezwoafskrgxkzpvlzxtfhmemjcncbdzeyydwtdqumbyhqinztpodslevnczxykwzry\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": 'Verification mail has been resent.',\n \"data\": null,\n \"code\": 200\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n\"message\": \"App user already verified\",\n`\"code\": 403,\n\"error_debug\": null\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n    \"message\": \"\",\n    \"errors\": {}\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 500,
+                            "body": "{\n    \"message\": \"\",\n    \"code\": 500,\n    \"error_debug\": \"\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

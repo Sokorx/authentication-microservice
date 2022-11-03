@@ -1,0 +1,348 @@
+openapi: 3.0.3
+info:
+  title: Moniport
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://staging-ms-auth.monitecture.com'
+paths:
+  /api/v1/users/register:
+    post:
+      summary: 'Register App User'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    reference: ''
+                    first_name: ''
+                    last_name: ''
+                    phone_number: ''
+                    middle_name: ''
+                    email: ''
+                    app_reference: ''
+                    user_reference: ''
+                    verified: false
+                    created_at: null
+                    updated_at: null
+                  message: 'App user created,verify email.'
+                  code: '201'
+                properties:
+                  data:
+                    type: object
+                    example:
+                      reference: ''
+                      first_name: ''
+                      last_name: ''
+                      phone_number: ''
+                      middle_name: ''
+                      email: ''
+                      app_reference: ''
+                      user_reference: ''
+                      verified: false
+                      created_at: null
+                      updated_at: null
+                  message:
+                    type: string
+                    example: 'App user created,verify email.'
+                  code:
+                    type: string
+                    example: '201'
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  errors: {  }
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  errors:
+                    type: object
+                    example: {  }
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  code: 500
+                  error_debug: ''
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  code:
+                    type: integer
+                    example: 500
+                  error_debug:
+                    type: string
+                    example: ''
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'App user first name. Must not be greater than 255 characters.'
+                  example: John
+                last_name:
+                  type: string
+                  description: 'App user last name. Must not be greater than 255 characters.'
+                  example: Doe
+                middle_name:
+                  type: string
+                  description: 'App user last name. Must not be greater than 255 characters.'
+                  example: ''
+                phone_number:
+                  type: string
+                  description: 'App user phone. Must be at least 8 characters. Must not be greater than 15 characters.'
+                  example: '08101209762'
+                device_id:
+                  type: string
+                  description: 'Device id. Must not be greater than 255 characters.'
+                  example: tjdzzbpgatdtsxfeealqylkiajzuwxldjnjpuxgmbvkvymgmhumzssoqsrxtqogrsqhyugyohshjgghpjumipaphlqvxxfjhqxssmmerdmdhptukkeqkqfdkkibwgaemxhsemmgplllxibvzimmwchadyravmacpsixocvijcetnsxcnnioozbob
+                email:
+                  type: string
+                  description: 'App user email. Must not be greater than 255 characters.'
+                  example: johndoe342@gmail.com
+                app_reference:
+                  type: string
+                  description: 'Reference of app that wants to register the user. Must not be greater than 255 characters.'
+                  example: wplnurqcdnvbkszsxqpwuhatpvfrxprcoaieazlapanremozgqwfkozphxuyxg
+                password:
+                  type: string
+                  description: 'User password. Must not be greater than 255 characters.'
+                  example: keifcnytaunomngcbecpwfeamjghbwugwyiknzumaprbhxpmwwacermwldpblbwavfowajyncgboqgxwuvpoahetnrfvpmxwbydoptazrrnnedyxuwesyllaifyhfpwoxjbsemxtcswdgzqihcvvyytyqqecghurfofclbutajwwpgemavoalqhi
+              required:
+                - first_name
+                - last_name
+                - phone_number
+                - device_id
+                - email
+                - app_reference
+                - password
+      security: []
+  /api/v1/users/verify-email:
+    post:
+      summary: 'Verify Email for App User'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n \"message\": 'App user verified successfull',\n \"data\": null,\n \"code\": 200\n}"
+        403:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"message\": \"Expired verification token\",\n`\"code\": 403,\n\"error_debug\": null\n}"
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  errors: {  }
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  errors:
+                    type: object
+                    example: {  }
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  code: 500
+                  error_debug: ''
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  code:
+                    type: integer
+                    example: 500
+                  error_debug:
+                    type: string
+                    example: ''
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                verification_token:
+                  type: string
+                  description: 'Email verification token. Must not be greater than 255 characters.'
+                  example: yjsqhscdxokwaayvmztrvtvuatwkswopekujjxpyhpjqoivvadltqrsdjuanuqcbvjuqzgrzueypmtolttlcibrhepwxmnvskeltcdtmgtywggzhtkskcvoaoatbvjxljmamhbxheyjsypcosttrkaqqdpvpcrwdnzybmpemohxvdhcuisxnuhqmvctivyowvvazwqmgbm
+                user_reference:
+                  type: string
+                  description: 'Reference of user that wants to  verify their email. Must not be greater than 255 characters.'
+                  example: zohcbuknqqfcmrabogunkviypdqargvnxmkifpmcqtikiyoiisnzvmornkfjxmo
+                app_reference:
+                  type: string
+                  description: 'Reference of app that wants to  verify user. Must not be greater than 255 characters.'
+                  example: ljtircbpojvfmriqfwkmwleykciiqtkzqyymjpkfjsvamokicujivudyjdcuuhgqucdoftdxfpkvysyyxsuexqgsioqwmzxqziuolfnlzqlcdknpbpycrtpcuvdnansfkfkfattfmgusqjtaxmoxhtuewsbomlhxrjgvmmocppjknlatevcvlzmchgkxymnqzd
+              required:
+                - verification_token
+                - user_reference
+                - app_reference
+      security: []
+  /api/v1/users/resend-verification-email:
+    post:
+      summary: 'Resend app user verification email'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n \"message\": 'Verification mail has been resent.',\n \"data\": null,\n \"code\": 200\n}"
+        403:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"message\": \"App user already verified\",\n`\"code\": 403,\n\"error_debug\": null\n}"
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  errors: {  }
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  errors:
+                    type: object
+                    example: {  }
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  code: 500
+                  error_debug: ''
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  code:
+                    type: integer
+                    example: 500
+                  error_debug:
+                    type: string
+                    example: ''
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_reference:
+                  type: string
+                  description: 'Reference of user that wants to  verify their email. Must not be greater than 255 characters.'
+                  example: vlxppivvveuerwbcwapzqxespeucdnmcdqpxydfwvvfnhacqewczpiclpinfypijlfrwbqwiqtewkarsmppludfxvjmtjmysoypcraqrkywbymsluhgfaxxzukkdkrsyxnkvjceoybvbuldijymsvhoefosytitexkekdhkfjwmao
+                app_reference:
+                  type: string
+                  description: 'Reference of app that wants to  verify user. Must not be greater than 255 characters.'
+                  example: ozgaitsnjpvnvvmpwmqldugihytefwzfsfubekftpnzporrnufdzxqvqlsnndinbggeekbfhbjgymvxrvkhqeezwoafskrgxkzpvlzxtfhmemjcncbdzeyydwtdqumbyhqinztpodslevnczxykwzry
+              required:
+                - user_reference
+                - app_reference
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
