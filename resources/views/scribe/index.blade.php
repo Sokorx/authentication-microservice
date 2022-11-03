@@ -23,6 +23,8 @@
         /* starts out as display none and is replaced with js later  */
                     body .content .bash-example code { display: none; }
                     body .content .javascript-example code { display: none; }
+                    body .content .php-example code { display: none; }
+                    body .content .python-example code { display: none; }
             </style>
 
     <script>
@@ -36,7 +38,7 @@
 
 </head>
 
-<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;,&quot;php&quot;,&quot;python&quot;]">
 
 <a href="#" id="nav-button">
     <span>
@@ -49,6 +51,8 @@
             <div class="lang-selector">
                                             <button type="button" class="lang-button" data-language-name="bash">bash</button>
                                             <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                                            <button type="button" class="lang-button" data-language-name="php">php</button>
+                                            <button type="button" class="lang-button" data-language-name="python">python</button>
                     </div>
     
     <div class="search">
@@ -134,10 +138,10 @@ You can switch the language used with the tabs at the top right (or from the nav
     \"last_name\": \"Doe\",
     \"middle_name\": \"\",
     \"phone_number\": \"08101209762\",
-    \"device_id\": \"vhjujgobigxpmksbfzhyndkpwsfyfiaczwamdentcxqeluibsvwrmoxrvtupgrtmvrnwbdfddxisudbdwvscpllqbizqqteaulkckqgiimtgjlfcofotemujimckpploeefkmxblyyswdluxdogmmzvvmbkkzulvowqewlluans\",
+    \"device_id\": \"wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq\",
     \"email\": \"johndoe342@gmail.com\",
-    \"app_reference\": \"wchdmabskikdbdsuqijhkprddlavzjrrkzixtpdziupnevcrbiasepwnxirlkyrsippdwzlqqbshagudyinmjilnescqqopztwvvqvqqczwfaosesvnigesceqxdfpbktsekdwakgdxugujktbbtruzqzywybjoaohsdsgafuvkkljxsojxrgljsmpwpwxaqeat\",
-    \"password\": \"ggaqfagtvtovtqovytaixgxaxkoxghwneejhkntuazgmnkdfowltjkeevzvwgerwqkofgzzzhhdlhwqlfmjraujuhwtaxsbxirduzjlkydtqolkikynrjfmbeomzputwlbwszmyjulpxhydtdjfzpri\"
+    \"app_reference\": \"pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn\",
+    \"password\": \"fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz\"
 }"
 </code></pre></div>
 
@@ -157,10 +161,10 @@ let body = {
     "last_name": "Doe",
     "middle_name": "",
     "phone_number": "08101209762",
-    "device_id": "vhjujgobigxpmksbfzhyndkpwsfyfiaczwamdentcxqeluibsvwrmoxrvtupgrtmvrnwbdfddxisudbdwvscpllqbizqqteaulkckqgiimtgjlfcofotemujimckpploeefkmxblyyswdluxdogmmzvvmbkkzulvowqewlluans",
+    "device_id": "wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq",
     "email": "johndoe342@gmail.com",
-    "app_reference": "wchdmabskikdbdsuqijhkprddlavzjrrkzixtpdziupnevcrbiasepwnxirlkyrsippdwzlqqbshagudyinmjilnescqqopztwvvqvqqczwfaosesvnigesceqxdfpbktsekdwakgdxugujktbbtruzqzywybjoaohsdsgafuvkkljxsojxrgljsmpwpwxaqeat",
-    "password": "ggaqfagtvtovtqovytaixgxaxkoxghwneejhkntuazgmnkdfowltjkeevzvwgerwqkofgzzzhhdlhwqlfmjraujuhwtaxsbxirduzjlkydtqolkikynrjfmbeomzputwlbwszmyjulpxhydtdjfzpri"
+    "app_reference": "pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn",
+    "password": "fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz"
 };
 
 fetch(url, {
@@ -168,6 +172,55 @@ fetch(url, {
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://staging-ms-auth.monitecture.com/api/v1/users/register',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'first_name' =&gt; 'John',
+            'last_name' =&gt; 'Doe',
+            'middle_name' =&gt; '',
+            'phone_number' =&gt; '08101209762',
+            'device_id' =&gt; 'wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq',
+            'email' =&gt; 'johndoe342@gmail.com',
+            'app_reference' =&gt; 'pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn',
+            'password' =&gt; 'fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://staging-ms-auth.monitecture.com/api/v1/users/register'
+payload = {
+    "first_name": "John",
+    "last_name": "Doe",
+    "middle_name": "",
+    "phone_number": "08101209762",
+    "device_id": "wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq",
+    "email": "johndoe342@gmail.com",
+    "app_reference": "pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn",
+    "password": "fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz"
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
 
 </span>
 
@@ -312,7 +365,7 @@ fetch(url, {
                 <input type="text"
                name="device_id"
                data-endpoint="POSTapi-v1-users-register"
-               value="vhjujgobigxpmksbfzhyndkpwsfyfiaczwamdentcxqeluibsvwrmoxrvtupgrtmvrnwbdfddxisudbdwvscpllqbizqqteaulkckqgiimtgjlfcofotemujimckpploeefkmxblyyswdluxdogmmzvvmbkkzulvowqewlluans"
+               value="wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq"
                data-component="body" hidden>
     <br>
 <p>Device id. Must not be greater than 255 characters.</p>
@@ -336,7 +389,7 @@ fetch(url, {
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-register"
-               value="wchdmabskikdbdsuqijhkprddlavzjrrkzixtpdziupnevcrbiasepwnxirlkyrsippdwzlqqbshagudyinmjilnescqqopztwvvqvqqczwfaosesvnigesceqxdfpbktsekdwakgdxugujktbbtruzqzywybjoaohsdsgafuvkkljxsojxrgljsmpwpwxaqeat"
+               value="pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to register the user. Must not be greater than 255 characters.</p>
@@ -348,7 +401,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-v1-users-register"
-               value="ggaqfagtvtovtqovytaixgxaxkoxghwneejhkntuazgmnkdfowltjkeevzvwgerwqkofgzzzhhdlhwqlfmjraujuhwtaxsbxirduzjlkydtqolkikynrjfmbeomzputwlbwszmyjulpxhydtdjfzpri"
+               value="fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz"
                data-component="body" hidden>
     <br>
 <p>User password. Must not be greater than 255 characters.</p>
@@ -372,9 +425,9 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"verification_token\": \"rjbvytlhkvlqeuchxcerphmtqvdalithycrbgasozopppstefrthnvpfrvygoifmkwpywruvxqekdrsscjiqhsfhtdjuazgwsueasybygpkwxqnkvaenfejrprftajafoshrenfglbustktxemxhqbxeyprrgpayujtypaxidyglgvelxhucjfqjzpbypvecvtuakbvyaufbxxclrnzwgmzvhnhtqxmp\",
-    \"user_reference\": \"zpzezapdtwpljslvklenshgihrclotczaunjimgamdahyuivwbrwxwpqhncqrklqrcjsiivcjpwyuqptjmqkoonnouqgrfgqtxurqgumbljqsuxeqdxofbrqwlpnwocfacmyybpwvsqqjiagfaxfytb\",
-    \"app_reference\": \"whzdrqpdobkfypyw\"
+    \"verification_token\": \"nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum\",
+    \"user_reference\": \"qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws\",
+    \"app_reference\": \"ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh\"
 }"
 </code></pre></div>
 
@@ -390,9 +443,9 @@ const headers = {
 };
 
 let body = {
-    "verification_token": "rjbvytlhkvlqeuchxcerphmtqvdalithycrbgasozopppstefrthnvpfrvygoifmkwpywruvxqekdrsscjiqhsfhtdjuazgwsueasybygpkwxqnkvaenfejrprftajafoshrenfglbustktxemxhqbxeyprrgpayujtypaxidyglgvelxhucjfqjzpbypvecvtuakbvyaufbxxclrnzwgmzvhnhtqxmp",
-    "user_reference": "zpzezapdtwpljslvklenshgihrclotczaunjimgamdahyuivwbrwxwpqhncqrklqrcjsiivcjpwyuqptjmqkoonnouqgrfgqtxurqgumbljqsuxeqdxofbrqwlpnwocfacmyybpwvsqqjiagfaxfytb",
-    "app_reference": "whzdrqpdobkfypyw"
+    "verification_token": "nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum",
+    "user_reference": "qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws",
+    "app_reference": "ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh"
 };
 
 fetch(url, {
@@ -400,6 +453,45 @@ fetch(url, {
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://staging-ms-auth.monitecture.com/api/v1/users/verify-email',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'verification_token' =&gt; 'nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum',
+            'user_reference' =&gt; 'qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws',
+            'app_reference' =&gt; 'ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://staging-ms-auth.monitecture.com/api/v1/users/verify-email'
+payload = {
+    "verification_token": "nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum",
+    "user_reference": "qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws",
+    "app_reference": "ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh"
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
 
 </span>
 
@@ -495,7 +587,7 @@ fetch(url, {
                 <input type="text"
                name="verification_token"
                data-endpoint="POSTapi-v1-users-verify-email"
-               value="rjbvytlhkvlqeuchxcerphmtqvdalithycrbgasozopppstefrthnvpfrvygoifmkwpywruvxqekdrsscjiqhsfhtdjuazgwsueasybygpkwxqnkvaenfejrprftajafoshrenfglbustktxemxhqbxeyprrgpayujtypaxidyglgvelxhucjfqjzpbypvecvtuakbvyaufbxxclrnzwgmzvhnhtqxmp"
+               value="nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum"
                data-component="body" hidden>
     <br>
 <p>Email verification token. Must not be greater than 255 characters.</p>
@@ -507,7 +599,7 @@ fetch(url, {
                 <input type="text"
                name="user_reference"
                data-endpoint="POSTapi-v1-users-verify-email"
-               value="zpzezapdtwpljslvklenshgihrclotczaunjimgamdahyuivwbrwxwpqhncqrklqrcjsiivcjpwyuqptjmqkoonnouqgrfgqtxurqgumbljqsuxeqdxofbrqwlpnwocfacmyybpwvsqqjiagfaxfytb"
+               value="qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws"
                data-component="body" hidden>
     <br>
 <p>Reference of user that wants to  verify their email. Must not be greater than 255 characters.</p>
@@ -519,7 +611,7 @@ fetch(url, {
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-verify-email"
-               value="whzdrqpdobkfypyw"
+               value="ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to  verify user. Must not be greater than 255 characters.</p>
@@ -543,8 +635,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_reference\": \"ahhfbcrxwupocuxmclxrvsaaomsjpjee\",
-    \"app_reference\": \"sknzlawrttgkkrrylcvquvntuzqwghmikpgkxzdaojukvdcgxqjeiormlebeisynopqgrdjjmjzntqztpfalrkhxxgfhthxqqlotitdyjhwmorqpazkzyhasjndraqzbgetcevccajxvmpdkiaregnajeerpkjyjctyzpenipcakiqhqoqltmbzhkoignbluzyibqrtbtnejhkbctmpcoqcrhbi\"
+    \"user_reference\": \"tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu\",
+    \"app_reference\": \"rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux\"
 }"
 </code></pre></div>
 
@@ -560,8 +652,8 @@ const headers = {
 };
 
 let body = {
-    "user_reference": "ahhfbcrxwupocuxmclxrvsaaomsjpjee",
-    "app_reference": "sknzlawrttgkkrrylcvquvntuzqwghmikpgkxzdaojukvdcgxqjeiormlebeisynopqgrdjjmjzntqztpfalrkhxxgfhthxqqlotitdyjhwmorqpazkzyhasjndraqzbgetcevccajxvmpdkiaregnajeerpkjyjctyzpenipcakiqhqoqltmbzhkoignbluzyibqrtbtnejhkbctmpcoqcrhbi"
+    "user_reference": "tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu",
+    "app_reference": "rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux"
 };
 
 fetch(url, {
@@ -569,6 +661,43 @@ fetch(url, {
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://staging-ms-auth.monitecture.com/api/v1/users/resend-verification-email',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'user_reference' =&gt; 'tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu',
+            'app_reference' =&gt; 'rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://staging-ms-auth.monitecture.com/api/v1/users/resend-verification-email'
+payload = {
+    "user_reference": "tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu",
+    "app_reference": "rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux"
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
 
 </span>
 
@@ -664,7 +793,7 @@ fetch(url, {
                 <input type="text"
                name="user_reference"
                data-endpoint="POSTapi-v1-users-resend-verification-email"
-               value="ahhfbcrxwupocuxmclxrvsaaomsjpjee"
+               value="tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu"
                data-component="body" hidden>
     <br>
 <p>Reference of user that wants to  verify their email. Must not be greater than 255 characters.</p>
@@ -676,7 +805,7 @@ fetch(url, {
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-resend-verification-email"
-               value="sknzlawrttgkkrrylcvquvntuzqwghmikpgkxzdaojukvdcgxqjeiormlebeisynopqgrdjjmjzntqztpfalrkhxxgfhthxqqlotitdyjhwmorqpazkzyhasjndraqzbgetcevccajxvmpdkiaregnajeerpkjyjctyzpenipcakiqhqoqltmbzhkoignbluzyibqrtbtnejhkbctmpcoqcrhbi"
+               value="rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to  verify user. Must not be greater than 255 characters.</p>
@@ -691,6 +820,8 @@ fetch(url, {
                     <div class="lang-selector">
                                                         <button type="button" class="lang-button" data-language-name="bash">bash</button>
                                                         <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                                                        <button type="button" class="lang-button" data-language-name="php">php</button>
+                                                        <button type="button" class="lang-button" data-language-name="python">python</button>
                             </div>
             </div>
 </div>

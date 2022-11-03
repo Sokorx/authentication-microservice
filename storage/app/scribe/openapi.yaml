@@ -133,7 +133,7 @@ paths:
                 device_id:
                   type: string
                   description: 'Device id. Must not be greater than 255 characters.'
-                  example: vhjujgobigxpmksbfzhyndkpwsfyfiaczwamdentcxqeluibsvwrmoxrvtupgrtmvrnwbdfddxisudbdwvscpllqbizqqteaulkckqgiimtgjlfcofotemujimckpploeefkmxblyyswdluxdogmmzvvmbkkzulvowqewlluans
+                  example: wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq
                 email:
                   type: string
                   description: 'App user email. Must not be greater than 255 characters.'
@@ -141,11 +141,11 @@ paths:
                 app_reference:
                   type: string
                   description: 'Reference of app that wants to register the user. Must not be greater than 255 characters.'
-                  example: wchdmabskikdbdsuqijhkprddlavzjrrkzixtpdziupnevcrbiasepwnxirlkyrsippdwzlqqbshagudyinmjilnescqqopztwvvqvqqczwfaosesvnigesceqxdfpbktsekdwakgdxugujktbbtruzqzywybjoaohsdsgafuvkkljxsojxrgljsmpwpwxaqeat
+                  example: pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn
                 password:
                   type: string
                   description: 'User password. Must not be greater than 255 characters.'
-                  example: ggaqfagtvtovtqovytaixgxaxkoxghwneejhkntuazgmnkdfowltjkeevzvwgerwqkofgzzzhhdlhwqlfmjraujuhwtaxsbxirduzjlkydtqolkikynrjfmbeomzputwlbwszmyjulpxhydtdjfzpri
+                  example: fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz
               required:
                 - first_name
                 - last_name
@@ -237,15 +237,15 @@ paths:
                 verification_token:
                   type: string
                   description: 'Email verification token. Must not be greater than 255 characters.'
-                  example: rjbvytlhkvlqeuchxcerphmtqvdalithycrbgasozopppstefrthnvpfrvygoifmkwpywruvxqekdrsscjiqhsfhtdjuazgwsueasybygpkwxqnkvaenfejrprftajafoshrenfglbustktxemxhqbxeyprrgpayujtypaxidyglgvelxhucjfqjzpbypvecvtuakbvyaufbxxclrnzwgmzvhnhtqxmp
+                  example: nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum
                 user_reference:
                   type: string
                   description: 'Reference of user that wants to  verify their email. Must not be greater than 255 characters.'
-                  example: zpzezapdtwpljslvklenshgihrclotczaunjimgamdahyuivwbrwxwpqhncqrklqrcjsiivcjpwyuqptjmqkoonnouqgrfgqtxurqgumbljqsuxeqdxofbrqwlpnwocfacmyybpwvsqqjiagfaxfytb
+                  example: qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws
                 app_reference:
                   type: string
                   description: 'Reference of app that wants to  verify user. Must not be greater than 255 characters.'
-                  example: whzdrqpdobkfypyw
+                  example: ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh
               required:
                 - verification_token
                 - user_reference
@@ -333,11 +333,11 @@ paths:
                 user_reference:
                   type: string
                   description: 'Reference of user that wants to  verify their email. Must not be greater than 255 characters.'
-                  example: ahhfbcrxwupocuxmclxrvsaaomsjpjee
+                  example: tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu
                 app_reference:
                   type: string
                   description: 'Reference of app that wants to  verify user. Must not be greater than 255 characters.'
-                  example: sknzlawrttgkkrrylcvquvntuzqwghmikpgkxzdaojukvdcgxqjeiormlebeisynopqgrdjjmjzntqztpfalrkhxxgfhthxqqlotitdyjhwmorqpazkzyhasjndraqzbgetcevccajxvmpdkiaregnajeerpkjyjctyzpenipcakiqhqoqltmbzhkoignbluzyibqrtbtnejhkbctmpcoqcrhbi
+                  example: rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux
               required:
                 - user_reference
                 - app_reference

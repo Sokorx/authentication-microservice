@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Moniport",
-        "_postman_id": "fc204ba7-66ca-4101-bebd-3e845a32b29e",
+        "_postman_id": "64f2a409-eb0f-45b0-91a6-c48c6ad530a2",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"John\",\"last_name\":\"Doe\",\"middle_name\":\"\",\"phone_number\":\"08101209762\",\"device_id\":\"vhjujgobigxpmksbfzhyndkpwsfyfiaczwamdentcxqeluibsvwrmoxrvtupgrtmvrnwbdfddxisudbdwvscpllqbizqqteaulkckqgiimtgjlfcofotemujimckpploeefkmxblyyswdluxdogmmzvvmbkkzulvowqewlluans\",\"email\":\"johndoe342@gmail.com\",\"app_reference\":\"wchdmabskikdbdsuqijhkprddlavzjrrkzixtpdziupnevcrbiasepwnxirlkyrsippdwzlqqbshagudyinmjilnescqqopztwvvqvqqczwfaosesvnigesceqxdfpbktsekdwakgdxugujktbbtruzqzywybjoaohsdsgafuvkkljxsojxrgljsmpwpwxaqeat\",\"password\":\"ggaqfagtvtovtqovytaixgxaxkoxghwneejhkntuazgmnkdfowltjkeevzvwgerwqkofgzzzhhdlhwqlfmjraujuhwtaxsbxirduzjlkydtqolkikynrjfmbeomzputwlbwszmyjulpxhydtdjfzpri\"}"
+                            "raw": "{\"first_name\":\"John\",\"last_name\":\"Doe\",\"middle_name\":\"\",\"phone_number\":\"08101209762\",\"device_id\":\"wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq\",\"email\":\"johndoe342@gmail.com\",\"app_reference\":\"pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn\",\"password\":\"fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz\"}"
                         },
                         "description": "",
                         "auth": {
@@ -91,7 +91,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"verification_token\":\"rjbvytlhkvlqeuchxcerphmtqvdalithycrbgasozopppstefrthnvpfrvygoifmkwpywruvxqekdrsscjiqhsfhtdjuazgwsueasybygpkwxqnkvaenfejrprftajafoshrenfglbustktxemxhqbxeyprrgpayujtypaxidyglgvelxhucjfqjzpbypvecvtuakbvyaufbxxclrnzwgmzvhnhtqxmp\",\"user_reference\":\"zpzezapdtwpljslvklenshgihrclotczaunjimgamdahyuivwbrwxwpqhncqrklqrcjsiivcjpwyuqptjmqkoonnouqgrfgqtxurqgumbljqsuxeqdxofbrqwlpnwocfacmyybpwvsqqjiagfaxfytb\",\"app_reference\":\"whzdrqpdobkfypyw\"}"
+                            "raw": "{\"verification_token\":\"nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum\",\"user_reference\":\"qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws\",\"app_reference\":\"ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh\"}"
                         },
                         "description": "",
                         "auth": {
@@ -147,7 +147,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"user_reference\":\"ahhfbcrxwupocuxmclxrvsaaomsjpjee\",\"app_reference\":\"sknzlawrttgkkrrylcvquvntuzqwghmikpgkxzdaojukvdcgxqjeiormlebeisynopqgrdjjmjzntqztpfalrkhxxgfhthxqqlotitdyjhwmorqpazkzyhasjndraqzbgetcevccajxvmpdkiaregnajeerpkjyjctyzpenipcakiqhqoqltmbzhkoignbluzyibqrtbtnejhkbctmpcoqcrhbi\"}"
+                            "raw": "{\"user_reference\":\"tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu\",\"app_reference\":\"rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux\"}"
                         },
                         "description": "",
                         "auth": {
