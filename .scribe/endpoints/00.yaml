@@ -4,127 +4,6 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/v1/users/register
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Register App User'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      first_name:
-        name: first_name
-        description: 'App user first name. Must not be greater than 255 characters.'
-        required: true
-        example: John
-        type: string
-        custom: []
-      last_name:
-        name: last_name
-        description: 'App user last name. Must not be greater than 255 characters.'
-        required: true
-        example: Doe
-        type: string
-        custom: []
-      middle_name:
-        name: middle_name
-        description: 'App user last name. Must not be greater than 255 characters.'
-        required: false
-        example: ''
-        type: string
-        custom: []
-      phone_number:
-        name: phone_number
-        description: 'App user phone. Must be at least 8 characters. Must not be greater than 15 characters.'
-        required: true
-        example: '08101209762'
-        type: string
-        custom: []
-      device_id:
-        name: device_id
-        description: 'Device id. Must not be greater than 255 characters.'
-        required: true
-        example: pyjwjnycfsvopczufhsnszbcqhgmssfmxizqszkixqegikikvwbertuhkssfdnsuvdtmbnpxwvgqbwdkqsnndugqjzqdjlzrturggqkbytajispbqubeexeukkmdcbosufqcrnawavibbnxvutagdvhrfidasifrqrbszrordqkhtbnjhevhitcixpswfydjaixugeuksrjhuflwdv
-        type: string
-        custom: []
-      email:
-        name: email
-        description: 'App user email. Must not be greater than 255 characters.'
-        required: true
-        example: johndoe342@gmail.com
-        type: string
-        custom: []
-      app_reference:
-        name: app_reference
-        description: 'Reference of app that wants to register the user. Must not be greater than 255 characters.'
-        required: true
-        example: fceszzllinewpotlnzgcunpztceglhivremttaafrjaeufkzmdncgoekslkqvwuqhcuezzkfdlrmpcyvpsaknnlufwvfoaorxewpzjnmmgysfqgqqsxjzopbhbqobrmmrshvmqplqcrvepoycjraxiiy
-        type: string
-        custom: []
-      password:
-        name: password
-        description: 'User password. Must not be greater than 255 characters.'
-        required: true
-        example: gwdsppwqfurzdfhswvdjrtfmvoowstgkdrrcrxjmngvghlwbtiiwcmcdwiwoyeuoaophegxjeafyiueujnxaswma
-        type: string
-        custom: []
-    cleanBodyParameters:
-      first_name: John
-      last_name: Doe
-      middle_name: ''
-      phone_number: '08101209762'
-      device_id: pyjwjnycfsvopczufhsnszbcqhgmssfmxizqszkixqegikikvwbertuhkssfdnsuvdtmbnpxwvgqbwdkqsnndugqjzqdjlzrturggqkbytajispbqubeexeukkmdcbosufqcrnawavibbnxvutagdvhrfidasifrqrbszrordqkhtbnjhevhitcixpswfydjaixugeuksrjhuflwdv
-      email: johndoe342@gmail.com
-      app_reference: fceszzllinewpotlnzgcunpztceglhivremttaafrjaeufkzmdncgoekslkqvwuqhcuezzkfdlrmpcyvpsaknnlufwvfoaorxewpzjnmmgysfqgqqsxjzopbhbqobrmmrshvmqplqcrvepoycjraxiiy
-      password: gwdsppwqfurzdfhswvdjrtfmvoowstgkdrrcrxjmngvghlwbtiiwcmcdwiwoyeuoaophegxjeafyiueujnxaswma
-    fileParameters: []
-    responses:
-      -
-        status: 201
-        content: '{"data":{"reference":"05eeafa1-425a-4d72-adc1-0bb81fc40ca6","first_name":"Blake Upton","last_name":"Savannah Denesik II","phone_number":"(313) 485-8165","middle_name":"Dr. Eugenia Jast","email":"cicero.pfannerstill@nitzsche.com","app_reference":"35bd13a1-c2fd-4eed-8341-7a9cc227f636","user_reference":"2039dfe8-eed5-4905-a8f7-8774d4c93944","verified":false,"created_at":"2022-09-17T15:11:33.000000Z","updated_at":"2022-09-17T15:11:33.000000Z"},"message":"App user created,verify email.","code":"201"}'
-        headers: []
-        description: '201'
-        custom: []
-      -
-        status: 422
-        content: |
-          {
-              "message": "",
-              "errors": {}
-          }
-        headers: []
-        description: '422'
-        custom: []
-      -
-        status: 500
-        content: |
-          {
-              "message": "",
-              "code": 500,
-              "error_debug": ""
-          }
-        headers: []
-        description: '500'
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
     uri: api/v1/users/verify-email
     metadata:
       groupName: Endpoints
@@ -147,27 +26,27 @@ endpoints:
         name: verification_token
         description: 'Email verification token. Must not be greater than 255 characters.'
         required: true
-        example: jdlbdqkpnhfykkxzaarqxyjdduaqopqqtkomnrgwxubyhqogfphpdiy
+        example: doofvyocgrpaqtbjtkmaxjsrxubzflenzzfobkwucrawrkcfeojltfwtnqyiphzeshwdvslxcrezlvtbfpatbhdkmhunwyaylecgptghbxefxoosppgywkvphmonxakiutlkyhclovcw
         type: string
         custom: []
       user_reference:
         name: user_reference
         description: 'Reference of user that wants to  verify their email. Must not be greater than 255 characters.'
         required: true
-        example: xiztmrasawpxqtsipnwxytgdjqnjtqzwpajxakxwgslheswxaqqfqejwgnshpuhfvfqljeusrhvwmteczaewqfmbnpwffcmdbcnofyxgooifsjjovdtzdgijkvttubnraibodgmarqfzoesgkkgijmpvyvwxobulyejyldfbgjmzsvrqnjyvwxcwimknkoiasmqafczosrygrxnl
+        example: pxhuzdt
         type: string
         custom: []
       app_reference:
         name: app_reference
         description: 'Reference of app that wants to  verify user. Must not be greater than 255 characters.'
         required: true
-        example: sokgqhlrdwbugiqgdjwmphnhtpsnzxsbtjyyafdwwutouddiopajalmkcaqbusfuncgtveaezlhpcpprbplsbbtddaueinskbzaiidtciuajpspcrfekezuhlxyiijzosgncepgoyevabzisqmxrxuvnmowqepsqzwmsiivgumiasqyocrwcfphtnhjhxxgbmyomahnqvkzjqeapwrcbefzhaewglmcqkqposkmvmi
+        example: tforkvcibrbsfddpronjpwcgatvjmetqbdhwlpxexjkhhrgkephukjwewnrfwcjzcncwqwtxhamndckeryfyxccxavytlqcmtpibamiloskywnlwlcdityiebgejmnbojrqxzaojwtlyjlhkqyfllakdbfzrnhxqshumhwslshdgusuxelrlgznuocdfrd
         type: string
         custom: []
     cleanBodyParameters:
-      verification_token: jdlbdqkpnhfykkxzaarqxyjdduaqopqqtkomnrgwxubyhqogfphpdiy
-      user_reference: xiztmrasawpxqtsipnwxytgdjqnjtqzwpajxakxwgslheswxaqqfqejwgnshpuhfvfqljeusrhvwmteczaewqfmbnpwffcmdbcnofyxgooifsjjovdtzdgijkvttubnraibodgmarqfzoesgkkgijmpvyvwxobulyejyldfbgjmzsvrqnjyvwxcwimknkoiasmqafczosrygrxnl
-      app_reference: sokgqhlrdwbugiqgdjwmphnhtpsnzxsbtjyyafdwwutouddiopajalmkcaqbusfuncgtveaezlhpcpprbplsbbtddaueinskbzaiidtciuajpspcrfekezuhlxyiijzosgncepgoyevabzisqmxrxuvnmowqepsqzwmsiivgumiasqyocrwcfphtnhjhxxgbmyomahnqvkzjqeapwrcbefzhaewglmcqkqposkmvmi
+      verification_token: doofvyocgrpaqtbjtkmaxjsrxubzflenzzfobkwucrawrkcfeojltfwtnqyiphzeshwdvslxcrezlvtbfpatbhdkmhunwyaylecgptghbxefxoosppgywkvphmonxakiutlkyhclovcw
+      user_reference: pxhuzdt
+      app_reference: tforkvcibrbsfddpronjpwcgatvjmetqbdhwlpxexjkhhrgkephukjwewnrfwcjzcncwqwtxhamndckeryfyxccxavytlqcmtpibamiloskywnlwlcdityiebgejmnbojrqxzaojwtlyjlhkqyfllakdbfzrnhxqshumhwslshdgusuxelrlgznuocdfrd
     fileParameters: []
     responses:
       -
@@ -228,7 +107,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Resend app user verification email'
       description: ''
       authenticated: false
       custom: []
@@ -244,19 +123,19 @@ endpoints:
         name: user_reference
         description: 'Reference of user that wants to  verify their email. Must not be greater than 255 characters.'
         required: true
-        example: zybozpamnnchjjyugbaexkrkcnyikpiriadmaphraeftchiywuzvvddnxsapgtlbvlhuisabioizcl
+        example: tiphdaoiknmviudatzvkcbpavwyxqqqdjwsyppjunysrpbnaicrunxopvckwjmhcdjgygdgcoapeocibwsvwnnvzutdwbyucadtbcqdvcebkugrlaifpteicvojgwboxpzbyjkmzbttgntufecqxkljlbvutjoyjbckxksfigipdsmqidmnyckkstplbfxtttjfsmntovizohjaqxmih
         type: string
         custom: []
       app_reference:
         name: app_reference
         description: 'Reference of app that wants to  verify user. Must not be greater than 255 characters.'
         required: true
-        example: icqlbguonrhldyrxiiuujdzwvkzuoraqxeeaihzlpndqbavdochalmdbfrmndkzvefrsfqqujejsygdhkfuhalectntszgmkkdtpxuzqgfozvichbvgaabhcuexqedoglqjestynfemocdipuwrpgofunqtuaairlntizhyvwexommltemrnxoyaotfhyss
+        example: wircxzturilceku
         type: string
         custom: []
     cleanBodyParameters:
-      user_reference: zybozpamnnchjjyugbaexkrkcnyikpiriadmaphraeftchiywuzvvddnxsapgtlbvlhuisabioizcl
-      app_reference: icqlbguonrhldyrxiiuujdzwvkzuoraqxeeaihzlpndqbavdochalmdbfrmndkzvefrsfqqujejsygdhkfuhalectntszgmkkdtpxuzqgfozvichbvgaabhcuexqedoglqjestynfemocdipuwrpgofunqtuaairlntizhyvwexommltemrnxoyaotfhyss
+      user_reference: tiphdaoiknmviudatzvkcbpavwyxqqqdjwsyppjunysrpbnaicrunxopvckwjmhcdjgygdgcoapeocibwsvwnnvzutdwbyucadtbcqdvcebkugrlaifpteicvojgwboxpzbyjkmzbttgntufecqxkljlbvutjoyjbckxksfigipdsmqidmnyckkstplbfxtttjfsmntovizohjaqxmih
+      app_reference: wircxzturilceku
     fileParameters: []
     responses:
       -
