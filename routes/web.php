@@ -23,7 +23,7 @@ Route::get('/docs', function () {
 });
 
 Route::get('/docs/postman', function() {
-    $path = storage_path('app/scribe/collection.json');
+    $path = storage_path('app/scribe/collection.json') ?? public_path('vendor/scribe/collection.json');
     if (file_exists($path)) {
         return response()->file($path);
     }
@@ -32,7 +32,7 @@ Route::get('/docs/postman', function() {
 })->name('scribe.postman');
 
 Route::get('/docs/openapi', function() {
-    $path = storage_path('app/scribe/openapi.yaml');
+    $path = storage_path('app/scribe/openapi.yaml') ?? public_path('vendor/scribe/openapi.yaml');
     if (file_exists($path)) {
         return response()->file($path);
     }
