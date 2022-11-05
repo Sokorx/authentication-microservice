@@ -94,7 +94,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: November 3 2022</li>
+        <li>Last updated: November 5 2022</li>
     </ul>
 </div>
 
@@ -138,10 +138,10 @@ You can switch the language used with the tabs at the top right (or from the nav
     \"last_name\": \"Doe\",
     \"middle_name\": \"\",
     \"phone_number\": \"08101209762\",
-    \"device_id\": \"wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq\",
+    \"device_id\": \"elzpehdqiqipuumrrhbcjbmqquuzapkgsdqoksavksiezblvdvdmpemyhsvkyqvtuvrhwaguuiufqmoqqoydsxdourpregyhhkoijzuenzgxiijhwymuuzsbllmudyjhqnxoebzkbvileflooeiaakzglyqgaasdxmyvdahiisnqltiktyciipenagctjxyllylrxikxurpfijcox\",
     \"email\": \"johndoe342@gmail.com\",
-    \"app_reference\": \"pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn\",
-    \"password\": \"fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz\"
+    \"app_reference\": \"gesjpihqschkjbznprmryynevxxdbgewxwlbzpjaggyrnjlceprwpuwilkkvwgqdlhmotdghefojfytrqvmudwbimhqtojcwrlgllqbrqqloxbxicqmcwjacjcmovtxcynbrrxdukfwaxjbvscmntqlmzkfpqjfbwwjtsbjjfnithsgxplexmornfombwvjmsfnanvpdyhhlmqbxanxgmycbbcablenhlnconqkxawdfmqlm\",
+    \"password\": \"xvpvacrxnhjgggvrdrelmzkeyvmiwcjgoocpfgjawfeafntodyyuynbalaydrsqbspzmhkzbsuzyoxtjvgplkzrozsjseubamkvfpfeotferjdfuwoapancmxmyobwpmwdrjvuwiyymebvqsbgqvrsblvlccjdpxqpoomzkzebrcueasgjaocqlaprjcyjxzwdjy\"
 }"
 </code></pre></div>
 
@@ -161,10 +161,10 @@ let body = {
     "last_name": "Doe",
     "middle_name": "",
     "phone_number": "08101209762",
-    "device_id": "wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq",
+    "device_id": "elzpehdqiqipuumrrhbcjbmqquuzapkgsdqoksavksiezblvdvdmpemyhsvkyqvtuvrhwaguuiufqmoqqoydsxdourpregyhhkoijzuenzgxiijhwymuuzsbllmudyjhqnxoebzkbvileflooeiaakzglyqgaasdxmyvdahiisnqltiktyciipenagctjxyllylrxikxurpfijcox",
     "email": "johndoe342@gmail.com",
-    "app_reference": "pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn",
-    "password": "fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz"
+    "app_reference": "gesjpihqschkjbznprmryynevxxdbgewxwlbzpjaggyrnjlceprwpuwilkkvwgqdlhmotdghefojfytrqvmudwbimhqtojcwrlgllqbrqqloxbxicqmcwjacjcmovtxcynbrrxdukfwaxjbvscmntqlmzkfpqjfbwwjtsbjjfnithsgxplexmornfombwvjmsfnanvpdyhhlmqbxanxgmycbbcablenhlnconqkxawdfmqlm",
+    "password": "xvpvacrxnhjgggvrdrelmzkeyvmiwcjgoocpfgjawfeafntodyyuynbalaydrsqbspzmhkzbsuzyoxtjvgplkzrozsjseubamkvfpfeotferjdfuwoapancmxmyobwpmwdrjvuwiyymebvqsbgqvrsblvlccjdpxqpoomzkzebrcueasgjaocqlaprjcyjxzwdjy"
 };
 
 fetch(url, {
@@ -188,10 +188,10 @@ $response = $client-&gt;post(
             'last_name' =&gt; 'Doe',
             'middle_name' =&gt; '',
             'phone_number' =&gt; '08101209762',
-            'device_id' =&gt; 'wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq',
+            'device_id' =&gt; 'elzpehdqiqipuumrrhbcjbmqquuzapkgsdqoksavksiezblvdvdmpemyhsvkyqvtuvrhwaguuiufqmoqqoydsxdourpregyhhkoijzuenzgxiijhwymuuzsbllmudyjhqnxoebzkbvileflooeiaakzglyqgaasdxmyvdahiisnqltiktyciipenagctjxyllylrxikxurpfijcox',
             'email' =&gt; 'johndoe342@gmail.com',
-            'app_reference' =&gt; 'pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn',
-            'password' =&gt; 'fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz',
+            'app_reference' =&gt; 'gesjpihqschkjbznprmryynevxxdbgewxwlbzpjaggyrnjlceprwpuwilkkvwgqdlhmotdghefojfytrqvmudwbimhqtojcwrlgllqbrqqloxbxicqmcwjacjcmovtxcynbrrxdukfwaxjbvscmntqlmzkfpqjfbwwjtsbjjfnithsgxplexmornfombwvjmsfnanvpdyhhlmqbxanxgmycbbcablenhlnconqkxawdfmqlm',
+            'password' =&gt; 'xvpvacrxnhjgggvrdrelmzkeyvmiwcjgoocpfgjawfeafntodyyuynbalaydrsqbspzmhkzbsuzyoxtjvgplkzrozsjseubamkvfpfeotferjdfuwoapancmxmyobwpmwdrjvuwiyymebvqsbgqvrsblvlccjdpxqpoomzkzebrcueasgjaocqlaprjcyjxzwdjy',
         ],
     ]
 );
@@ -209,10 +209,10 @@ payload = {
     "last_name": "Doe",
     "middle_name": "",
     "phone_number": "08101209762",
-    "device_id": "wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq",
+    "device_id": "elzpehdqiqipuumrrhbcjbmqquuzapkgsdqoksavksiezblvdvdmpemyhsvkyqvtuvrhwaguuiufqmoqqoydsxdourpregyhhkoijzuenzgxiijhwymuuzsbllmudyjhqnxoebzkbvileflooeiaakzglyqgaasdxmyvdahiisnqltiktyciipenagctjxyllylrxikxurpfijcox",
     "email": "johndoe342@gmail.com",
-    "app_reference": "pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn",
-    "password": "fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz"
+    "app_reference": "gesjpihqschkjbznprmryynevxxdbgewxwlbzpjaggyrnjlceprwpuwilkkvwgqdlhmotdghefojfytrqvmudwbimhqtojcwrlgllqbrqqloxbxicqmcwjacjcmovtxcynbrrxdukfwaxjbvscmntqlmzkfpqjfbwwjtsbjjfnithsgxplexmornfombwvjmsfnanvpdyhhlmqbxanxgmycbbcablenhlnconqkxawdfmqlm",
+    "password": "xvpvacrxnhjgggvrdrelmzkeyvmiwcjgoocpfgjawfeafntodyyuynbalaydrsqbspzmhkzbsuzyoxtjvgplkzrozsjseubamkvfpfeotferjdfuwoapancmxmyobwpmwdrjvuwiyymebvqsbgqvrsblvlccjdpxqpoomzkzebrcueasgjaocqlaprjcyjxzwdjy"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -365,7 +365,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="device_id"
                data-endpoint="POSTapi-v1-users-register"
-               value="wqexoxjlmywopgrcgdhppzeenzakvsmczqlikrewspymmsslizhakprkrxkbdiomtq"
+               value="elzpehdqiqipuumrrhbcjbmqquuzapkgsdqoksavksiezblvdvdmpemyhsvkyqvtuvrhwaguuiufqmoqqoydsxdourpregyhhkoijzuenzgxiijhwymuuzsbllmudyjhqnxoebzkbvileflooeiaakzglyqgaasdxmyvdahiisnqltiktyciipenagctjxyllylrxikxurpfijcox"
                data-component="body" hidden>
     <br>
 <p>Device id. Must not be greater than 255 characters.</p>
@@ -389,7 +389,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-register"
-               value="pthqqxgwfgnccypxtaixnxpptfbwfjzhmgpzlesjvlbpbjqdgkoxxxhexibzhwafihsyrxopbalxyvbgpldtwshycbqvbnlkpvqgnkkeiouzjhxoroerltdepgjatvryyfowybgferbtoglshvbkxmvzqitacikelhsgkyacakoywogjrn"
+               value="gesjpihqschkjbznprmryynevxxdbgewxwlbzpjaggyrnjlceprwpuwilkkvwgqdlhmotdghefojfytrqvmudwbimhqtojcwrlgllqbrqqloxbxicqmcwjacjcmovtxcynbrrxdukfwaxjbvscmntqlmzkfpqjfbwwjtsbjjfnithsgxplexmornfombwvjmsfnanvpdyhhlmqbxanxgmycbbcablenhlnconqkxawdfmqlm"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to register the user. Must not be greater than 255 characters.</p>
@@ -401,7 +401,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-v1-users-register"
-               value="fqmcpungoxnegwkbadazagihmqtxkudmbtrazppvhdzoaykjczbucednvhppfesvecrycxzfxuwmovgvlxafzunccgulmwnadkzsmgowcnqvgdtkmkgjvahzfgmfdzwqmzbbclznjeqnffuzjwlgbjwdvutlpasykatuvvimdhaazpyibfwuvvwujoiddjcolrdqjkgrycmkhnilxmfthyaqwmhvybwbvz"
+               value="xvpvacrxnhjgggvrdrelmzkeyvmiwcjgoocpfgjawfeafntodyyuynbalaydrsqbspzmhkzbsuzyoxtjvgplkzrozsjseubamkvfpfeotferjdfuwoapancmxmyobwpmwdrjvuwiyymebvqsbgqvrsblvlccjdpxqpoomzkzebrcueasgjaocqlaprjcyjxzwdjy"
                data-component="body" hidden>
     <br>
 <p>User password. Must not be greater than 255 characters.</p>
@@ -425,9 +425,9 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"verification_token\": \"nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum\",
-    \"user_reference\": \"qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws\",
-    \"app_reference\": \"ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh\"
+    \"verification_token\": \"hzirutpawoxpwbdszosjyrzksrczffpavbukhasoslfhfoyvvjqqxaafgkgkirpvncnswavdpmsdeeoqpgixrrcmsblayucmmpuhuoddenlmyfpxqthktddanfjutmsffmqaoswkygrrivtxzwmupvmkkkzuvirhowcjxnxvfxantynbslmajsyzuigudbzuoqtjtonvtaogz\",
+    \"user_reference\": \"qckvowoplhrfvvmbimybwskxgoelwfv\",
+    \"app_reference\": \"gvyclcyyeispowanaeocrujyfqxuqqwmjpzmkcaxeqjoqugfstrhbkkzikdicofgqsmnskieuiqzeazcuhlvehfslrbkwlxeeyugduixexbiwsxsdxtabcfdcjsji\"
 }"
 </code></pre></div>
 
@@ -443,9 +443,9 @@ const headers = {
 };
 
 let body = {
-    "verification_token": "nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum",
-    "user_reference": "qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws",
-    "app_reference": "ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh"
+    "verification_token": "hzirutpawoxpwbdszosjyrzksrczffpavbukhasoslfhfoyvvjqqxaafgkgkirpvncnswavdpmsdeeoqpgixrrcmsblayucmmpuhuoddenlmyfpxqthktddanfjutmsffmqaoswkygrrivtxzwmupvmkkkzuvirhowcjxnxvfxantynbslmajsyzuigudbzuoqtjtonvtaogz",
+    "user_reference": "qckvowoplhrfvvmbimybwskxgoelwfv",
+    "app_reference": "gvyclcyyeispowanaeocrujyfqxuqqwmjpzmkcaxeqjoqugfstrhbkkzikdicofgqsmnskieuiqzeazcuhlvehfslrbkwlxeeyugduixexbiwsxsdxtabcfdcjsji"
 };
 
 fetch(url, {
@@ -465,9 +465,9 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'verification_token' =&gt; 'nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum',
-            'user_reference' =&gt; 'qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws',
-            'app_reference' =&gt; 'ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh',
+            'verification_token' =&gt; 'hzirutpawoxpwbdszosjyrzksrczffpavbukhasoslfhfoyvvjqqxaafgkgkirpvncnswavdpmsdeeoqpgixrrcmsblayucmmpuhuoddenlmyfpxqthktddanfjutmsffmqaoswkygrrivtxzwmupvmkkkzuvirhowcjxnxvfxantynbslmajsyzuigudbzuoqtjtonvtaogz',
+            'user_reference' =&gt; 'qckvowoplhrfvvmbimybwskxgoelwfv',
+            'app_reference' =&gt; 'gvyclcyyeispowanaeocrujyfqxuqqwmjpzmkcaxeqjoqugfstrhbkkzikdicofgqsmnskieuiqzeazcuhlvehfslrbkwlxeeyugduixexbiwsxsdxtabcfdcjsji',
         ],
     ]
 );
@@ -481,9 +481,9 @@ import json
 
 url = 'http://staging-ms-auth.monitecture.com/api/v1/users/verify-email'
 payload = {
-    "verification_token": "nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum",
-    "user_reference": "qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws",
-    "app_reference": "ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh"
+    "verification_token": "hzirutpawoxpwbdszosjyrzksrczffpavbukhasoslfhfoyvvjqqxaafgkgkirpvncnswavdpmsdeeoqpgixrrcmsblayucmmpuhuoddenlmyfpxqthktddanfjutmsffmqaoswkygrrivtxzwmupvmkkkzuvirhowcjxnxvfxantynbslmajsyzuigudbzuoqtjtonvtaogz",
+    "user_reference": "qckvowoplhrfvvmbimybwskxgoelwfv",
+    "app_reference": "gvyclcyyeispowanaeocrujyfqxuqqwmjpzmkcaxeqjoqugfstrhbkkzikdicofgqsmnskieuiqzeazcuhlvehfslrbkwlxeeyugduixexbiwsxsdxtabcfdcjsji"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -587,7 +587,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="verification_token"
                data-endpoint="POSTapi-v1-users-verify-email"
-               value="nycyvmpmjrzkassanotcwwbnwfjwsaovcmbufhgum"
+               value="hzirutpawoxpwbdszosjyrzksrczffpavbukhasoslfhfoyvvjqqxaafgkgkirpvncnswavdpmsdeeoqpgixrrcmsblayucmmpuhuoddenlmyfpxqthktddanfjutmsffmqaoswkygrrivtxzwmupvmkkkzuvirhowcjxnxvfxantynbslmajsyzuigudbzuoqtjtonvtaogz"
                data-component="body" hidden>
     <br>
 <p>Email verification token. Must not be greater than 255 characters.</p>
@@ -599,7 +599,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="user_reference"
                data-endpoint="POSTapi-v1-users-verify-email"
-               value="qkzrpatkcnpcormuucqquvpffilptaiihgthhwnewnzmbjrcgzvcqefmbeqwtflmtsiyhynasmdgljsfaoqdhgyvhpyzdkmqnpgoqgjkjyzozsqgjnuqmfxpqzqftnfpaxbvbxuxsyissynrlkvuidimovpgigrdcqbujalzvtmakbaqfvemomxyjfyroigrlrdknwldqessuwrzejkfunphykgtkdezwws"
+               value="qckvowoplhrfvvmbimybwskxgoelwfv"
                data-component="body" hidden>
     <br>
 <p>Reference of user that wants to  verify their email. Must not be greater than 255 characters.</p>
@@ -611,7 +611,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-verify-email"
-               value="ydinfvubjdupclxsxzcwdkkhdoykuihpzszgsiyholvllrjyzlclcpdobytplyesudbidyjpxtlbobmztevyzvh"
+               value="gvyclcyyeispowanaeocrujyfqxuqqwmjpzmkcaxeqjoqugfstrhbkkzikdicofgqsmnskieuiqzeazcuhlvehfslrbkwlxeeyugduixexbiwsxsdxtabcfdcjsji"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to  verify user. Must not be greater than 255 characters.</p>
@@ -635,8 +635,8 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_reference\": \"tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu\",
-    \"app_reference\": \"rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux\"
+    \"user_reference\": \"tpkzyfjtdtczvqthsvpzhzskfpzngxbbsbbjrwvlzcippfrbgqgwtqlufqimxyjbdmhlyzcdbk\",
+    \"app_reference\": \"iautwoyxxzvusnesqguudohgaslmkffkhschqoxmyctsuksbwxnwmdixnoazaxabbthzmstkmawvlsanrotfmptpijnifekmppuxozemuvvevoiuucmevawkwbqmkueplgif\"
 }"
 </code></pre></div>
 
@@ -652,8 +652,8 @@ const headers = {
 };
 
 let body = {
-    "user_reference": "tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu",
-    "app_reference": "rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux"
+    "user_reference": "tpkzyfjtdtczvqthsvpzhzskfpzngxbbsbbjrwvlzcippfrbgqgwtqlufqimxyjbdmhlyzcdbk",
+    "app_reference": "iautwoyxxzvusnesqguudohgaslmkffkhschqoxmyctsuksbwxnwmdixnoazaxabbthzmstkmawvlsanrotfmptpijnifekmppuxozemuvvevoiuucmevawkwbqmkueplgif"
 };
 
 fetch(url, {
@@ -673,8 +673,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'user_reference' =&gt; 'tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu',
-            'app_reference' =&gt; 'rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux',
+            'user_reference' =&gt; 'tpkzyfjtdtczvqthsvpzhzskfpzngxbbsbbjrwvlzcippfrbgqgwtqlufqimxyjbdmhlyzcdbk',
+            'app_reference' =&gt; 'iautwoyxxzvusnesqguudohgaslmkffkhschqoxmyctsuksbwxnwmdixnoazaxabbthzmstkmawvlsanrotfmptpijnifekmppuxozemuvvevoiuucmevawkwbqmkueplgif',
         ],
     ]
 );
@@ -688,8 +688,8 @@ import json
 
 url = 'http://staging-ms-auth.monitecture.com/api/v1/users/resend-verification-email'
 payload = {
-    "user_reference": "tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu",
-    "app_reference": "rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux"
+    "user_reference": "tpkzyfjtdtczvqthsvpzhzskfpzngxbbsbbjrwvlzcippfrbgqgwtqlufqimxyjbdmhlyzcdbk",
+    "app_reference": "iautwoyxxzvusnesqguudohgaslmkffkhschqoxmyctsuksbwxnwmdixnoazaxabbthzmstkmawvlsanrotfmptpijnifekmppuxozemuvvevoiuucmevawkwbqmkueplgif"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -793,7 +793,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="user_reference"
                data-endpoint="POSTapi-v1-users-resend-verification-email"
-               value="tpivjcueszvuosfijlwinareizakpspqfkmbzfhcuglghfdevycgiuuyebuu"
+               value="tpkzyfjtdtczvqthsvpzhzskfpzngxbbsbbjrwvlzcippfrbgqgwtqlufqimxyjbdmhlyzcdbk"
                data-component="body" hidden>
     <br>
 <p>Reference of user that wants to  verify their email. Must not be greater than 255 characters.</p>
@@ -805,7 +805,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="app_reference"
                data-endpoint="POSTapi-v1-users-resend-verification-email"
-               value="rmdqhzcligllazxmylhyrbwepspgvxmkkxzvuqamcwrozxqsnnfpnajryuflkux"
+               value="iautwoyxxzvusnesqguudohgaslmkffkhschqoxmyctsuksbwxnwmdixnoazaxabbthzmstkmawvlsanrotfmptpijnifekmppuxozemuvvevoiuucmevawkwbqmkueplgif"
                data-component="body" hidden>
     <br>
 <p>Reference of app that wants to  verify user. Must not be greater than 255 characters.</p>

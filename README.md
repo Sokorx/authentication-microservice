@@ -31,3 +31,10 @@ php artisan test
 ```shell
 php artisan scribe:generate
 ```
+
+### Copy Generate Documentation
+
+```shell
+copy storage/app/scribe/collection.json public/scribe/collection.json
+copy storage/app/scribe/openapi.yaml public/scribe/openapi.yaml
+```
