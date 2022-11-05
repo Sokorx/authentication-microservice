@@ -32,9 +32,9 @@ php artisan test
 php artisan scribe:generate
 ```
 
-### Copy Generate Documentation
+### Copy Generated Documentation Files
 
 ```shell
-copy storage/app/scribe/collection.json public/scribe/collection.json
-copy storage/app/scribe/openapi.yaml public/scribe/openapi.yaml
+cp storage/app/scribe/collection.json public/scribe/collection.json
+cp storage/app/scribe/openapi.yaml public/scribe/openapi.yaml
 ```
