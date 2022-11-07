@@ -57,6 +57,7 @@ task('deploy:secrets', function () {
     upload('.env', get('deploy_path') . '/shared');
     writeln('env:' . get('labels')['env']);
     run('sudo apt install acl');
+    run('chmod -R 777 storage');
     // run('sudo supervisorctl reread');
     // run('sudo supervisorctl update');
     // run('sudo supervisorctl start websockets');
