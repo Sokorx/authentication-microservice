@@ -90,8 +90,9 @@ desc('Deploy the application');
 task('deploy', [
     'deploy:info',
     'deploy:setup',
+    'push',
     // 'deploy:release',
-    'deploy:update_code',
+    // 'deploy:update_code',
     'rsync',
     'deploy:secrets',
     'deploy:shared',
