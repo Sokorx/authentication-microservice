@@ -57,7 +57,7 @@ task('deploy:secrets', function () {
     upload('.env', get('deploy_path') . '/shared');
     writeln('env:' . get('labels')['env']);
     run('sudo apt install acl');
-    run('chmod -R 777 /var/www/authentication-microservice/current/storage');
+    // run('chmod -R 777 /var/www/authentication-microservice/current/storage');
     run('chmod -R 777 /var/www/staging/authentication-microservice/current/storage');
     // run('sudo supervisorctl reread');
     // run('sudo supervisorctl update');
