@@ -33,6 +33,8 @@ add('writable_dirs', [
     'storage/framework/sessions',
     'storage/framework/views',
     'storage/logs',
+    'storage/logs/single',
+    'storage/logs/daily',
 ]);
 
 // Exclude anything that you don't want on the production server
