@@ -10,7 +10,7 @@ set('repository', 'git@github.com:Sokorx/authentication-microservice.git');
 
 set('application', 'Moniport');
 set('ssh_multiplexing', true); // Speeds up deployments
-set('keep_releases', 3);
+set('keep_releases', 0);
 set('rsync_src', function () {
     return __DIR__; // If your project isn't in the root, you'll need to change this
 });
@@ -90,7 +90,6 @@ desc('Deploy the application');
 task('deploy', [
     'deploy:info',
     'deploy:setup',
-    'deploy:release',
     'deploy:update_code',
     'rsync',
     'deploy:secrets',
