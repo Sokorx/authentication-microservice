@@ -1,4 +1,4 @@
-# Moniport Authentication Microservice.
+# Moniport Authentication Microservice
 
 ## Requirement
 
