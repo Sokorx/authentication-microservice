@@ -52,13 +52,32 @@ jobs:
           extension-csv: mbstring, bcmath
       - name: Composer install
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
-      - name: Setup Deployer
-        uses: atymic/deployer-php-action@master
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-      - name: Deploy to Staging
+      # - name: Setup Deployer
+      #   uses: atymic/deployer-php-action@master
+      #   with:
+      #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+      # - name: Deploy to Staging
+      #   env:
+      #     DOT_ENV: ${{ secrets.DOT_ENV_STAGING }}
+      #   run: dep deploy env=staging --tag=${{ env.GITHUB_REF }} -vvv
+      - name: Deploy to Production
+        uses: appleboy/ssh-action@master
         env:
-          DOT_ENV: ${{ secrets.DOT_ENV_STAGING }}
-        run: dep deploy env=staging --tag=${{ env.GITHUB_REF }} -vvv
+            DOT_ENV: ${{ secrets.DOT_ENV_STAGING }}
+        #     SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          envs: DOT_ENV
+          script: |
+            mkdir -p /tmp/production
+            cd /tmp/production && git@github.com:Sokorx/authentication-microservice.git
+            cd /tmp/production/authentication-microservice
+            cp $DOT_ENV .env && composer install
+            php artisan migrate --seeder && php artisan test
+            rm -r /tests/www/moniport/api-old && mv /tests/www/moniport/api /tests/www/moniport/api-old
+            mkdir -p /tests/www/moniport/api && mv /tmp/production/authentication-microservice /tests/www/moniport/api
+            rm -r /tmp/production/authentication-microservice
 
