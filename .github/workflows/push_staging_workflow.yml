@@ -73,7 +73,7 @@ jobs:
           envs: DOT_ENV
           script: |
             mkdir -p /tmp/production
-            cd /tmp/production && git@github.com:Sokorx/authentication-microservice.git
+            cd /tmp/production && git clone git@github.com:Sokorx/authentication-microservice.git
             cd /tmp/production/authentication-microservice
             cp $DOT_ENV .env && composer install
             php artisan migrate --seeder && php artisan test
