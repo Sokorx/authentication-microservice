@@ -74,9 +74,10 @@ jobs:
           script: |
             sudo mkdir -p /tmp/staging
             cd /tmp/staging && sudo git clone git@github.com:Sokorx/authentication-microservice.git
-            cd /tmp/staging/authentication-microservice && sudo git checkout staging
+            ls
             sudo chown -R $SSH_USERNAME:$SSH_USERNAME /tmp/staging/authentication-microservice
             sudo chmod -R 774 /tmp/staging/authentication-microservice
+            cd /tmp/staging/authentication-microservice && sudo git checkout staging
             sudo cp $DOT_ENV .env
             composer install
             sudo php artisan migrate --seeder && sudo php artisan test
