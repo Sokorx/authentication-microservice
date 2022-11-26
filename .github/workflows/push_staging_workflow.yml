@@ -65,7 +65,7 @@ jobs:
         uses: appleboy/ssh-action@master
         env:
             DOT_ENV: ${{ secrets.DOT_ENV_STAGING }}
-        #     SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+            SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
@@ -75,6 +75,8 @@ jobs:
             sudo mkdir -p /tmp/staging
             cd /tmp/staging && sudo git clone git@github.com:Sokorx/authentication-microservice.git
             cd /tmp/staging/authentication-microservice && sudo git checkout staging
+            sudo chown -R $SSH_USERNAME:$SSH_USERNAME /tmp/staging/authentication-microservice
+            sudo chmod -R 774 /tmp/staging/authentication-microservice
             sudo cp $DOT_ENV .env
             composer install
             sudo php artisan migrate --seeder && sudo php artisan test
