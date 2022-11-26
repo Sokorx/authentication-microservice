@@ -75,7 +75,8 @@ jobs:
             sudo mkdir -p /tmp/staging
             cd /tmp/staging && sudo git clone git@github.com:Sokorx/authentication-microservice.git
             cd /tmp/staging/authentication-microservice && sudo git checkout staging
-            sudo cp $DOT_ENV .env && composer install
+            sudo cp $DOT_ENV .env
+            composer install
             sudo php artisan migrate --seeder && sudo php artisan test
             sudo rm -r /tests/www/moniport/api-old && sudo mv /tests/www/moniport/api /tests/www/moniport/api-old
             sudo mkdir -p /tests/www/moniport/api && sudo mv /tmp/staging/authentication-microservice /tests/www/moniport/api
