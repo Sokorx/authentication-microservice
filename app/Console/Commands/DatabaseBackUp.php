@@ -30,7 +30,7 @@ class DatabaseBackUp extends Command
     {
         $filename = "backup-" . Carbon::now()->format('Y-m-d') . "-ikechukwu.gz";
 
-        $command = "ssh -tt " . env('DATABASE_BACKUP_USER') . "@" . env('DB_HOST') . " '" . env('DATABASE_BACKUP_COMMAND') . env('DATABASE_BACKUP') . "/" . $filename . " && exit; exec bash -l'";
+        $command = "ssh -T " . env('DATABASE_BACKUP_USER') . "@" . env('DB_HOST') . " '" . env('DATABASE_BACKUP_COMMAND') . env('DATABASE_BACKUP') . "/" . $filename . " && exit; exec bash -l'";
 
         $returnVar = NULL;
         $output  = NULL;
