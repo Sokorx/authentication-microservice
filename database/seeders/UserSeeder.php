@@ -25,6 +25,6 @@ class UserSeeder extends Seeder
         ]);
 
         $user = User::where('email', 'devops@moniporte.com')->first();
-        $user->givePermissionTo(UserPermissions::getUserPermissions());
+        $user->syncPermissions(UserPermissions::getAllUserPermissions());
     }
 }

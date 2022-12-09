@@ -87,7 +87,7 @@ return [
                      * API calls will be made only for routes in this group matching these HTTP methods (GET, POST, etc).
                      * List the methods here or use '*' to mean all methods. Leave empty to disable API calls.
                      */
-                    'methods' => ['GET'],
+                    'methods' => ['GET', 'POST'],
 
                     /*
                      * Laravel config variables which should be set for the API call.
@@ -138,7 +138,7 @@ return [
      * - "static" will generate a static HTMl page in the /public/docs folder,
      * - "laravel" will generate the documentation as a Blade view, so you can add routing and authentication.
      */
-    'type' => 'static',
+    'type' => 'laravel',
 
     /*
      * Settings for `static` type output.
@@ -177,7 +177,7 @@ return [
         /*
          * Middleware to attach to the docs endpoint (if `add_routes` is true).
          */
-        'middleware' => [],
+        'middleware' => ['checkenv'],
     ],
 
     'try_it_out' => [
@@ -258,8 +258,7 @@ This documentation aims to provide all the information you need to work with our
 
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
-INTRO
-    ,
+INTRO,
 
     /*
      * Example requests for each endpoint will be shown in each of these languages.
@@ -270,6 +269,8 @@ INTRO
     'example_languages' => [
         'bash',
         'javascript',
+        'php',
+        'python'
     ],
 
     /*
@@ -345,18 +346,6 @@ INTRO
      *
      */
     'logo' => false,
-
-    /**
-     * Customize the "Last updated" value displayed in the docs by specifying tokens and formats.
-     * Examples:
-     * - {date:F j Y} => March 28, 2022
-     * - {git:short} => Short hash of the last Git commit
-     *
-     * Available tokens are `{date:<format>}` and `{git:<format>}`.
-     * The format you pass to `date` will be passed to PhP's `date()` function.
-     * The format you pass to `git` can be either "short" or "long".
-     */
-    'last_updated' => 'Last updated: {date:F j, Y}',
 
     'examples' => [
         /*
@@ -438,5 +427,16 @@ INTRO
      * Tell Scribe which connections should be transacted here.
      * If you only use one db connection, you can leave this as is.
      */
-    'database_connections_to_transact' => [config('database.default')]
+    'database_connections_to_transact' => [config('database.default')],
+    /**
+     * Customize the "Last updated" value displayed in the docs by specifying tokens and formats.
+     * Examples:
+     * - {date:F j Y} => March 28, 2022
+     * - {git:short} => Short hash of the last Git commit
+     *
+     * Available tokens are `{date:<format>}` and `{git:<format>}`.
+     * The format you pass to `date` will be passed to PhP's `date()` function.
+     * The format you pass to `git` can be either "short" or "long".
+     */
+    'last_updated' => 'Last updated: {date:F j, Y}'
 ];

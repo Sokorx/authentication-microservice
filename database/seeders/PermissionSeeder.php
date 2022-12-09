@@ -17,7 +17,7 @@ class PermissionSeeder extends Seeder
      */
     public function run()
     {
-        $userPermissions = UserPermissions::getUserPermissions();
+        $userPermissions = UserPermissions::getAllUserPermissions();
 
         foreach($userPermissions as $permission) {
             Permission::firstOrCreate(['name' => $permission]);

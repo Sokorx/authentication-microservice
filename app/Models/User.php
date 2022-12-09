@@ -63,4 +63,16 @@ class User extends Authenticatable
             ]);
         }
     }
+
+    public function syncPermissions(array $permissions)
+    {
+        $class_name = get_class($this);
+        $reflection_class = new \ReflectionClass($class_name);
+
+        ModelHasPermission::where('model_id', $this->id)
+            ->where('model_type', $reflection_class->getName())
+            ->delete();
+
+        return $this->givePermissionTo($permissions);
+    }
 }
