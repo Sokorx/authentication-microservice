@@ -28,7 +28,7 @@ class DatabaseBackUp extends Command
      */
     public function handle()
     {
-        $filename = "backup-" . Carbon::now()->format('Y-m-d') . "-ikechukwu.gz";
+        $filename = "backup-" . Carbon::now()->format('Y-m-d') . "-jerry.gz";
 
         $command = "ssh -t -t " . env('DATABASE_BACKUP_USER') . "@" . env('DB_HOST') . " '" . env('DATABASE_BACKUP_COMMAND') . env('DATABASE_BACKUP') . "/" . $filename . " && exit; exec bash -l'";
 
