@@ -3,7 +3,7 @@
 
 
 <aside>
-    <strong>Base URL</strong>: <code>https://staging-ms-auth.monitecture.com</code>
+    <strong>Base URL</strong>: <code>https:127.0.0.1:8000</code>
 </aside>
 
 This documentation aims to provide all the information you need to work with our API.

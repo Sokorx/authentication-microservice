@@ -28,7 +28,7 @@
             </style>
 
     <script>
-        var baseUrl = "https://staging-ms-auth.monitecture.com";
+        var baseUrl = "https:127.0.0.1:8000";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -89,7 +89,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: December 8, 2022</li>
+        <li>Last updated: December 9, 2022</li>
     </ul>
 </div>
 
@@ -98,7 +98,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>https://staging-ms-auth.monitecture.com</code>
+    <strong>Base URL</strong>: <code>https:127.0.0.1:8000</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -124,14 +124,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-ms-auth.monitecture.com/api/user" \
+    --get "https:127.0.0.1:8000/api/user" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://staging-ms-auth.monitecture.com/api/user"
+    "https:127.0.0.1:8000/api/user"
 );
 
 const headers = {
@@ -148,7 +148,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'https://staging-ms-auth.monitecture.com/api/user',
+    'https:127.0.0.1:8000/api/user',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -164,7 +164,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-ms-auth.monitecture.com/api/user'
+url = 'https:127.0.0.1:8000/api/user'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
