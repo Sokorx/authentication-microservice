@@ -30,8 +30,8 @@ class DatabaseBackUp extends Command
     {
         $filename = "backup-" . Carbon::now()->format('Y-m-d') . ".gz";
 
-        $command = "sudo mysqldump --user=" . env('DB_USERNAME') ." --password='" . env('DB_PASSWORD') . "' --host=" . env('DB_HOST') . " " . env('DB_DATABASE') . "  | gzip > " . env('DATABASE_BACKUP') . "/" . $filename;
-
+        $command = "ssh -t " . env('DB_USERNAME') . "@" . env('DB_HOST') . " '" . env('DATABASE_BACKUP_COMMAND') . env('DATABASE_BACKUP') . "/" . $filename . " && exit; exec bash -l'";
+dd($command);
         $returnVar = NULL;
         $output  = NULL;
 
