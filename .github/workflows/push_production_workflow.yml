@@ -34,7 +34,7 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PRODUCTION_PASSWORD }}
           DB_DATABASE: authmicroservice
         run: |
-          php artisan migrate --seeder
+          php artisan migrate
           php artisan test
   deploy-production:
     name: Deploy Project to PRODUCTION Server
@@ -68,7 +68,7 @@ jobs:
             sudo touch .env
             echo "$DOT_ENV" | sudo tee /tmp/production/authentication-microservice/.env
             composer install
-            sudo php artisan migrate --seeder --force
+            sudo php artisan migrate:refresh --force
             sudo php artisan config:clear
             sudo rm -r /apps/www/authentication-microservice-old
             sudo mv /apps/www/authentication-microservice /apps/www/authentication-microservice-old
