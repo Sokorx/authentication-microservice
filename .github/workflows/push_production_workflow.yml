@@ -68,6 +68,7 @@ jobs:
             sudo touch .env
             echo "$DOT_ENV" | sudo tee /tmp/production/authentication-microservice/.env
             composer install
+            php artisan database:backup
             sudo php artisan migrate --seeder --force
             sudo php artisan config:clear
             sudo rm -r /apps/www/authentication-microservice-old
