@@ -60,6 +60,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           envs: DOT_ENV
           script: |
+            cd /apps/www/authentication-microservice
+            php artisan database:backup
             sudo mkdir -p /tmp/production
             cd /tmp/production && sudo git clone git@github.com:Sokorx/authentication-microservice.git
             cd /tmp/production/authentication-microservice
@@ -68,7 +70,6 @@ jobs:
             sudo touch .env
             echo "$DOT_ENV" | sudo tee /tmp/production/authentication-microservice/.env
             composer install
-            php artisan database:backup
             sudo php artisan migrate --force
             sudo php artisan config:clear
             sudo rm -r /apps/www/authentication-microservice-old
