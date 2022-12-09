@@ -34,7 +34,7 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_STAGING_PASSWORD }}
           DB_DATABASE: authmicroservice
         run: |
-          php artisan migrate --seeder
+          php artisan migrate --seed
           php artisan test
       - name: Generate Documentation
         run: php artisan scribe:generate
@@ -70,7 +70,7 @@ jobs:
             sudo touch .env
             echo "$DOT_ENV" | sudo tee /tmp/staging/authentication-microservice/.env
             composer install
-            sudo php artisan migrate --seeder && sudo php artisan test
+            sudo php artisan migrate --seed && sudo php artisan test
             sudo php artisan scribe:generate
             sudo rm -r /tests/www/authentication-microservice-old
             sudo mv /tests/www/authentication-microservice /tests/www/authentication-microservice-old
